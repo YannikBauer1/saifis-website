@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saifi's Rhön</title>
+<meta name="description" content="Saifi's Gebäudereinigung aus Bad Kissingen: Unterhaltsreinigung, Glasreinigung, Treppenhaus, Grund- und Baureinigung, Fassade und Photovoltaik – für Privat, Gewerbe und Hausverwaltungen in der Rhön.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  --bg:#FBFCF9; --bg2:#F1F5EE; --card:#FFFFFF; --ink:#14231C; --ink2:#43564C; --muted:#7B8C82; --line:#DCE4DD;
+  --forest:#1F6B4A; --forest-deep:#154D35; --forest-soft:#E3F0E8; --lime:#CFEA5E; --lime-ink:#5B6E12; --sun:#F2B233;
+  --shadow:0 24px 60px -30px rgba(20,35,28,.3);
+  --font-d:"Fraunces",Georgia,serif; --font-b:"Karla",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1712; --bg2:#141F18; --card:#182420; --ink:#EDF3EE; --ink2:#B9C8BE; --muted:#7E9187; --line:#25342C;
+  --forest:#5FBF8E; --forest-deep:#8BD9AF; --forest-soft:#183426; --lime:#D6EF6F; --lime-ink:#D6EF6F; --shadow:0 24px 60px -30px rgba(0,0,0,.7); color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0F1712; --bg2:#141F18; --card:#182420; --ink:#EDF3EE; --ink2:#B9C8BE; --muted:#7E9187; --line:#25342C;
+  --forest:#5FBF8E; --forest-deep:#8BD9AF; --forest-soft:#183426; --lime:#D6EF6F; --lime-ink:#D6EF6F; --shadow:0 24px 60px -30px rgba(0,0,0,.7); color-scheme:dark;}
+*{box-sizing:border-box}
+.hero-grid>*,.chapter>*,.row>*,.cgrid>*,.rev-grid>*,.factors>*,.tstep>*{min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-b);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-d);margin:0;line-height:1.05;text-wrap:balance;font-weight:600;letter-spacing:-.015em}
+h1{font-size:clamp(2.7rem,6vw,5.2rem);font-variation-settings:"opsz" 144,"SOFT" 30}
+h2{font-size:clamp(2rem,4.2vw,3.4rem);font-variation-settings:"opsz" 144}
+h3{font-size:1.35rem;font-weight:600}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+em.i{font-style:italic;font-weight:500;color:var(--forest)}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+@media (max-width:640px){.wrap{width:min(1200px,100% - 32px)}}
+section{padding-block:clamp(72px,9vw,128px)}
+.eyebrow{font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);display:inline-flex;align-items:center;gap:10px}
+.eyebrow i{width:9px;height:9px;border-radius:50%;background:var(--lime);border:2px solid var(--forest);display:inline-block}
+.lead{font-size:1.15rem;color:var(--ink2);max-width:58ch;line-height:1.65}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;padding:16px 26px;border-radius:12px;border:0;cursor:pointer;text-decoration:none;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--forest);outline-offset:3px}
+.btn-primary{background:var(--forest);color:#fff;box-shadow:0 14px 30px -14px rgba(31,107,74,.7)}
+.btn-primary:hover{background:var(--forest-deep)}
+.btn-lime{background:var(--lime);color:#14231C}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn-ghost:hover{border-color:var(--forest)}
+.btn svg{width:18px;height:18px}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--font-d);font-weight:700;font-size:1.3rem;letter-spacing:-.01em}
+.logo-mark{width:42px;height:42px;border-radius:50%;background:var(--forest);color:var(--lime);display:grid;place-items:center;font-family:var(--font-d);font-weight:700;font-size:1.3rem;font-style:italic}
+.logo small{display:block;font-family:var(--font-b);font-weight:600;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--ink2)}
+.nav-links a:hover,.nav-links a.active{color:var(--forest)}
+.nav .btn{padding:11px 18px;font-size:.9rem}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--ink)}
+@media (max-width:980px){.nav-links,.nav .btn-primary{display:none}.burger{display:grid;place-items:center}}
+.mobile-menu{display:none;position:fixed;inset:76px 0 0 0;background:var(--bg);z-index:49;padding:24px 20px;flex-direction:column}
+.mobile-menu.open{display:flex}
+.mobile-menu a{text-decoration:none;font-family:var(--font-d);font-size:1.7rem;padding:14px 4px;border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:20px;justify-content:center}
+
+/* HERO with embedded form */
+.hero{position:relative;overflow:hidden;padding-block:clamp(48px,7vw,96px) clamp(48px,6vw,80px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{margin-top:20px}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln span{display:inline-block}
+.hero .lead{margin-top:22px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.fact b{display:block;font-family:var(--font-d);font-size:1.7rem;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.fact span{font-size:.88rem;color:var(--muted)}
+.fact .st{color:var(--sun);letter-spacing:2px;font-size:1.2rem}
+.hills-bg{position:absolute;left:-5%;right:-5%;bottom:-2px;height:38%;z-index:0;pointer-events:none;opacity:.9}
+.hero .wrap{position:relative;z-index:1}
+.quick{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,3vw,34px);box-shadow:var(--shadow);position:relative}
+.quick::before{content:"Antwort in 24 h";position:absolute;top:-14px;right:22px;background:var(--lime);color:#14231C;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.quick h3{font-size:1.5rem}
+.quick p.small{color:var(--muted);font-size:.9rem;margin-top:6px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+@media (max-width:540px){.field{grid-column:1/-1}}
+label{font-size:.82rem;font-weight:700;color:var(--ink2)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;width:100%;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--forest)}
+textarea{min-height:96px;resize:vertical}
+.quick .btn{width:100%;justify-content:center;margin-top:16px}
+.quick .privacy{font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center}
+.success{display:none;text-align:center;padding:30px 6px}
+.success .ck{width:64px;height:64px;border-radius:50%;background:var(--forest);color:#fff;display:grid;place-items:center;margin:0 auto 16px;font-size:1.8rem}
+.quick.sent .fields,.quick.sent .btn,.quick.sent .privacy,.quick.sent .intro{display:none}
+.quick.sent .success{display:block}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chips button{font:inherit;font-size:.85rem;font-weight:600;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:7px 12px;cursor:pointer;color:var(--ink2)}
+.chips button:hover,.chips button.on{border-color:var(--forest);color:var(--forest);background:var(--forest-soft)}
+
+/* TRUST STRIP */
+.trust{background:var(--forest);color:#fff;padding:22px 0}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:center;align-items:center;font-weight:600;font-size:.95rem}
+.trust span{display:inline-flex;align-items:center;gap:10px}
+.trust svg{width:20px;height:20px;color:var(--lime)}
+
+/* CHAPTER LAYOUT: sticky side nav */
+.chapter{display:grid;grid-template-columns:200px 1fr;gap:clamp(30px,5vw,80px);align-items:start}
+@media (max-width:960px){.chapter{grid-template-columns:1fr}}
+.side{position:sticky;top:100px}
+.side .eyebrow{display:flex}
+.side h2{margin-top:14px;font-size:clamp(1.8rem,2.6vw,2.4rem)}
+.side p{color:var(--ink2);margin-top:12px;font-size:.95rem}
+@media (max-width:960px){.side{position:static}}
+
+/* SERVICES list editorial */
+.svc-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:70px 1fr auto;gap:22px;padding:26px 0;border-bottom:1px solid var(--line);align-items:center;text-decoration:none;position:relative;transition:padding .35s}
+.svc:hover{padding-left:12px}
+.svc .k{font-family:var(--font-d);font-size:1.6rem;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:500}
+.svc h3{font-size:clamp(1.3rem,2.2vw,1.8rem)}
+.svc p{color:var(--ink2);margin-top:6px;font-size:.97rem;max-width:62ch}
+.svc .who{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.svc .who span{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--forest);background:var(--forest-soft);padding:4px 8px;border-radius:6px}
+.svc .arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--ink);transition:background .3s,color .3s,border-color .3s}
+.svc:hover .arrow{background:var(--forest);color:#fff;border-color:var(--forest)}
+.svc .arrow svg{width:18px;height:18px}
+@media (max-width:640px){.svc{grid-template-columns:44px 1fr}.svc .arrow{display:none}.svc .k{font-size:1.2rem}}
+
+/* STORY / IMAGE rows */
+.story{background:var(--bg2);border-block:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.row + .row{margin-top:clamp(60px,8vw,110px)}
+.row.flip .media{order:2}
+@media (max-width:900px){.row,.row.flip .media{grid-template-columns:1fr;order:0}}
+.media{position:relative}
+.frame{border-radius:22px;overflow:hidden;aspect-ratio:4/3;max-width:100%;border:1px solid var(--line);position:relative;background:var(--card)}
+.frame .img{position:absolute;inset:-12% 0;background:linear-gradient(160deg,#BFE3CF,#5FA985 60%,#2F7D5A);display:grid;place-items:center;will-change:transform}
+.frame .img.b{background:linear-gradient(160deg,#DFE9F5,#8FB3CF 60%,#4F7FA3)}
+.frame .img.c{background:linear-gradient(160deg,#F6E7C4,#D9B56A 60%,#A67C2E)}
+.frame .ph{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(20,35,28,.35);padding:8px 12px;border-radius:8px;backdrop-filter:blur(4px)}
+.caption{position:absolute;left:18px;bottom:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:.88rem;box-shadow:var(--shadow);max-width:80%}
+.caption b{display:block;font-family:var(--font-d);font-size:1.05rem;font-weight:600}
+.checks{display:grid;gap:12px;margin-top:22px;padding:0;list-style:none}
+.checks li{display:flex;gap:12px;align-items:flex-start;color:var(--ink2)}
+.checks li::before{content:"✓";flex:0 0 26px;height:26px;border-radius:50%;background:var(--forest-soft);color:var(--forest);font-weight:700;display:grid;place-items:center;font-size:.85rem;margin-top:2px}
+
+/* PROCESS timeline with drawn path */
+.timeline{position:relative;display:grid;gap:clamp(30px,4vw,50px);margin-top:10px}
+.tstep{display:grid;grid-template-columns:64px 1fr;gap:22px;align-items:start;position:relative}
+.tstep .dot{width:64px;height:64px;border-radius:50%;background:var(--card);border:1.5px solid var(--line);display:grid;place-items:center;font-family:var(--font-d);font-size:1.5rem;font-weight:600;color:var(--forest);position:relative;z-index:1}
+.tstep.on .dot{background:var(--forest);color:#fff;border-color:var(--forest)}
+.tstep h3{padding-top:12px}
+.tstep p{color:var(--ink2);margin-top:8px;max-width:60ch}
+.tstep .note{display:inline-block;margin-top:12px;font-size:.85rem;font-weight:700;color:var(--lime-ink);background:color-mix(in srgb,var(--lime) 35%,transparent);padding:5px 10px;border-radius:8px}
+.tline{position:absolute;left:31px;top:32px;bottom:32px;width:2px;background:var(--line)}
+.tline i{display:block;width:100%;height:0;background:var(--forest)}
+
+/* PRICING factors */
+.factors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
+@media (max-width:900px){.factors{grid-template-columns:1fr}}
+.factor{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.factor h3{font-size:1.15rem}
+.factor p{color:var(--ink2);margin-top:8px;font-size:.95rem}
+.factor .ic{width:44px;height:44px;border-radius:12px;background:var(--forest-soft);color:var(--forest);display:grid;place-items:center;margin-bottom:16px}
+.factor .ic svg{width:22px;height:22px}
+.promise{margin-top:20px;background:var(--forest);color:#fff;border-radius:18px;padding:26px 28px;display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.promise b{font-family:var(--font-d);font-size:1.3rem;font-weight:600}
+.promise span{color:rgba(255,255,255,.85)}
+
+/* REVIEWS */
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:800px){.rev-grid{grid-template-columns:1fr}}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.rev .stars{color:var(--sun);letter-spacing:2px}
+.rev q{font-family:var(--font-d);font-size:1.3rem;line-height:1.4;font-weight:500;quotes:"„" "“";font-variation-settings:"opsz" 30}
+.rev .who{margin-top:auto;color:var(--muted);font-size:.88rem}
+.rev.sum{grid-column:1/-1;flex-direction:row;align-items:center;gap:26px;flex-wrap:wrap;background:var(--forest-soft);border-color:transparent}
+.rev.sum .big{font-family:var(--font-d);font-size:3.6rem;font-weight:600;color:var(--forest);line-height:1}
+.rev.sum a{font-weight:700;color:var(--forest)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:var(--font-d);font-size:1.2rem;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:0 0 32px;height:32px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-style:normal;transition:transform .3s,background .3s}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--forest);color:#fff;border-color:var(--forest)}
+.faq .a{padding:0 0 22px;color:var(--ink2);max-width:66ch}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#EDF3EE}
+.contact .eyebrow{color:var(--lime)}.contact .eyebrow i{border-color:var(--lime)}
+.contact .lead{color:#B9C8BE}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:start}
+@media (max-width:900px){.cgrid{grid-template-columns:1fr}}
+.cinfo{display:grid;gap:14px;margin-top:28px}
+.cinfo div{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;padding:16px 18px;border:1px solid rgba(255,255,255,.12);border-radius:14px}
+.cinfo b{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#7E9187;display:block}
+.cinfo span{font-size:1rem}
+.copy{background:none;border:1px solid rgba(255,255,255,.2);color:#B9C8BE;border-radius:8px;padding:6px 10px;font:inherit;font-size:.78rem;cursor:pointer}
+.copy:hover{border-color:var(--lime);color:var(--lime)}
+.contact .quick{background:#182420;border-color:rgba(255,255,255,.12);color:#EDF3EE}
+.contact .quick label{color:#B9C8BE}
+.contact .quick input,.contact .quick select,.contact .quick textarea{background:#0F1712;border-color:rgba(255,255,255,.14);color:#EDF3EE}
+.contact .quick .privacy{color:#7E9187}
+.contact .quick::before{content:"Kostenlos & unverbindlich"}
+
+footer{padding-block:40px 30px;font-size:.9rem;color:var(--muted);border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{text-decoration:none;color:var(--ink2)}
+footer a:hover{color:var(--forest)}
+footer ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
+
+.mob-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line);gap:10px}
+.mob-cta .btn{flex:1;justify-content:center;padding:14px}
+@media (max-width:640px){.mob-cta{display:flex}body{padding-bottom:78px}}
+@media (prefers-reduced-motion: reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="logo-mark">S</span><span>Saifi's<small>Gebäudereinigung · Bad Kissingen</small></span></a>
+    <nav aria-label="Hauptnavigation"><ul class="nav-links" id="navLinks">
+      <li><a href="#leistungen">Leistungen</a></li><li><a href="#ueber">Über uns</a></li><li><a href="#ablauf">Ablauf</a></li><li><a href="#preise">Preise</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#faq">Fragen</a></li>
+    </ul></nav>
+    <a class="btn btn-primary" href="#kontakt">Angebot anfordern</a>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#leistungen">Leistungen</a><a href="#ueber">Über uns</a><a href="#ablauf">Ablauf</a><a href="#preise">Preise</a><a href="#stimmen">Stimmen</a><a href="#faq">Fragen</a><a href="#kontakt">Kontakt</a>
+  <a class="btn btn-primary" href="#kontakt">Angebot anfordern</a>
+</div>
+
+<main id="top">
+<section class="hero">
+  <svg class="hills-bg" viewBox="0 0 1400 300" preserveAspectRatio="none" aria-hidden="true">
+    <path id="hill1" d="M0 220 C200 120 380 260 600 180 S950 90 1400 170 L1400 300 L0 300Z" fill="var(--forest-soft)"/>
+    <path id="hill2" d="M0 270 C250 200 500 290 760 240 S1150 190 1400 250 L1400 300 L0 300Z" fill="var(--bg2)"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i></i>Gebäudereinigung aus Bad Kissingen</span>
+      <h1>
+        <span class="ln"><span>Wir putzen nicht.</span></span>
+        <span class="ln"><span>Wir <em class="i">pflegen</em> Ihr Objekt.</span></span>
+      </h1>
+      <p class="lead">Für Hausverwaltungen, Praxen, Betriebe und Privathaushalte in Bad Kissingen und der Rhön: regelmäßige Unterhaltsreinigung, streifenfreies Glas, saubere Treppenhäuser und Photovoltaikanlagen, die wieder volle Leistung bringen. Persönlich, planbar, zum Festpreis.</p>
+      <div class="hero-facts">
+        <div class="fact"><b><span class="st">★★★★★</span></b><span>29 Google-Bewertungen · „Ausgezeichnet“</span></div>
+        <div class="fact"><b>24 h</b><span>bis zu Ihrem Angebot</span></div>
+        <div class="fact"><b>7</b><span>Leistungen aus einer Hand</span></div>
+        <div class="fact"><b>97688</b><span>Zuhause in Bad Kissingen</span></div>
+      </div>
+    </div>
+    <form class="quick" id="quickForm" novalidate>
+      <div class="intro"><h3>Was soll sauber werden?</h3><p class="small">Kurz auswählen, wir melden uns mit einem konkreten Vorschlag.</p>
+        <div class="chips" id="chips"><button type="button" data-v="Unterhaltsreinigung">Büro / Praxis</button><button type="button" data-v="Treppenhausreinigung">Treppenhaus</button><button type="button" data-v="Glasreinigung">Fenster / Glas</button><button type="button" data-v="Photovoltaikreinigung">Photovoltaik</button><button type="button" data-v="Grundreinigung">Grundreinigung</button><button type="button" data-v="Baureinigung">Baureinigung</button><button type="button" data-v="Fassadenreinigung">Fassade</button></div>
+      </div>
+      <div class="fields">
+        <div class="field"><label for="q-name">Name</label><input id="q-name" required placeholder="Ihr Name"></div>
+        <div class="field"><label for="q-contact">Telefon oder E-Mail</label><input id="q-contact" required placeholder="Für die Rückmeldung"></div>
+        <div class="field full"><label for="q-service">Leistung</label><select id="q-service"><option>Unterhaltsreinigung</option><option>Treppenhausreinigung</option><option>Glasreinigung</option><option>Photovoltaikreinigung</option><option>Grundreinigung</option><option>Baureinigung</option><option>Fassadenreinigung</option></select></div>
+        <div class="field full"><label for="q-msg">Kurz zum Objekt (optional)</label><textarea id="q-msg" placeholder="z. B. Mehrfamilienhaus mit 8 Parteien, Reinigung 14-tägig"></textarea></div>
+      </div>
+      <button class="btn btn-primary" type="submit">Kostenloses Angebot anfordern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="privacy">Keine Werbung, kein Newsletter. Nur Ihr Angebot. <a href="#datenschutz">Datenschutz</a></p>
+      <div class="success" role="status"><div class="ck">✓</div><h3>Vielen Dank!</h3><p class="lead" style="margin:8px auto 0;text-align:center;font-size:1rem">Wir melden uns innerhalb von 24 Stunden.</p></div>
+    </form>
+  </div>
+</section>
+
+<div class="trust"><div class="wrap">
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Festpreis-Angebot</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fester Ansprechpartner</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Geschultes eigenes Team</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Umweltschonende Reinigungsmittel</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kurzfristig in der ganzen Rhön</span>
+</div></div>
+
+<section id="leistungen">
+  <div class="wrap chapter">
+    <aside class="side"><span class="eyebrow"><i></i>Leistungen</span><h2>Sieben Wege zu einem gepflegten Objekt.</h2><p>Klicken Sie eine Leistung an, um sie direkt im Anfrageformular vorzuwählen.</p></aside>
+    <div class="svc-list">
+      <a class="svc reveal" href="#kontakt" data-pick="Unterhaltsreinigung"><span class="k">01</span><div><h3>Unterhaltsreinigung</h3><p>Die regelmäßige Reinigung von Büros, Praxen, Ladenflächen und Wohnanlagen – wöchentlich, mehrmals wöchentlich oder täglich. Mit Leistungsverzeichnis, festem Team und Qualitätskontrolle.</p><div class="who"><span>Gewerbe</span><span>Praxen</span><span>Hausverwaltung</span></div></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="svc reveal" href="#kontakt" data-pick="Treppenhausreinigung"><span class="k">02</span><div><h3>Treppenhausreinigung</h3><p>Treppen, Flure, Eingänge, Briefkastenanlagen und Kellergänge im festen Rhythmus. Für Eigentümergemeinschaften und Vermieter, die Ruhe im Haus wollen.</p><div class="who"><span>WEG</span><span>Vermieter</span></div></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="svc reveal" href="#kontakt" data-pick="Glasreinigung"><span class="k">03</span><div><h3>Glasreinigung</h3><p>Fenster, Schaufenster, Glastüren, Wintergärten und Fassadenglas – streifenfrei, innen und außen, mit Teleskop- und Reinwassertechnik bis in große Höhen.</p><div class="who"><span>Handel</span><span>Privat</span><span>Gewerbe</span></div></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="svc reveal" href="#kontakt" data-pick="Grundreinigung"><span class="k">04</span><div><h3>Grundreinigung</h3><p>Die intensive Reinigung aller Flächen und Oberflächen: Böden, Fugen, Sanitär, Küchen, Fensterrahmen. Vor Einzug, nach Auszug oder als jährliche Auffrischung.</p><div class="who"><span>Umzug</span><span>Jahresreinigung</span></div></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="svc reveal" href="#kontakt" data-pick="Baureinigung"><span class="k">05</span><div><h3>Baureinigung</h3><p>Bauzwischenreinigung während der Bauphase und Bauendreinigung zur Übergabe – Staub, Kleberreste, Schutzfolien, Fenster. Termintreu für Bauträger, Handwerksbetriebe und Bauherren.</p><div class="who"><span>Bauträger</span><span>Handwerk</span></div></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="svc reveal" href="#kontakt" data-pick="Fassadenreinigung"><span class="k">06</span><div><h3>Fassadenreinigung</h3><p>Algen, Moos, Ruß und Witterungsschmutz schonend entfernen, ohne Putz und Farbe zu beschädigen. Ihr Gebäude wirkt gepflegt und behält seinen Wert.</p><div class="who"><span>Werterhalt</span><span>Gewerbe</span></div></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="svc reveal" href="#kontakt" data-pick="Photovoltaikreinigung"><span class="k">07</span><div><h3>Photovoltaikreinigung</h3><p>Staub, Pollen, Vogelkot und Flechten kosten Ertrag. Wir reinigen Module mit entmineralisiertem Wasser und weichen Bürsten – ohne Chemie, ohne Kratzer, ohne Garantieverlust.</p><div class="who"><span>Dachanlagen</span><span>Landwirtschaft</span></div></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="ueber">
+  <div class="wrap">
+    <div class="row">
+      <div class="media reveal"><div class="frame"><div class="img parallax"><span class="ph">Foto: Team vor Ort</span></div></div><div class="caption"><b>Ein Team, das bleibt</b>Dieselben Gesichter bei jedem Termin.</div></div>
+      <div class="reveal">
+        <span class="eyebrow"><i></i>Über uns</span>
+        <h2 style="margin-top:14px">Jung, geschult und aus <em class="i">Bad Kissingen</em>.</h2>
+        <p class="lead" style="margin-top:18px">Wir sind ein junges Team mit frischen Ideen für eine Branche, in der oft noch „irgendjemand irgendwann“ kommt. Bei uns kommt jemand Bestimmtes zu einer bestimmten Zeit – und Sie kennen ihn mit Namen.</p>
+        <ul class="checks">
+          <li>Jede Kollegin und jeder Kollege ist für einen Bereich speziell geschult – Glas, Böden, Fassade oder Photovoltaik.</li>
+          <li>Ein fester Ansprechpartner für alles: Fragen, Änderungen, Sonderwünsche.</li>
+          <li>Wir wohnen hier. Kurze Wege, schnelle Reaktion, echtes Interesse an Ihrer Empfehlung.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row flip">
+      <div class="media reveal"><div class="frame"><div class="img b parallax"><span class="ph">Foto: Glasreinigung Schaufenster</span></div></div><div class="caption"><b>Sichtbar sauber</b>Reinwasser-Technik, streifenfrei bis in den Rahmen.</div></div>
+      <div class="reveal">
+        <span class="eyebrow"><i></i>Qualität</span>
+        <h2 style="margin-top:14px">Erst prüfen wir. Dann sind wir fertig.</h2>
+        <p class="lead" style="margin-top:18px">Nach jedem Einsatz kontrolliert die Teamleitung das Ergebnis nach einer festen Checkliste. Bei regelmäßigen Objekten bekommen Sie auf Wunsch eine kurze Fotodokumentation – damit Sie nicht nachschauen müssen.</p>
+        <ul class="checks">
+          <li>Checkliste pro Objekt statt „nach Gefühl“</li>
+          <li>Fotodokumentation auf Wunsch</li>
+          <li>Umweltschonende, materialgerechte Reinigungsmittel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ablauf">
+  <div class="wrap chapter">
+    <aside class="side"><span class="eyebrow"><i></i>Ablauf</span><h2>Vier Schritte. Keine Überraschungen.</h2><p>Die meisten Angebote verschicken wir noch am selben Tag.</p></aside>
+    <div class="timeline" id="timeline">
+      <div class="tline" aria-hidden="true"><i id="tfill"></i></div>
+      <div class="tstep"><span class="dot">1</span><div><h3>Sie fragen an</h3><p>Formular, Anruf oder WhatsApp – zwei Minuten reichen. Wir melden uns innerhalb von 24 Stunden.</p><span class="note">2 Minuten</span></div></div>
+      <div class="tstep"><span class="dot">2</span><div><h3>Wir schauen uns das Objekt an</h3><p>Vor Ort oder anhand Ihrer Fotos. Wir klären Umfang, Rhythmus und Besonderheiten – Böden, Materialien, Zugänge, Zeiten.</p><span class="note">ca. 20 Minuten</span></div></div>
+      <div class="tstep"><span class="dot">3</span><div><h3>Sie erhalten ein Festpreis-Angebot</h3><p>Mit Leistungsverzeichnis, klar aufgeschlüsselt. Was drinsteht, gilt – ohne Kleingedrucktes.</p><span class="note">innerhalb von 24 h</span></div></div>
+      <div class="tstep"><span class="dot">4</span><div><h3>Wir reinigen – und prüfen</h3><p>Zum vereinbarten Termin, mit festem Team. Nach dem Einsatz kontrollieren wir das Ergebnis. Zufrieden sind wir erst, wenn Sie es sind.</p><span class="note">zum Wunschtermin</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="preise">
+  <div class="wrap chapter">
+    <aside class="side"><span class="eyebrow"><i></i>Preise</span><h2>Woraus sich Ihr Preis ergibt.</h2><p>Ehrlich gesagt: Einen Pauschalpreis gibt es in der Gebäudereinigung nicht. Aber es gibt ein transparentes Angebot.</p></aside>
+    <div>
+      <div class="factors">
+        <div class="factor reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span><h3>Fläche &amp; Aufteilung</h3><p>Quadratmeter, Anzahl der Räume, Sanitärbereiche und Böden bestimmen den Aufwand.</p></div>
+        <div class="factor reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Rhythmus</h3><p>Täglich, wöchentlich, 14-tägig oder einmalig – je regelmäßiger, desto günstiger pro Einsatz.</p></div>
+        <div class="factor reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Material &amp; Technik</h3><p>Glas in der Höhe, Natursteinböden oder PV-Module brauchen spezielle Geräte und Fachwissen.</p></div>
+      </div>
+      <div class="promise reveal"><div><b>Unser Versprechen</b><br><span>Festpreis-Angebot innerhalb von 24 Stunden. Keine Anfahrtspauschale im Landkreis Bad Kissingen.</span></div><a class="btn btn-lime" href="#kontakt">Angebot anfordern</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="stimmen">
+  <div class="wrap chapter">
+    <aside class="side"><span class="eyebrow"><i></i>Stimmen</span><h2>Was Kundinnen und Kunden sagen.</h2><p>Öffentlich bei Google, ungefiltert.</p></aside>
+    <div class="rev-grid">
+      <article class="rev sum reveal"><div class="big">5,0</div><div><div class="stars">★★★★★</div><div style="margin-top:4px">„Ausgezeichnet“ · 29 Bewertungen bei Google</div><a href="https://www.google.com/search?q=Saifi%27s+Geb%C3%A4udereinigung+Bad+Kissingen" target="_blank" rel="noopener">Alle Bewertungen lesen →</a></div></article>
+      <article class="rev reveal"><div class="stars">★★★★★</div><q>Die Gebäudereinigung war absolut professionell, zuverlässig und gründlich. Besonders positiv fand ich die freundliche Kommunikation und die Pünktlichkeit des Teams.</q><div class="who">Google-Bewertung · Bad Kissingen</div></article>
+      <article class="rev reveal"><div class="stars">★★★★★</div><q>Zuverlässig, pünktlich, sehr freundlich, sauber und perfekt. Absolut empfehlenswert.</q><div class="who">Google-Bewertung · Privatkundin</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="faq">
+  <div class="wrap chapter">
+    <aside class="side"><span class="eyebrow"><i></i>Häufige Fragen</span><h2>Kurz beantwortet.</h2></aside>
+    <div class="faq">
+      <details><summary>Wie schnell bekomme ich ein Angebot?<i>+</i></summary><div class="a">Innerhalb von 24 Stunden nach Ihrer Anfrage – bei kleineren Objekten meist am selben Tag. Für größere Objekte vereinbaren wir zuerst eine kurze Besichtigung.</div></details>
+      <details><summary>Reinigen Sie auch außerhalb der Geschäftszeiten?<i>+</i></summary><div class="a">Ja. Büros und Praxen reinigen wir in der Regel früh morgens oder abends, damit Ihr Betrieb nicht gestört wird. Die Zeiten legen wir gemeinsam fest.</div></details>
+      <details><summary>Kommt immer dasselbe Team?<i>+</i></summary><div class="a">Ja. Jedes Objekt hat ein festes Team und eine feste Ansprechperson. Bei Urlaub oder Krankheit springt jemand ein, der das Objekt bereits kennt.</div></details>
+      <details><summary>Welche Reinigungsmittel verwenden Sie?<i>+</i></summary><div class="a">Materialgerechte, möglichst umweltschonende Mittel. Bei Glas und Photovoltaik arbeiten wir mit entmineralisiertem Wasser ganz ohne Chemie.</div></details>
+      <details><summary>Wo sind Sie im Einsatz?<i>+</i></summary><div class="a">In Bad Kissingen und im gesamten Landkreis – Bad Bocklet, Münnerstadt, Hammelburg, Bad Brückenau, Oerlenbach – sowie bis Bad Neustadt und Schweinfurt.</div></details>
+      <details><summary>Gibt es eine Mindestlaufzeit?<i>+</i></summary><div class="a">Für einmalige Reinigungen nein. Regelmäßige Verträge sind flexibel kündbar – wir möchten, dass Sie bleiben, weil Sie zufrieden sind, nicht weil Sie müssen.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap cgrid">
+    <div>
+      <span class="eyebrow"><i></i>Kontakt</span>
+      <h2 style="margin-top:14px">Sprechen wir über Ihr Objekt.</h2>
+      <p class="lead" style="margin-top:18px">Kostenlos, unverbindlich und innerhalb von 24 Stunden beantwortet. Oder rufen Sie einfach an.</p>
+      <div class="cinfo">
+        <div><div><b>Telefon &amp; WhatsApp</b><span id="phone">0971 / 000 00 00</span></div><button class="copy" data-copy="#phone">Kopieren</button></div>
+        <div><div><b>E-Mail</b><span id="mail">info@saifis-gebaeudereinigung.de</span></div><button class="copy" data-copy="#mail">Kopieren</button></div>
+        <div><div><b>Adresse</b><span>Kampfholz 95 · 97688 Bad Kissingen</span></div></div>
+        <div><div><b>Erreichbar</b><span>Mo – Fr 7:00 – 18:00 · Sa 8:00 – 13:00</span></div></div>
+      </div>
+    </div>
+    <form class="quick" id="quickForm2" novalidate>
+      <div class="intro"><h3>Angebot anfordern</h3><p class="small" style="color:#7E9187">Zwei Minuten. Wir melden uns.</p></div>
+      <div class="fields">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" required placeholder="Ihr Name"></div>
+        <div class="field"><label for="c-contact">Telefon oder E-Mail</label><input id="c-contact" required placeholder="Für die Rückmeldung"></div>
+        <div class="field full"><label for="c-service">Leistung</label><select id="c-service"><option>Unterhaltsreinigung</option><option>Treppenhausreinigung</option><option>Glasreinigung</option><option>Photovoltaikreinigung</option><option>Grundreinigung</option><option>Baureinigung</option><option>Fassadenreinigung</option></select></div>
+        <div class="field full"><label for="c-msg">Kurz zum Objekt</label><textarea id="c-msg" placeholder="z. B. Bürofläche 250 m² in Bad Kissingen, 2× wöchentlich"></textarea></div>
+      </div>
+      <button class="btn btn-lime" type="submit">Kostenloses Angebot anfordern</button>
+      <p class="privacy">Mit dem Absenden stimmen Sie der <a href="#datenschutz">Datenschutzerklärung</a> zu.</p>
+      <div class="success" role="status"><div class="ck">✓</div><h3>Vielen Dank!</h3><p style="margin-top:8px;color:#B9C8BE">Wir melden uns innerhalb von 24 Stunden.</p></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap foot">
+  <span>© 2026 Saifi's Gebäudereinigung · Kampfholz 95 · 97688 Bad Kissingen</span>
+  <ul><li><a href="#leistungen">Leistungen</a></li><li><a href="#faq">Fragen</a></li><li><a href="#kontakt">Kontakt</a></li><li><a href="#impressum">Impressum</a></li><li><a href="#datenschutz">Datenschutz</a></li></ul>
+</div></footer>
+<div class="mob-cta"><a class="btn btn-ghost" href="#kontakt">Anrufen</a><a class="btn btn-primary" href="#kontakt">Angebot anfordern</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  // chips preselect service
+  const sel=document.getElementById('q-service'), sel2=document.getElementById('c-service');
+  document.querySelectorAll('#chips button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#chips button').forEach(x=>x.classList.remove('on'));b.classList.add('on');sel.value=b.dataset.v;}));
+  document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{sel2.value=a.dataset.pick;sel.value=a.dataset.pick;}));
+  // copy
+  document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{const el=document.querySelector(b.dataset.copy);try{await navigator.clipboard.writeText(el.textContent.trim());b.textContent='Kopiert ✓';}catch(e){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Markiert';}setTimeout(()=>b.textContent='Kopieren',1800);}));
+  // forms
+  document.querySelectorAll('form.quick').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();let ok=true;form.querySelectorAll('input[required]').forEach(i=>{if(!i.value.trim()){i.style.borderColor='#E5484D';ok=false;}else i.style.borderColor='';});if(ok)form.classList.add('sent');}));
+  // active nav
+  const links=[...document.querySelectorAll('#navLinks a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id));}});},{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(s=>io.observe(s));
+  // timeline steps activate
+  const steps=[...document.querySelectorAll('.tstep')];
+  const io2=new IntersectionObserver(es=>es.forEach(en=>en.target.classList.toggle('on',en.isIntersecting||en.boundingClientRect.top<0)),{rootMargin:'-30% 0px -50% 0px'});
+  steps.forEach(s=>io2.observe(s));
+
+  if(!window.gsap||reduce){document.getElementById('tfill').style.height='100%';return;}
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.timeline({defaults:{ease:'power3.out'}})
+    .from('.hero h1 .ln span',{yPercent:105,duration:1,stagger:.14})
+    .from('.hero .eyebrow, .hero .lead, .hero-facts',{y:20,opacity:0,duration:.7,stagger:.12},'-=.6')
+    .from('.quick',{y:30,opacity:0,duration:.8},'-=.7')
+    .from('#hill1',{yPercent:30,duration:1.6,ease:'power2.out'},0)
+    .from('#hill2',{yPercent:50,duration:1.6,ease:'power2.out'},0.1);
+  gsap.utils.toArray('.reveal').forEach(el=>gsap.from(el,{y:34,opacity:0,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+  gsap.utils.toArray('.parallax').forEach(el=>gsap.fromTo(el,{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:el.closest('.frame'),start:'top bottom',end:'bottom top',scrub:true}}));
+  gsap.to('#tfill',{height:'100%',ease:'none',scrollTrigger:{trigger:'#timeline',start:'top 60%',end:'bottom 60%',scrub:true}});
+  gsap.utils.toArray('.side').forEach(s=>gsap.from(s,{x:-20,opacity:0,duration:.8,scrollTrigger:{trigger:s,start:'top 85%',once:true}}));
+})();
+</script>
+</body>
+</html>

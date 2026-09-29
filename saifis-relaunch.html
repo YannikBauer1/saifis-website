@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saifi's Relaunch</title>
+<meta name="description" content="Audit of the current saifis-gebaeudereinigung.de, competitor analysis, and three new website directions to compare.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{--bg:#F5F8F9;--card:#fff;--ink:#0F2430;--ink2:#41596A;--muted:#7A919F;--line:#D9E4EA;--accent:#137E8F;--accent-soft:#DDEFF2;--good:#1F8A5B;--bad:#C0392B;--warn:#B7791F;--font-d:"Plus Jakarta Sans",system-ui,sans-serif;--font-b:"Figtree",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0D1B21;--card:#132630;--ink:#EAF2F5;--ink2:#B4C7D0;--muted:#7E96A3;--line:#233A45;--accent:#3FBFD1;--accent-soft:#143C46;--good:#5FCF97;--bad:#F08A7E;--warn:#E5B35A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0D1B21;--card:#132630;--ink:#EAF2F5;--ink2:#B4C7D0;--muted:#7E96A3;--line:#233A45;--accent:#3FBFD1;--accent-soft:#143C46;--good:#5FCF97;--bad:#F08A7E;--warn:#E5B35A;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-b);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto;padding-block:40px 80px}
+@media (max-width:640px){.wrap{width:min(1080px,100% - 32px)}}
+h1,h2,h3{font-family:var(--font-d);margin:0;line-height:1.15;text-wrap:balance;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800}
+h2{font-size:1.6rem;font-weight:800;margin-top:64px;padding-top:24px;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0}
+a{color:var(--accent)}
+.sub{color:var(--ink2);font-size:1.1rem;max-width:66ch;margin-top:14px}
+.eyebrow{font-family:var(--font-d);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card p{color:var(--ink2);font-size:.95rem}
+.variant{padding:0;overflow:hidden}
+.variant .swatch{height:150px;position:relative;display:flex;align-items:flex-end;padding:16px;color:#fff;font-family:var(--font-d);font-weight:800;font-size:1.4rem;letter-spacing:-.02em}
+.variant .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.variant .tag{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.variant ul{margin:0;padding-left:18px;color:var(--ink2);font-size:.92rem;display:grid;gap:4px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-family:var(--font-d);font-weight:700;padding:12px 18px;border-radius:10px;text-decoration:none;margin-top:8px;align-self:flex-start}
+.btn:hover{filter:brightness(1.08)}
+.sa{background:linear-gradient(145deg,#149FB3,#0E5E6B)}.sa::after{content:"";position:absolute;right:20px;top:20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.18)}
+.sb{background:linear-gradient(145deg,#0C1A20,#132A33);color:#FFB457!important}.sb::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;border:1px solid rgba(255,180,87,.5)}
+.sc{background:linear-gradient(145deg,#1F6B4A,#154D35)}.sc::after{content:"";position:absolute;right:20px;top:24px;width:60px;height:60px;border-radius:50%;background:#CFEA5E;opacity:.9}
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:.93rem}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--font-d);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:color-mix(in srgb,var(--line) 40%,transparent)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.78rem;font-weight:700}
+.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.good{background:color-mix(in srgb,var(--good) 15%,transparent);color:var(--good)}
+.warn{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.list{display:grid;gap:12px;margin-top:18px;padding:0;list-style:none}
+.list li{display:grid;grid-template-columns:auto 1fr;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.list li b{font-family:var(--font-d)}
+.list li .k{font-family:var(--font-d);font-weight:800;color:var(--accent);min-width:28px}
+.list li span{color:var(--ink2);font-size:.95rem}
+.note{margin-top:18px;background:var(--accent-soft);border-radius:12px;padding:16px 18px;font-size:.95rem;color:var(--ink2)}
+.note b{color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.two ul{margin:8px 0 0;padding-left:18px;color:var(--ink2);font-size:.95rem;display:grid;gap:6px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.meta span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.85rem;color:var(--ink2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Website relaunch · September 2026</span>
+  <h1 style="margin-top:10px">Saifi's Gebäudereinigung: audit, competitors, three new directions</h1>
+  <p class="sub">The current site at saifis-gebaeudereinigung.de is a generic builder template that does not sell. Below is what is wrong, what the stronger regional players do, and three fully built one-page prototypes with motion you can open and compare.</p>
+  <div class="meta"><span>Bad Kissingen · Rhön</span><span>7 services</span><span>29 Google reviews · „Ausgezeichnet“</span><span>Address: Kampfholz 95</span></div>
+
+  <h2>The three variants</h2>
+  <p class="sub" style="font-size:1rem">All three use the same real content (services, reviews, address). They differ in tone, layout and motion. Open each on desktop and phone; the animations need a browser, not the thumbnail.</p>
+  <div class="grid">
+    <article class="card variant">
+      <div class="swatch sa">A · Frischluft</div>
+      <div class="body">
+        <span class="tag">Light · friendly · local</span>
+        <h3>Safe bet, broad appeal</h3>
+        <p>Aqua on off-white, rounded cards, bento service grid. Signature motion: a squeegee wipes the frosted hero window clean on load, floating job cards drift, stats count up, process line fills on scroll.</p>
+        <ul><li>Best for: private households and small businesses</li><li>Feels: clean, approachable, modern</li><li>Fonts: Plus Jakarta Sans + Figtree</li></ul>
+        <a class="btn" href="https://claude.ai/artifact/Lc29kaZPc7mKYqkHPk4PE7" target="_blank" rel="noopener">Open Variante A →</a>
+      </div>
+    </article>
+    <article class="card variant">
+      <div class="swatch sb">B · Nachtschicht</div>
+      <div class="body">
+        <span class="tag">Dark · premium · bold</span>
+        <h3>Stand out from every competitor</h3>
+        <p>Deep petrol with amber, huge kinetic headline, film grain. Signature motion: services pin and scroll horizontally, a quote lights up word by word as you scroll, before/after slider, cursor spotlight, magnetic buttons.</p>
+        <ul><li>Best for: B2B, property managers, larger contracts</li><li>Feels: confident, high-end, unusual for the trade</li><li>Fonts: Syne + DM Sans</li></ul>
+        <a class="btn" href="https://claude.ai/artifact/FrjhfPzN9ybTXX1AuBzWxC" target="_blank" rel="noopener">Open Variante B →</a>
+      </div>
+    </article>
+    <article class="card variant">
+      <div class="swatch sc">C · Rhön</div>
+      <div class="body">
+        <span class="tag">Editorial · regional · conversion-first</span>
+        <h3>Most leads per visitor</h3>
+        <p>Forest green with a lime accent and a serif display face. The quote form sits in the hero with one-tap service chips. Sticky chapter navigation, parallax photo frames, a timeline that draws itself, price-factor explainer and FAQ.</p>
+        <ul><li>Best for: SEO, Google Ads landing, trust building</li><li>Feels: established, honest, rooted in the region</li><li>Fonts: Fraunces + Karla</li></ul>
+        <a class="btn" href="https://claude.ai/artifact/Hdarwq4Z8ddQDBEZLufobe" target="_blank" rel="noopener">Open Variante C →</a>
+      </div>
+    </article>
+  </div>
+  <div class="note"><b>My recommendation:</b> start from C for structure and conversion, and borrow A's hero animation if the friend wants something more playful. B is the boldest and would be the only dark cleaning site in the region, but it needs strong real photography to work.</div>
+
+  <h2>Audit of the current site</h2>
+  <p class="sub" style="font-size:1rem">The site itself is blocked from this environment's network, so this audit is based on search-engine snapshots of its pages, its indexed titles and meta text, and how it competes in search results. Please double-check the points marked "verify".</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Area</th><th>Finding</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr><td>Page title</td><td>The indexed title is "Homepage - Saifi's Gebäudereinigung Homepage | Saifi's Gebäudereinigung". Repeats the brand twice, says "Homepage" twice, and never mentions Bad Kissingen or a service.</td><td><span class="pill bad">Critical for SEO</span></td></tr>
+      <tr><td>Two domains</td><td>Content is indexed under both saifis-gebaeudereinigung.de and the umlaut domain saifi's-gebäudereinigung.de (punycode). Both serve pages without a redirect, so Google sees duplicate content.</td><td><span class="pill bad">Critical for SEO</span></td></tr>
+      <tr><td>Hero copy</td><td>"Herzlich Willkommen" style opening. No headline that says what you do, where, and why to pick you. Visitors on a phone see nothing sellable in the first screen.</td><td><span class="pill bad">Conversion</span></td></tr>
+      <tr><td>Call to action</td><td>Only a "Jetzt anrufen" button. No quote form, no promise of response time, no WhatsApp. B2B visitors who research at night have no way to act.</td><td><span class="pill bad">Conversion</span></td></tr>
+      <tr><td>Services</td><td>Seven services are listed as names only (Baureinigung, Fassadenreinigung, Glasreinigung, Grundreinigung, Photovoltaikreinigung, Treppenhausreinigung, Unterhaltsreinigung). No description, no target group, no keywords per service.</td><td><span class="pill warn">SEO + trust</span></td></tr>
+      <tr><td>Social proof</td><td>The 29 "Ausgezeichnet" Google reviews are the strongest asset and are barely used. Two quotes are embedded but no rating summary, no link to the profile.</td><td><span class="pill warn">Trust</span></td></tr>
+      <tr><td>Team page</td><td>Generic text ("junges, dynamisches Team") with no names, photos, or certificates. Reads like a template.</td><td><span class="pill warn">Trust</span></td></tr>
+      <tr><td>Contact data</td><td>Address "Kampfholz 95" appears in snippets, but no phone number or email is indexed anywhere. Local SEO needs NAP (name, address, phone) consistent on the site and in Google Business.</td><td><span class="pill warn">Local SEO · verify</span></td></tr>
+      <tr><td>Design</td><td>Builder template look: stock layout, no brand color system, no motion, weak typography hierarchy. Nothing that would be remembered.</td><td><span class="pill warn">Brand</span></td></tr>
+      <tr><td>Legal</td><td>Impressum and Datenschutz exist (required in Germany). Keep them, but a cookie banner is only needed if tracking is added.</td><td><span class="pill good">OK</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Competitors in the region</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Company</th><th>What they do well</th><th>Weakness Saifi's can exploit</th></tr></thead>
+    <tbody>
+      <tr><td>Titan Gebäudereinigung<br><small style="color:var(--muted)">Kitzingen · 200+ staff</small></td><td>ISO 9001 and 14001 badges, guild membership, 12+ services, dedicated quote form, city-keyword URLs for Würzburg, Schweinfurt, Kitzingen.</td><td>Corporate and anonymous. No faces, no local feel. Bad Kissingen is only a side market for them.</td></tr>
+      <tr><td>Scholl Gebäudereinigung<br><small style="color:var(--muted)">Bad Kissingen · direct competitor</small></td><td>Established name, very broad service list (hospital, monument, winter service), guild member, phone number everywhere.</td><td>Old-fashioned site (index.php URLs, mixed old and new pages). No reviews shown, no modern design, no online request.</td></tr>
+      <tr><td>Rappelt GmbH<br><small style="color:var(--muted)">Kitzingen</small></td><td>One page per service with proper descriptions. Clear structure.</td><td>Generic stock copy, no differentiation, no social proof.</td></tr>
+      <tr><td>Frank Menna<br><small style="color:var(--muted)">regional</small></td><td>Aggressive local SEO: separate landing page for "Gebäudereinigung Bad Kissingen" with keywords in the title.</td><td>Not based in Bad Kissingen. Saifi's can win the "local" story and the reviews.</td></tr>
+      <tr><td>Portals (MyHammer, trustlocal, gelbeseiten)</td><td>Rank on top for "Gebäudereinigung Bad Kissingen" with 4.9 aggregate ratings.</td><td>They send leads to whoever is listed. A strong site plus a complete Google Business profile pulls those clicks directly.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="two">
+    <div class="card"><h3>What the winners share</h3><ul><li>Headline = service + city in the first screen</li><li>Quote form or "Angebot in 24 h" promise above the fold</li><li>Trust row: reviews, certificates, guild, years</li><li>One block per service with a target group</li><li>Real photos of the team and vehicles</li><li>City-specific pages or sections for the service area</li></ul></div>
+    <div class="card"><h3>Where nobody in the region plays</h3><ul><li>Motion and brand personality (all sites are static templates)</li><li>Reviews used as the main argument</li><li>Transparent explanation of how the price is built</li><li>Photovoltaik cleaning as a growth niche (rooftop PV is booming in Lower Franconia)</li><li>A friendly, young team shown as a strength instead of hidden</li></ul></div>
+  </div>
+
+  <h2>What all three prototypes fix</h2>
+  <ul class="list">
+    <li><span class="k">01</span><div><b>First screen sells.</b><span> Service + city in the eyebrow, a claim in the headline, two calls to action, and the review rating visible before scrolling.</span></div></li>
+    <li><span class="k">02</span><div><b>Quote request in 2 minutes.</b><span> Every variant has a form with service selection and a "Antwort in 24 h" promise, plus a sticky phone/quote bar on mobile.</span></div></li>
+    <li><span class="k">03</span><div><b>Reviews as the main proof.</b><span> 5.0 rating tile, the two real quotes, and a link to the Google profile.</span></div></li>
+    <li><span class="k">04</span><div><b>Every service explained.</b><span> Description, target group, and the keyword in the heading (e.g. "Photovoltaikreinigung"). Ready to expand into subpages later.</span></div></li>
+    <li><span class="k">05</span><div><b>Local SEO structure.</b><span> Service area section listing Bad Kissingen, Bad Bocklet, Münnerstadt, Hammelburg, Bad Brückenau, Oerlenbach, Bad Neustadt, Schweinfurt. Meta description with city and services.</span></div></li>
+    <li><span class="k">06</span><div><b>Motion with a reason.</b><span> Each variant has one orchestrated hero moment and scroll reveals via GSAP; all respect reduced-motion settings.</span></div></li>
+    <li><span class="k">07</span><div><b>Mobile first, accessible.</b><span> Tested at 390px, visible focus states, labels on every input, dark mode support in A and C.</span></div></li>
+  </ul>
+
+  <h2>What we still need from your friend</h2>
+  <p class="sub" style="font-size:1rem">These are placeholders in the prototypes and must be replaced before going live.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th>Currently</th><th>Needed</th></tr></thead>
+    <tbody>
+      <tr><td>Phone number</td><td>0971 / 000 00 00</td><td>Real landline and WhatsApp number</td></tr>
+      <tr><td>Email</td><td>info@saifis-gebaeudereinigung.de (assumed)</td><td>Confirm the real address</td></tr>
+      <tr><td>Address</td><td>Kampfholz 95, 97688 Bad Kissingen (from search snippet)</td><td>Verify house number and postcode</td></tr>
+      <tr><td>Opening hours</td><td>Mo–Fr 7–18, Sa 8–13 (assumed)</td><td>Real hours</td></tr>
+      <tr><td>Photos</td><td>Labelled placeholder frames</td><td>Team, vehicle, 3–5 job photos, 2 before/after pairs, owner portrait</td></tr>
+      <tr><td>Owner name</td><td>"Saifi"</td><td>Full name for Impressum and team section</td></tr>
+      <tr><td>Reviews</td><td>2 real quotes + "29, Ausgezeichnet"</td><td>Link to Google Business profile, permission to quote 3–5 more</td></tr>
+      <tr><td>Claims to verify</td><td>"Festpreis", "keine Anfahrtspauschale im Landkreis", "kein Subunternehmer", "Reinwasser-Technik"</td><td>Confirm or remove each claim</td></tr>
+      <tr><td>Certificates</td><td>None shown</td><td>Innung membership, insurance, any training certificates, if they exist</td></tr>
+      <tr><td>Form backend</td><td>Shows a thank-you state only</td><td>Connect to email (e.g. Formspree, Netlify Forms, or a small PHP mailer) when hosting</td></tr>
+      <tr><td>Legal pages</td><td>Links to #impressum / #datenschutz</td><td>Copy existing Impressum and Datenschutz over</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Technical notes</h2>
+  <div class="two">
+    <div class="card"><h3>How the prototypes are built</h3><ul><li>Single self-contained HTML file per variant, no build step</li><li>GSAP 3.12 + ScrollTrigger from cdnjs for motion</li><li>Google Fonts, everything else inline (CSS, SVG icons, canvas)</li><li>Standalone versions are in the saifis-website repository</li></ul></div>
+    <div class="card"><h3>Going live</h3><ul><li>Host on the existing domain; set a 301 redirect from the umlaut domain to saifis-gebaeudereinigung.de</li><li>Title tag: "Gebäudereinigung Bad Kissingen | Saifi's – Unterhalts-, Glas- &amp; PV-Reinigung"</li><li>Add LocalBusiness JSON-LD with NAP and opening hours</li><li>Complete the Google Business profile with the same data and photos</li><li>Optional later: one subpage per service for SEO depth</li></ul></div>
+  </div>
+</div>
+</body>
+</html>
