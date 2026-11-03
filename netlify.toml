@@ -1,0 +1,9 @@
+# Preview of the Durchblick relaunch. Static files, no build step.
+[build]
+  publish = "scrollcraft/builds/durchblick"
+
+# Stay out of search engines until customer names and photos are approved.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

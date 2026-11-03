@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Saifi's Versionen</title>
+<style>
+  :root { --ink:#0c1a33; --soft:#4a5d78; --blue:#006ab3; --line:#bdd3e5; --bg:#eff6fb; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 56rem; margin: 0 auto; padding: clamp(2rem, 6vw, 4.5rem) 1rem; }
+  img { display: block; width: 180px; height: auto; margin-left: -12px; }
+  h1 { margin: 1.5rem 0 .25rem; font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.1; letter-spacing: -.02em; }
+  main > p { margin: 0 0 2rem; color: var(--soft); }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li { border-bottom: 1px solid var(--line); }
+  a { display: grid; gap: .25rem; padding: 1.25rem .25rem; color: inherit; text-decoration: none; }
+  a:hover h2 { color: var(--blue); }
+  a:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+  h2 { margin: 0; font-size: 1.375rem; line-height: 1.2; transition: color .15s; }
+  span { color: var(--soft); }
+</style>
+</head>
+<body>
+<main>
+  <img src="shared/logo.png" width="500" height="250" alt="Saifi's Gebäudereinigung">
+  <h1>Vier neue Versionen</h1>
+  <p>Prototypen, noch nicht live. Am besten auf Desktop und Handy ansehen.</p>
+  <ul>
+    <li><a href="builds/durchblick/"><h2>Durchblick</h2><span>Mutig, aber seriös. Für Betriebe mit Glas und Fassaden. Beim Scrollen wird die Scheibe sauber.</span></a></li>
+    <li><a href="builds/akte/"><h2>Akte</h2><span>Ruhig. Für Hausverwaltungen und Vermieter. Echte Einsätze, und das Protokoll wird zur Anfrage.</span></a></li>
+    <li><a href="builds/einsatz/"><h2>Im Einsatz</h2><span>So laut wie möglich. Für regionale Betriebe. Die Kolonne arbeitet nur, wenn Sie scrollen.</span></a></li>
+    <li><a href="builds/objekt-finder/"><h2>Objekt-Finder</h2><span>Ruhig und nützlich. Objektart wählen, und die Seite stellt sich darauf ein.</span></a></li>
+  </ul>
+</main>
+</body>
+</html>

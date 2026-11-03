@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gebäudereinigung Bad Kissingen | Saifi's: Sauber. Schnell. Zuverlässig.</title>
+<meta name="description" content="Saifi's Gebäudereinigung aus Bad Kissingen: Glas, Fassade, Photovoltaik, Treppenhaus und Unterhaltsreinigung. Kostenfreier Analyse-Termin oder direkt anrufen: 0971 12382990.">
+<meta name="theme-color" content="#0099ff">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230099ff'/><path d='M8 6h18l-4 8H4zM10 18h18l-4 8H6z' fill='%230F1D7B'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Saifi's Gebäudereinigung","founder":"Naqeeb Ullah Saifi","telephone":"+4997112382990","email":"info@saifis-gebaeudereinigung.de","url":"https://saifis-gebaeudereinigung.de/","address":{"@type":"PostalAddress","streetAddress":"Prinzregentenstraße 3","postalCode":"97688","addressLocality":"Bad Kissingen","addressCountry":"DE"},"sameAs":["https://www.instagram.com/saifis0077/"]}</script>
+<style>
+:root{
+  --bright:#0099ff; --brand:#006ab3; --navy:#0f1d7b; --white:#fff; --tint:#eff6fb;
+  --sc-canvas:#fff; --sc-surface:#eff6fb; --sc-ink:#0f1d7b; --sc-ink-soft:#33408f;
+  --sc-accent:#006ab3; --sc-accent-ink:#fff;
+  --sc-font-display:"Archivo",system-ui,sans-serif; --sc-font-text:"Archivo",system-ui,sans-serif;
+  --bar:72px; --dock:0px; --pad:clamp(1rem,2.6vw,2.5rem); --gap:clamp(.5rem,1vw,1rem);
+}
+html{scroll-behavior:auto}
+body{background:var(--white);color:var(--navy);overflow-x:clip}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:0}
+a{color:inherit}
+/* the display voice */
+.word,.shout{font-family:var(--sc-font-display);font-weight:900;font-stretch:62%;text-transform:uppercase;letter-spacing:-.012em;line-height:.9;margin:0}
+.word{display:block;white-space:nowrap;padding-top:.11em}
+.word>span{display:inline-block}
+.shout{text-wrap:balance}
+.say{font-size:clamp(1.15rem,.9rem + 1.05vw,2rem);line-height:1.28;font-weight:600;font-stretch:88%;letter-spacing:-.008em;max-width:30ch;margin:0;text-wrap:pretty}
+.cap{font-size:clamp(.9rem,.8rem + .3vw,1.1rem);line-height:1.3;font-weight:600;font-stretch:85%;margin:0}
+.film{display:block;width:100%;height:100%;object-fit:cover;background:var(--navy)}
+.frame{position:relative;margin:0;overflow:hidden}
+/* grounds. Every cut restates its ink because color inherits as computed. */
+.act{position:relative;overflow:clip}
+.on-white{background:var(--white);color:var(--navy)}
+.on-bright{background:var(--bright);color:var(--navy)}
+.on-brand{background:var(--brand);color:var(--white)}
+.on-navy{background:var(--navy);color:var(--white)}
+
+/* -------- chrome: the loud bar. The peak's line lives here too. */
+.bar{position:fixed;inset:0 0 auto;z-index:60;height:var(--bar);display:flex;align-items:stretch;background:var(--white);color:var(--navy)}
+.bar__mark{display:flex;align-items:center;padding-inline:var(--pad) clamp(1rem,2vw,2rem);flex:none}
+.bar__mark img{height:44px;width:auto}
+.bar__status{flex:1;min-width:0;display:flex;align-items:center;gap:.75em;border-inline-start:2px solid var(--navy);padding-inline:clamp(.75rem,1.4vw,1.5rem);font-weight:800;font-stretch:75%;font-size:clamp(.95rem,.8rem + .5vw,1.25rem);line-height:1.1;text-transform:uppercase;letter-spacing:.005em}
+.bar__tempo{margin-inline-start:auto;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:900}
+.act-btn{display:flex;align-items:center;justify-content:center;padding-inline:clamp(1rem,1.8vw,2rem);min-width:clamp(13.5rem,19vw,20rem);font-weight:900;font-stretch:75%;font-size:clamp(1rem,.85rem + .45vw,1.3rem);text-transform:uppercase;text-decoration:none;letter-spacing:.012em;white-space:nowrap;transition:background-color .12s var(--sc-ease-out),color .12s var(--sc-ease-out)}
+.act-btn--mail{background:var(--brand);color:var(--white)}
+.act-btn--tel{background:var(--navy);color:var(--white);font-variant-numeric:tabular-nums}
+.act-btn:active{transform:translateY(1px)}
+.act-btn:focus-visible{outline-offset:-6px}
+@media (hover:hover) and (pointer:fine){.act-btn--mail:hover{background:var(--navy)}.act-btn--tel:hover{background:var(--bright);color:var(--navy)}}
+.meter{position:absolute;inset:auto 0 0;height:5px;background:var(--navy);pointer-events:none}
+.meter i{display:block;height:100%;background:var(--bright);transform-origin:0 50%;transform:scaleX(0)}
+.dock{display:none}
+/* the peak: a hard band in the fixed layer, on the moment the hand stops */
+.halt{position:fixed;inset:auto 0 var(--dock);z-index:55;background:var(--bright);color:var(--navy);padding:clamp(.75rem,1.6vw,1.5rem) var(--pad) clamp(1rem,1.8vw,1.75rem);pointer-events:none;visibility:hidden}
+.halt.is-on{visibility:visible}
+.halt b{display:block;font-family:var(--sc-font-display);font-weight:900;font-stretch:62%;text-transform:uppercase;line-height:.92;letter-spacing:-.012em;white-space:nowrap;font-size:clamp(3rem,7.7vw,12rem);padding-top:.1em}
+.halt b>span{display:inline-block;margin:0;font:inherit}
+.halt>span{display:block;margin-top:.35em;font-size:clamp(1.05rem,.8rem + 1.1vw,2rem);font-weight:800;font-stretch:80%;line-height:1.15}
+
+/* -------- 1 hero: type on brand blue, the real van parked in front of it */
+.hero{height:100svh;min-height:600px}
+.hero__type{position:absolute;right:var(--pad);top:calc(var(--bar) + clamp(.5rem,2vh,1.5rem));width:min(61vw,calc((100svh - var(--bar)) * .98))}
+.hero h1{margin:0}
+.hero .word{--f:15vw;font-size:var(--f)}
+.hero .word+.word{margin-top:-.02em}
+.hero__say{margin-top:clamp(.75rem,2vh,1.5rem);max-width:34ch;margin-inline-start:auto}
+.hero__van{position:absolute;left:0;bottom:0;height:min(108svh,112vw);width:auto;max-width:none;z-index:2;pointer-events:none}
+
+/* -------- 2 the rule */
+.rule{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);align-items:end;min-height:92svh;padding:calc(var(--bar) + var(--pad)) var(--pad) var(--pad)}
+.rule .shout{font-size:clamp(3.2rem,8.7vw,11rem)}
+.rule em{font-style:normal;color:var(--bright)}
+.rule .say{margin-top:clamp(1rem,2.4vw,2rem);color:var(--tint)}
+.rule .frame{aspect-ratio:3/4;max-height:calc(92svh - var(--bar) - var(--pad)*2);justify-self:end;width:100%;max-width:520px}
+
+/* -------- 3 glas: film bleeds from the left edge */
+.glas{display:grid;grid-template-columns:auto minmax(0,1fr);min-height:100svh}
+.glas .frame{height:100svh;aspect-ratio:3/4;max-width:54vw}
+.glas__text{align-self:end;padding:calc(var(--bar) + var(--pad)) var(--pad) var(--pad);min-width:0}
+.glas .word{--f:24vw;font-size:var(--f)}
+.glas .say{margin-top:clamp(.5rem,1.4vw,1.25rem)}
+.glas .cap{margin-top:.6rem}
+
+/* -------- 4 hoch: the word takes the width, the wide film hangs under it */
+.hoch{padding:calc(var(--bar) + clamp(.25rem,1vw,1rem)) var(--pad) var(--pad)}
+.hoch .word{--f:38vw;font-size:var(--f)}
+.hoch__row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,min(53vw,764px));gap:var(--pad);align-items:end;margin-top:clamp(.5rem,1vw,1rem)}
+.hoch .frame{aspect-ratio:764/576}
+.hoch .cap{margin-top:.6rem}
+
+/* -------- 5 solar: low-res footage stays small */
+.solar{display:grid;grid-template-columns:minmax(0,1fr) min(360px,25vw);gap:var(--pad);align-items:end;padding:calc(var(--bar) + var(--pad)) var(--pad) var(--pad);min-height:72svh}
+.solar .word{--f:30vw;font-size:var(--f)}
+.solar .say{margin-top:clamp(.5rem,1.2vw,1rem)}
+.solar .frame{aspect-ratio:3/4}
+.solar .cap{margin-top:.6rem}
+
+/* -------- 6 autohaus */
+.auto__img{display:block;width:100%;height:min(62svh,52vw);object-fit:cover;object-position:50% 58%}
+.auto__text{padding:clamp(.25rem,.6vw,.5rem) var(--pad) var(--pad)}
+.auto .word{--f:23vw;font-size:var(--f)}
+.auto__row{display:flex;justify-content:space-between;gap:var(--pad);align-items:baseline;margin-top:clamp(.4rem,1vw,.9rem);flex-wrap:wrap}
+.auto .say{max-width:44ch}
+
+/* -------- 7 studio: mirrored bleed, right edge */
+.studio{display:grid;grid-template-columns:minmax(0,1fr) auto;min-height:100svh}
+.studio__text{padding:calc(var(--bar) + var(--pad)) var(--pad) var(--pad);display:flex;flex-direction:column;justify-content:space-between;gap:var(--pad);min-width:0}
+.studio .word{--f:24vw;font-size:var(--f)}
+.studio .frame{height:100svh;aspect-ratio:3/4;max-width:50vw}
+.studio .cap{margin-top:.6rem}
+
+/* -------- 8 the quiet before the wall */
+.quiet{min-height:62svh;display:grid;align-items:center;padding:calc(var(--bar) + var(--pad)) var(--pad) var(--pad)}
+.quiet p{margin:0;font-size:clamp(1.4rem,1rem + 1.5vw,2.5rem);font-weight:700;font-stretch:88%;line-height:1.15;letter-spacing:-.012em;max-width:25ch}
+
+/* -------- 9 the wall */
+.wall{padding:calc(var(--bar) + clamp(.75rem,1.4vw,1.25rem)) var(--pad) clamp(1.5rem,3vw,3rem)}
+.wall__head{display:flex;justify-content:space-between;align-items:end;gap:var(--pad);flex-wrap:wrap;margin-bottom:clamp(.75rem,1.4vw,1.25rem)}
+.wall .shout{font-size:clamp(2.6rem,6vw,6.5rem)}
+.wall__head a{font-weight:700;font-stretch:88%;text-underline-offset:.2em;text-decoration-thickness:2px;padding-block:.5rem}
+.wall__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap) var(--gap)}
+.wall__grid .frame{aspect-ratio:3/4}
+.wall__grid .cap{margin:.35rem 0 .5rem;color:var(--tint)}
+
+/* -------- 10 services as running type */
+.leist{padding:calc(var(--bar) + var(--pad)) var(--pad) clamp(2rem,4vw,4rem)}
+.leist h2{margin:0 0 clamp(.75rem,1.6vw,1.5rem);font-size:clamp(1.3rem,1rem + 1.1vw,2.25rem);font-weight:800;font-stretch:80%;line-height:1.1;letter-spacing:-.008em}
+.run{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.1em .32em;font-family:var(--sc-font-display);font-weight:900;font-stretch:62%;text-transform:uppercase;line-height:1;font-size:clamp(2.35rem,5.15vw,6rem);letter-spacing:-.008em;hyphens:manual}
+.run a{display:block;text-decoration:none;padding:.03em .06em .05em;margin-inline:-.06em;transition:background-color .1s var(--sc-ease-out),color .1s var(--sc-ease-out)}
+.run a[aria-current="true"]{background:var(--navy);color:var(--white)}
+@media (hover:hover) and (pointer:fine){.run a:hover{background:var(--navy);color:var(--white)}}
+.run a:active{transform:translateY(1px)}
+
+/* -------- 11 q-check */
+.check{padding:calc(var(--bar) + clamp(.25rem,1vw,1rem)) var(--pad) clamp(2rem,4vw,4rem);min-height:70svh;display:flex;flex-direction:column;justify-content:center}
+.check .word{--f:16vw;font-size:var(--f)}
+.check__row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--pad);margin-top:clamp(.75rem,1.6vw,1.5rem)}
+.check .say{max-width:36ch}
+.check .say:first-child{grid-column:1/7}
+.check .say:last-child{grid-column:8/13}
+
+/* -------- 12 three words, three steps */
+.steps{padding:calc(var(--bar) + clamp(.75rem,1.6vw,1.5rem)) var(--pad) var(--pad)}
+.steps ol{list-style:none;margin:0;padding:0}
+.steps li{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:var(--pad);align-items:end;border-top:3px solid currentColor;padding-block:clamp(.35rem,.8vw,.75rem) clamp(.5rem,1vw,1rem)}
+.steps .word{font-size:clamp(4rem,12.6vw,15rem);padding-top:.09em}
+.steps .say{padding-bottom:.25em;max-width:32ch}
+
+/* -------- 13 the name */
+.name{padding:calc(var(--bar) + var(--pad)) var(--pad) clamp(2rem,4vw,4rem);min-height:66svh;display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(.75rem,1.6vw,1.5rem)}
+.name .word{--f:12vw;font-size:var(--f)}
+.name .say{max-width:48ch}
+.name__who{font-weight:800;font-stretch:80%;font-size:clamp(1.05rem,.9rem + .6vw,1.5rem);margin:0}
+
+/* -------- 14 the last cut: two actions, full bleed */
+.last{display:grid;grid-template-rows:1fr auto;min-height:100svh}
+.last__pair{display:grid;grid-template-columns:1fr 1fr}
+.huge{display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(.5rem,1.2vw,1rem);padding:calc(var(--bar) + var(--pad)) var(--pad) var(--pad);text-decoration:none;min-width:0;transition:background-color .1s var(--sc-ease-out),color .1s var(--sc-ease-out)}
+.huge b{font-family:var(--sc-font-display);font-weight:900;font-stretch:62%;text-transform:uppercase;line-height:.92;letter-spacing:-.012em;font-size:clamp(4rem,10.4vw,13rem);display:block}
+.huge small{font-size:clamp(1.05rem,.9rem + .6vw,1.5rem);font-weight:700;font-stretch:88%;line-height:1.25;max-width:32ch}
+.huge--mail{background:var(--bright);color:var(--navy)}
+.huge--tel{background:var(--navy);color:var(--white)}
+.huge--tel b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.huge--tel b>span{display:inline-block}
+.huge:focus-visible{outline-offset:-10px}
+@media (hover:hover) and (pointer:fine){.huge--mail:hover{background:var(--white)}.huge--tel:hover{background:var(--brand)}}
+.foot{display:flex;flex-wrap:wrap;gap:.35rem clamp(1rem,2.4vw,2.5rem);padding:.85rem var(--pad);background:var(--white);color:var(--navy);font-size:var(--sc-t-sm);font-weight:600;font-stretch:88%;line-height:1.35}
+.foot a{text-underline-offset:.2em}
+.foot span:first-child{font-weight:800}
+
+/* -------- the small hard cuts */
+.js .cut{opacity:0;transform:translateY(.09em)}
+.js .wipe{clip-path:inset(100% 0 0 0)}
+.js .cut.on{opacity:1;transform:none;transition:opacity .12s linear,transform .18s var(--sc-ease-out)}
+.js .wipe.on{clip-path:inset(0 0 0 0);transition:clip-path .22s var(--sc-ease-out)}
+/* play control: only under reduced motion, or when a phone refuses to play */
+.playbtn{display:none;position:absolute;left:.5rem;bottom:.5rem;min-height:44px;padding:.35rem .85rem;border:0;background:var(--navy);color:var(--white);font-weight:800;font-stretch:80%;font-size:.95rem;cursor:pointer;outline-color:var(--white)}
+.manual .playbtn{display:block}
+@media (prefers-reduced-motion:reduce){
+  .js .cut,.js .wipe{opacity:1;transform:none;clip-path:none;transition:none}
+  .meter,.bar__tempo{display:none}
+}
+
+/* ================ tablet and down: bar goes top, actions go to a dock */
+@media (max-width:1040px){
+  .bar__status{font-size:.86rem}
+  .act-btn{min-width:11rem;padding-inline:.75rem;font-size:.95rem}
+}
+@media (max-width:860px){
+  :root{--bar:56px;--dock:56px;--pad:1rem}
+  .bar .act-btn{display:none}
+  .bar__mark{padding-inline:.75rem}
+  .bar__mark img{height:34px}
+  .bar__status{font-size:.74rem;line-height:1.12;padding-inline:.6rem;gap:.5em;font-stretch:72%}
+  .dock{position:fixed;inset:auto 0 0;z-index:60;height:var(--dock);display:grid;grid-template-columns:1fr 1fr;padding-bottom:0}
+  .dock .act-btn{min-width:0;padding-inline:.25rem;font-size:.86rem;font-stretch:68%;letter-spacing:.006em}
+  .dock.is-hidden{display:none}
+  body{padding-bottom:var(--dock)}
+
+  .hero{height:calc(100svh - var(--dock));min-height:520px}
+  .hero__type{left:var(--pad);right:var(--pad);top:calc(var(--bar) + .6rem);width:auto;display:flex;flex-direction:column}
+  .hero__say{order:-1;margin:0 0 .15rem;font-size:1rem;line-height:1.22;max-width:32ch}
+  .hero__van{height:min(50svh,120vw);left:0;bottom:-9svh}
+
+  .rule{grid-template-columns:1fr;min-height:0;gap:1rem;padding-bottom:1.25rem}
+  .rule .shout{font-size:clamp(3rem,15vw,6rem)}
+  .rule .frame{max-height:none;max-width:none;justify-self:stretch}
+
+  .glas{grid-template-columns:1fr;min-height:0}
+  .glas__text{padding:calc(var(--bar) + .5rem) var(--pad) 1rem;order:-1}
+  .glas .frame{height:auto;width:100%;max-width:none}
+
+  .hoch__row{grid-template-columns:1fr}
+  .hoch .frame{order:-1}
+
+  .solar{grid-template-columns:1fr;min-height:0;padding-bottom:1.25rem;gap:.75rem}
+  .solar__fig{width:min(100%,360px);justify-self:end}
+
+  .auto__img{height:62vw;margin-top:var(--bar)}
+
+  .studio{grid-template-columns:1fr;min-height:0}
+  .studio__text{padding-bottom:1rem;gap:.6rem}
+  .studio .frame{height:auto;width:100%;max-width:none}
+
+  .quiet{min-height:46svh}
+
+  .wall__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wall__grid .no-phone{display:none}
+  .wall .shout{font-size:clamp(2.6rem,13vw,4.5rem)}
+
+  .run{font-size:clamp(2rem,9.5vw,3.4rem);gap:.14em .3em}
+
+  .check__row{grid-template-columns:1fr;gap:.75rem}
+  .check .say:first-child,.check .say:last-child{grid-column:auto}
+
+  .steps li{grid-template-columns:1fr;gap:.25rem}
+  .steps .word{font-size:clamp(4rem,23vw,8rem)}
+
+  .name{min-height:0}
+  .name .word{white-space:normal;font-size:27vw;line-height:.88}
+  .name .word>span{display:block}
+
+  .last__pair{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+  .huge b{font-size:clamp(3.2rem,16.2vw,6rem)}
+  body.at-last{padding-bottom:0}
+}
+@media (max-width:860px) and (max-height:700px){
+  .hero__van{height:46svh;bottom:-9svh}
+  .hero__say{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar__mark" href="#top" aria-label="Saifi's Gebäudereinigung, zum Seitenanfang"><img src="assets/logo-trim.png" width="490" height="130" alt="Saifi's Gebäudereinigung"></a>
+  <div class="bar__status" aria-hidden="true"><span id="status">Die Kolonne wartet auf Sie.</span><span class="bar__tempo" id="tempo"></span></div>
+  <a class="act-btn act-btn--mail" data-mail href="mailto:info@saifis-gebaeudereinigung.de?subject=Analyse-Termin%20anfragen">Analyse-Termin anfragen</a>
+  <a class="act-btn act-btn--tel" href="tel:+4997112382990">0971 12382990</a>
+  <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+</header>
+
+<main id="top">
+
+<section class="act hero on-bright" data-sc-act="flow">
+  <div class="hero__type">
+    <h1>
+      <span class="word" data-fit data-fit-max="30"><span>Sauber.</span></span>
+      <span class="word" data-fit data-fit-max="26"><span>Schnell.</span></span>
+      <span class="word" data-fit data-fit-max="19"><span>Zuverlässig.</span></span>
+    </h1>
+    <p class="say hero__say">Gebäudereinigung aus Bad Kissingen. Glas, Fassade, Solar, Treppenhaus und der ganze Rest.</p>
+  </div>
+  <picture>
+    <source media="(max-width:860px)" srcset="assets/van-m.webp">
+    <img class="hero__van" src="assets/van.webp" width="1125" height="1500" alt="Weißer Transporter von Saifi's Gebäudereinigung mit blauem Logo, dem Slogan und der Telefonnummer auf der Seite." fetchpriority="high">
+  </picture>
+</section>
+
+<section class="act rule on-navy" data-sc-act="flow">
+  <div>
+    <h2 class="shout cut">Die Kolonne arbeitet nur, wenn Sie <em>scrollen.</em></h2>
+    <p class="say">Das gilt nur auf dieser Seite. Alle Filme hier sind echte Einsätze von Saifi's, keine Stockfotos.</p>
+  </div>
+  <figure class="frame wipe"><video class="film " data-clip data-src="assets/kolonne.mp4" poster="assets/kolonne.webp" data-rest="0.0 0.47 1.0 1.33 1.67 2.33 2.77 3.17 3.57 3.97 4.33 4.4 5.0 5.33 5.6 6.0" width="720" height="960" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Reinigungskraft im schwarzen Saifi's-Shirt zieht eine große Scheibe vor blauem Himmel ab."></video></figure>
+</section>
+
+<section class="act glas on-white" data-sc-act="flow">
+  <figure class="frame wipe"><video class="film " data-clip data-src="assets/glas.mp4" poster="assets/glas.webp" data-rest="0.0 0.47 1.13 1.4 1.93 2.07 2.47 2.8 3.27 3.93 4.23 4.57 4.9 5.9 6.0" width="720" height="960" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Glasreinigung mit Teleskopstange: Wasser läuft über die Scheibe, die Sonne spiegelt sich im Glas."></video></figure>
+  <div class="glas__text">
+    <h2 class="word cut" data-fit><span>Glas.</span></h2>
+    <p class="say">Stange hoch, Wasser drauf, nächste Scheibe.</p>
+    <p class="cap">Lebenshilfe Hammelburg</p>
+  </div>
+</section>
+
+<section class="act hoch on-brand" data-sc-act="flow">
+  <h2 class="word cut" data-fit data-fit-max="56"><span>Hoch.</span></h2>
+  <div class="hoch__row">
+    <p class="say">Angeseilt, wenn es sein muss. Die Aussicht gibt es gratis dazu.</p>
+    <div>
+      <figure class="frame wipe"><video class="film " data-clip data-src="assets/hoch.mp4" poster="assets/hoch.webp" data-rest="0.0 0.6 1.13 1.27 1.67 2.33 2.6 3.13 3.27 3.8" width="764" height="576" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Mitarbeiter im Sicherheitsgurt reinigt ein hohes Fenster, dahinter eine Stadt und bewaldete Hügel."></video></figure>
+    </div>
+  </div>
+</section>
+
+<section class="act solar on-navy" data-sc-act="flow">
+  <div class="solar__left"><h2 class="word cut" data-fit data-fit-max="44"><span>Solar.</span></h2>
+  <p class="say">Schmutz auf dem Modul nimmt der Anlage Licht. Also muss er runter.</p></div>
+  <figure class="frame wipe solar__fig"><video class="film " data-clip data-src="assets/solar.mp4" poster="assets/solar.webp" data-rest="0.0 0.63 0.94 1.2 1.47 2.0 3.07 3.61 4.01 4.38 4.41 5.01 5.15 5.55 5.95" width="360" height="480" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Bürste an einer Stange reinigt Photovoltaikmodule auf einem Dach."></video></figure>
+</section>
+
+<section class="act auto on-white" data-sc-act="flow">
+  <picture>
+    <source media="(max-width:860px)" srcset="assets/ford-m.webp">
+    <img class="auto__img" src="assets/ford.webp" width="1536" height="1200" loading="lazy" alt="Gläserne Fassade des Autohauses Löffler mit Ford-Logo vor bewölktem Himmel.">
+  </picture>
+  <div class="auto__text">
+    <h2 class="word cut" data-fit><span>Autohaus.</span></h2>
+    <div class="auto__row">
+      <p class="say">Wer Autos verkauft, verkauft auch durch die Scheibe.</p>
+      <p class="cap">Autohaus Löffler, Ford</p>
+    </div>
+  </div>
+</section>
+
+<section class="act studio on-bright" data-sc-act="flow">
+  <div class="studio__text">
+    <h2 class="word cut" data-fit><span>Studio.</span></h2>
+    <div>
+      <p class="say">Das Glas über den Geräten putzt sich nicht von selbst. Die Leiter steht schon.</p>
+      <p class="cap">GoFit, Fensterreinigung</p>
+    </div>
+  </div>
+  <figure class="frame wipe"><video class="film " data-clip data-src="assets/studio.mp4" poster="assets/studio.webp" data-rest="0.0 0.4 0.8 1.23" width="720" height="960" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Mitarbeiter auf einer Leiter reinigt einen hohen Glasgang von innen."></video></figure>
+</section>
+
+<section class="act quiet on-white" data-sc-act="flow">
+  <p>Gleich kommt die ganze Kolonne. Dann hören Sie einmal kurz auf.</p>
+</section>
+
+<section class="act wall on-navy" id="kolonne" data-sc-act="flow">
+  <div class="wall__head">
+    <h2 class="shout cut">Die ganze Kolonne.</h2>
+    <a href="https://www.instagram.com/saifis0077/" rel="noopener">Mehr Einsätze auf Instagram</a>
+  </div>
+  <div class="wall__grid">
+    <div><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-sonne.mp4" poster="assets/w-sonne.webp" data-rest="0.0 0.53 0.93 1.33 1.73 2.13 2.67 2.93 3.3 3.63 4.3 4.6 5.1 5.2" width="540" height="720" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Reinigungsstange und Wasser an einer Scheibe im Gegenlicht."></video></figure><p class="cap">Gegen die Sonne</p></div>
+    <div><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-athera.mp4" poster="assets/w-athera.webp" data-rest="0.0 0.67 1.07 1.2 1.73 2.13 2.53 2.8 3.33 3.87 4.13 4.4 5.0 5.53 5.8" width="360" height="480" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Teleskopstange reinigt die Fenster eines Bürohauses über dem Schild Athera Physio."></video></figure><p class="cap">Athera Physio, 3. Stock</p></div>
+    <div><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-innen.mp4" poster="assets/w-innen.webp" data-rest="0.0 0.6 1.0 1.2 1.8 1.83 2.87 3.27 3.53 4.0 4.13 4.4 4.93 5.47 5.73 5.87" width="480" height="640" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Mitarbeiter reinigt eine Glaswand im Innenraum."></video></figure><p class="cap">Glaswand innen</p></div>
+    <div><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-hoch.mp4" poster="assets/w-hoch.webp" data-rest="0.0 0.4 1.07 1.33 1.93 2.0 2.53" width="432" height="576" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Mitarbeiter im Sicherheitsgurt am Fenster, dahinter die Stadt."></video></figure><p class="cap">Mit Gurt</p></div>
+    <div><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-rot.mp4" poster="assets/w-rot.webp" data-rest="0.0 0.2 0.6 1.0 1.1 1.51 1.91 2.31 2.58 3.25 3.51 3.68 4.18" width="432" height="576" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Rote Reinigungsstange an einer Fassade mit grünen Fensterrahmen."></video></figure><p class="cap">Stange an der Fassade</p></div>
+    <div><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-auto.mp4" poster="assets/w-auto.webp" data-rest="0.0 0.87 1.27 1.8 2.07 2.47 2.87 3.14 3.41" width="540" height="720" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Glasfront eines Autohauses mit Fahrzeugen dahinter."></video></figure><p class="cap">Autohaus</p></div>
+    <div class="no-phone"><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-solar.mp4" poster="assets/w-solar.webp" data-rest="0.0 0.4 0.8 1.2 1.87 2.0 2.53 3.07 3.2 3.87 4.27 4.53 5.0 5.27 5.67" width="360" height="480" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Dach voller Photovoltaikmodule."></video></figure><p class="cap">Photovoltaik</p></div>
+    <div class="no-phone"><figure class="frame wipe"><video class="film " data-clip data-src="assets/w-gofit.mp4" poster="assets/w-gofit.webp" data-rest="0.0 0.4 1.07 1.53 1.6 2.23 2.77 2.87 3.4 3.87" width="360" height="480" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback role="img" aria-label="Eingang des Fitnessstudios GoFit mit Glastüren."></video></figure><p class="cap">GoFit, Türen</p></div>
+  </div>
+</section>
+
+<section class="act leist on-bright" id="leistungen" data-sc-act="flow">
+  <h2>Was soll sauber werden? Wählen Sie, der Rest steht dann schon in der Anfrage.</h2>
+  <ul class="run">
+    <li><a data-service="Fassadenreinigung" href="#anfrage">Fassaden&shy;reinigung</a></li>
+    <li><a data-service="Unterhaltsreinigung" href="#anfrage">Unterhalts&shy;reinigung</a></li>
+    <li><a data-service="Photovoltaikreinigung" href="#anfrage">Photovoltaik&shy;reinigung</a></li>
+    <li><a data-service="Graffitientfernung" href="#anfrage">Graffiti&shy;entfernung</a></li>
+    <li><a data-service="Treppenhausreinigung" href="#anfrage">Treppenhaus&shy;reinigung</a></li>
+    <li><a data-service="Glasreinigung" href="#anfrage">Glas&shy;reinigung</a></li>
+    <li><a data-service="Grundreinigung" href="#anfrage">Grund&shy;reinigung</a></li>
+    <li><a data-service="Baureinigung" href="#anfrage">Bau&shy;reinigung</a></li>
+    <li><a data-service="Hausmeisterservice" href="#anfrage">Hausmeister&shy;service</a></li>
+    <li><a data-service="Polsterreinigung" href="#anfrage">Polster&shy;reinigung</a></li>
+    <li><a data-service="Teppichreinigung" href="#anfrage">Teppich&shy;reinigung</a></li>
+    <li><a data-service="Steinreinigung" href="#anfrage">Stein&shy;reinigung</a></li>
+    <li><a data-service="Jalousienreinigung" href="#anfrage">Jalousien&shy;reinigung</a></li>
+    <li><a data-service="Desinfektionsreinigung" href="#anfrage">Desinfektions&shy;reinigung</a></li>
+  </ul>
+</section>
+
+<section class="act check on-white" data-sc-act="flow">
+  <h2 class="word cut" data-fit><span>Unangekündigt.</span></h2>
+  <div class="check__row">
+    <p class="say">So prüft unser eigener Q-Check regelmäßig die Reinigungskräfte in Ihrem Objekt. Das Personal weiß nie, wann.</p>
+    <p class="say">Und wenn etwas ist, rufen Sie Ihren persönlichen Ansprechpartner an.</p>
+  </div>
+</section>
+
+<section class="act steps on-brand" data-sc-act="flow">
+  <h2 class="sc-sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">So läuft es ab</h2>
+  <ol>
+    <li><span class="word cut"><span>Anfrage.</span></span><p class="say">Sie schreiben uns kurz oder rufen direkt an.</p></li>
+    <li><span class="word cut"><span>Analyse.</span></span><p class="say">Wir rufen zurück und kommen zum Termin in Ihr Objekt. Kostenfrei und 100% unverbindlich.</p></li>
+    <li><span class="word cut"><span>Angebot.</span></span><p class="say">Sie bekommen ein maßgeschneidertes Angebot für genau dieses Objekt.</p></li>
+  </ol>
+</section>
+
+<section class="act name on-navy" data-sc-act="flow">
+  <p class="name__who">Inhabergeführt, das heißt:</p>
+  <h2 class="word cut" data-fit data-fit-desk><span>Naqeeb Ullah Saifi</span></h2>
+  <p class="say">„Dafür sorge ich als Geschäftsführer persönlich und gemeinsam mit meinem Team bin ich mir sicher, werden wir auch Sie begeistern können.“</p>
+</section>
+
+<section class="act last" id="anfrage" data-sc-act="flow">
+  <div class="last__pair">
+    <a class="huge huge--mail" data-mail href="mailto:info@saifis-gebaeudereinigung.de?subject=Analyse-Termin%20anfragen">
+      <small id="picked">Kostenfrei und 100% unverbindlich. Öffnet Ihre Mail-App.</small>
+      <b>Analyse-Termin anfragen</b>
+    </a>
+    <a class="huge huge--tel" href="tel:+4997112382990">
+      <small>Oder gleich anrufen und den Termin direkt ausmachen.</small>
+      <b data-fit><span>0971 12382990</span></b>
+    </a>
+  </div>
+  <footer class="foot">
+    <span>Saifi's Gebäudereinigung</span>
+    <span>Prinzregentenstraße 3, 97688 Bad Kissingen</span>
+    <a href="mailto:info@saifis-gebaeudereinigung.de">info@saifis-gebaeudereinigung.de</a>
+    <a href="https://www.instagram.com/saifis0077/" rel="noopener">Instagram</a>
+    <a href="https://saifis-gebaeudereinigung.de/impressum/">Impressum</a>
+    <a href="https://saifis-gebaeudereinigung.de/datenschutz/">Datenschutz</a>
+  </footer>
+</section>
+
+</main>
+
+<div class="halt" id="halt" aria-hidden="true"><b data-fit><span>Sie stoppen. Wir stoppen.</span></b><span>Vor Ort hören wir erst auf, wenn es sauber ist.</span></div>
+
+<nav class="dock" id="dock" aria-label="Kontakt">
+  <a class="act-btn act-btn--mail" data-mail href="mailto:info@saifis-gebaeudereinigung.de?subject=Analyse-Termin%20anfragen">Analyse-Termin anfragen</a>
+  <a class="act-btn act-btn--tel" href="tel:+4997112382990">0971 12382990</a>
+</nav>
+
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+<script>
+/* Page-local. The engine is untouched. */
+(function () {
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- words that fill their column ---- */
+  var fits = [].slice.call(document.querySelectorAll('[data-fit]'));
+  function fit() {
+    fits.forEach(function (el) {
+      var inner = el.firstElementChild;
+      if (el.hasAttribute('data-fit-desk') && innerWidth <= 860) { el.style.fontSize = ''; return; }
+      el.style.fontSize = '100px';
+      var w = inner.getBoundingClientRect().width;
+      var box = el.clientWidth - parseFloat(getComputedStyle(el).paddingLeft) - parseFloat(getComputedStyle(el).paddingRight);
+      var size = 100 * box / w * 0.995;
+      var cap = parseFloat(el.getAttribute('data-fit-max'));
+      if (cap) size = Math.min(size, innerHeight * cap / 100);
+      el.style.fontSize = size.toFixed(2) + 'px';
+    });
+  }
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  var rt; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(fit, 120); });
+
+  /* ---- hard entrances ---- */
+  var cuts = [].slice.call(document.querySelectorAll('.cut,.wipe'));
+  if (reduced || !('IntersectionObserver' in window)) cuts.forEach(function (c) { c.classList.add('on'); });
+  else {
+    var cio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); cio.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    cuts.forEach(function (c) { cio.observe(c); });
+  }
+
+  /* ---- the chosen service travels into the inquiry ---- */
+  var MAIL = 'info@saifis-gebaeudereinigung.de';
+  function mailHref(service) {
+    var subject = 'Analyse-Termin anfragen' + (service ? ': ' + service : '');
+    var body = 'Guten Tag,\n\nich möchte einen kostenfreien Analyse-Termin anfragen.\n\n'
+      + (service ? 'Leistung: ' + service + '\n' : 'Leistung: \n')
+      + 'Objekt und Ort: \nAnsprechpartner: \nTelefon: \n';
+    return 'mailto:' + MAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+  var mails = [].slice.call(document.querySelectorAll('[data-mail]'));
+  var picked = document.getElementById('picked');
+  function setService(s) {
+    mails.forEach(function (a) { a.href = mailHref(s); });
+    picked.textContent = (s ? s + ' steht schon drin. ' : '') + 'Kostenfrei und 100% unverbindlich. Öffnet Ihre Mail-App.';
+    [].forEach.call(document.querySelectorAll('[data-service]'), function (a) {
+      if (a.getAttribute('data-service') === s) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+  }
+  setService('');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-service]');
+    if (a) setService(a.getAttribute('data-service'));
+  });
+
+  /* ---- the phone dock steps aside on the last cut ---- */
+  var dock = document.getElementById('dock');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      var hit = es[0].isIntersecting;
+      dock.classList.toggle('is-hidden', hit);
+      document.body.classList.toggle('at-last', hit);
+    }, { threshold: 0.35 }).observe(document.querySelector('.last__pair'));
+  }
+
+  /* ---- SIGNATURE: the crew only works while you scroll ---- */
+  var clips = [].slice.call(document.querySelectorAll('video[data-clip]'));
+  var status = document.getElementById('status');
+  var tempo = document.getElementById('tempo');
+  var meter = document.getElementById('meter');
+  var halt = document.getElementById('halt');
+  var wall = document.getElementById('kolonne');
+  var LINE_WAIT = 'Die Kolonne wartet auf Sie.';
+  var LINE_WORK = 'Die Kolonne arbeitet.';
+  var LINE_STOP = 'Sie stoppen, wir stoppen.';
+  var LINE_MANUAL = 'Die Filme starten hier nur auf Knopfdruck.';
+
+  function attach(v) {
+    if (v.getAttribute('src')) return;
+    v.src = v.getAttribute('data-src');
+    v.preload = 'auto';
+    v.rest = (v.getAttribute('data-rest') || '0').split(' ').map(parseFloat);
+  }
+
+  /* Under reduced motion, or if a phone refuses muted playback, every clip gets
+     an explicit button instead and scrolling drives nothing. */
+  var manual = false;
+  function goManual() {
+    if (manual) return;
+    manual = true;
+    document.documentElement.classList.add('manual');
+    status.textContent = LINE_MANUAL;
+    tempo.textContent = '';
+    halt.classList.remove('is-on');
+    if (meter) meter.style.transform = 'scaleX(0)';
+  }
+  clips.forEach(function (v) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'playbtn'; b.textContent = 'Film abspielen';
+    b.addEventListener('click', function () {
+      attach(v);
+      if (v.paused) { v.playbackRate = 1; v.play(); b.textContent = 'Anhalten'; }
+      else { v.pause(); b.textContent = 'Film abspielen'; }
+    });
+    v.parentNode.appendChild(b);
+  });
+  if (reduced) { goManual(); return; }
+
+  var visible = new Set();
+  var near = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) attach(e.target); });
+  }, { rootMargin: '100% 0px 100% 0px' });
+  var seen = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) visible.add(e.target);
+      else { visible.delete(e.target); if (!e.target.paused) e.target.pause(); }
+    });
+  }, { threshold: 0.1 });
+  clips.forEach(function (v) { near.observe(v); seen.observe(v); });
+
+  var hasWorked = false, running = false, lastY = scrollY, lastT = 0, lastMove = 0, v = 0, working = false, shownRate = 0, stopTimer = 0;
+  var clamp = function (a, b, x) { return Math.min(b, Math.max(a, x)); };
+
+  function settle(el) {
+    /* Stop on a sharp frame, not whichever blurred one the hand landed on. */
+    var t = el.currentTime, rest = el.rest || [0], next = null;
+    for (var i = 0; i < rest.length; i++) if (rest[i] >= t - 0.02) { next = rest[i]; break; }
+    if (next === null) next = rest[rest.length - 1];
+    if (Math.abs(next - t) < 0.7 && Math.abs(next - t) > 0.02) el.currentTime = next;
+  }
+
+  function work(rate) {
+    if (!working) {
+      working = true; hasWorked = true;
+      clearTimeout(stopTimer);
+      halt.classList.remove('is-on');
+      status.textContent = LINE_WORK;
+    }
+    visible.forEach(function (el) {
+      if (Math.abs(el.playbackRate - rate) > 0.08) el.playbackRate = rate;
+      if (el.paused && el.readyState >= 2) {
+        var p = el.play();
+        if (p && p.catch) p.catch(function (err) { if (err && err.name === 'NotAllowedError') goManual(); });
+      }
+    });
+    if (rate !== shownRate) { tempo.textContent = rate.toFixed(1).replace('.', ',') + '×'; shownRate = rate; }
+  }
+
+  function stop() {
+    if (!working) return;
+    working = false;
+    visible.forEach(function (el) { if (!el.paused) { el.pause(); settle(el); } });
+    tempo.textContent = ''; shownRate = 0;
+    arm();
+  }
+  function arm() {
+    clearTimeout(stopTimer);
+    stopTimer = setTimeout(function () {
+      if (manual || working) return;
+      if (hasWorked) status.textContent = LINE_STOP;
+      var r = wall.getBoundingClientRect();
+      if (hasWorked && r.top < innerHeight * .45 && r.bottom > innerHeight * .75) halt.classList.add('is-on');
+    }, 260);
+  }
+
+  function tick(t) {
+    if (manual) { running = false; return; }
+    var dt = Math.max(1, t - lastT), y = scrollY, dy = Math.abs(y - lastY);
+    lastT = t; lastY = y;
+    /* an anchor jump is not a hand */
+    var inst = dy > innerHeight * 0.9 ? 0 : dy / dt * 1000;
+    if (dy > 0 && dy <= innerHeight * 0.9) lastMove = t;
+    v += (inst - v) * (inst > v ? 0.3 : 0.08);
+    if (t - lastMove < 150) work(clamp(0.7, 3, 0.7 + v / 1100));
+    else stop();
+    meter.style.transform = 'scaleX(' + clamp(0, 1, v / 2800).toFixed(3) + ')';
+    if (t - lastMove < 150 || v > 4) requestAnimationFrame(tick);
+    else { v = 0; meter.style.transform = 'scaleX(0)'; running = false; arm(); }
+  }
+  addEventListener('scroll', function () {
+    halt.classList.remove('is-on');
+    clearTimeout(stopTimer);
+    if (running || manual) return;
+    running = true;
+    lastT = performance.now();
+    requestAnimationFrame(tick);
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

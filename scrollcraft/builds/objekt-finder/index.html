@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gebäudereinigung Bad Kissingen | Saifi's Reinigungsplan nach Objektart</title>
+<meta name="description" content="Gebäudereinigung in Bad Kissingen und Umgebung: Objektart wählen, Leistungen prüfen und den Entwurf für Ihren kostenfreien Analyse-Termin senden.">
+<meta name="theme-color" content="#0F1D7B">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23006AB3'/><path d='M12 7h15l-5 7H7zM10 18h15l-5 7H5z' fill='white'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/handel-poster.webp">
+<link rel="stylesheet" href="scrollcraft.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Saifi's Gebäudereinigung","founder":"Naqeeb Ullah Saifi","telephone":"+4997112382990","email":"info@saifis-gebaeudereinigung.de","url":"https://saifis-gebaeudereinigung.de/","address":{"@type":"PostalAddress","streetAddress":"Prinzregentenstraße 3","postalCode":"97688","addressLocality":"Bad Kissingen","addressCountry":"DE"},"areaServed":"Bad Kissingen und Umgebung"}
+</script>
+<style>
+  :root {
+    --sc-canvas:     #EFF6FB;
+    --sc-surface:    #FFFFFF;
+    --sc-ink:        #0C1B33;
+    --sc-ink-soft:   #43566E;
+    --sc-accent:     #006AB3;
+    --sc-accent-ink: #FFFFFF;
+    --sc-font-display: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
+    --sc-font-text:    "Barlow", system-ui, sans-serif;
+    --navy: #0F1D7B;
+    --steel: #BDD3E5;
+    --line: #CFE0EC;
+    --line-strong: #6F8CA6;
+    --r: 3px;
+    --rail-w: 244px;
+    --plan-w: 356px;
+    --bar-h: 68px;
+    --sc-shadow-color: 228 60% 20%;
+  }
+  html { scroll-padding-top: 16px; }
+  body { font-size: 1rem; line-height: 1.5; letter-spacing: 0; hyphens: manual; }
+  h1, h2, h3, p, figure, ul, ol, fieldset, legend, dl, dd { margin: 0; padding: 0; }
+  ul, ol { list-style: none; }
+  fieldset { border: 0; min-width: 0; }
+  a { color: var(--sc-accent); }
+  :focus-visible { border-radius: var(--r); }
+
+  h1, h2, h3, legend, .label { font-family: var(--sc-font-display); }
+  h1 { font-size: 1.625rem; line-height: 1.15; font-weight: 700; letter-spacing: -0.005em; text-wrap: balance; }
+  h2 { font-size: 1.375rem; line-height: 1.2; font-weight: 700; }
+  h3, legend { font-size: 1.1875rem; line-height: 1.25; font-weight: 700; }
+  .note { font-size: 0.9375rem; color: var(--sc-ink-soft); text-wrap: pretty; }
+  .label { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.04em; color: var(--sc-ink-soft); }
+
+  /* ---- buttons: one radius, one height, two weights ---- */
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 48px; padding: 0 16px; width: 100%;
+    font-family: var(--sc-font-display); font-size: 1.0625rem; font-weight: 700; letter-spacing: 0.005em;
+    white-space: nowrap; text-decoration: none; border-radius: var(--r); cursor: pointer;
+    border: 1.5px solid var(--sc-accent); background: var(--sc-accent); color: #fff;
+    transition: background-color 140ms var(--sc-ease-out), color 140ms var(--sc-ease-out), transform 120ms var(--sc-ease-out);
+  }
+  .btn--line { background: #fff; color: var(--sc-accent); font-variant-numeric: tabular-nums; }
+  .btn:active { transform: translateY(1px); }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .btn--line:hover { background: #E3EFF8; border-color: var(--sc-accent); color: var(--navy); }
+  }
+  .linkbtn { background: none; border: 0; padding: 6px 0; cursor: pointer; color: var(--sc-accent); font-size: 0.9375rem; font-weight: 500; text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+  .linkbtn:hover { color: var(--navy); }
+
+  /* ---- shell ---- */
+  .desk { display: grid; grid-template-columns: var(--rail-w) minmax(0, 1fr) var(--plan-w); align-items: start; min-height: 100dvh; }
+
+  /* ---- object rail ---- */
+  .rail { position: sticky; top: 0; height: 100dvh; display: flex; flex-direction: column; background: #fff; border-right: 1px solid var(--line); overflow-y: auto; scrollbar-width: thin; }
+  .rail__logo { display: block; padding: 20px 20px 16px; }
+  .rail__logo img { width: 176px; height: auto; }
+  .rail__label { padding: 0 20px 6px; }
+  .tabs { display: flex; flex-direction: column; flex: 0 0 auto; }
+  .tab {
+    position: relative; display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 10px; align-items: center;
+    width: 100%; min-height: 56px; padding: 7px 18px 7px 14px; text-align: left; cursor: pointer;
+    background: transparent; border: 0; border-top: 1px solid #E6EFF6; color: var(--sc-ink);
+    transition: background-color 140ms var(--sc-ease-out);
+  }
+  .tab:last-child { border-bottom: 1px solid #E6EFF6; }
+  .tab img { width: 40px; height: 40px; object-fit: cover; border-radius: var(--r); background: var(--steel); }
+  .tab__name { display: block; font-family: var(--sc-font-display); font-size: 1rem; font-weight: 600; line-height: 1.15; }
+  .tab__name .is-short { display: none; }
+  .tab__ref { display: block; font-size: 0.8125rem; line-height: 1.25; color: var(--sc-ink-soft); margin-top: 1px; }
+  @media (hover: hover) and (pointer: fine) { .tab:hover { background: var(--sc-canvas); } }
+  /* The selected tab borrows the logo's slanted edge. */
+  .tab[aria-selected="true"] { background: var(--sc-accent); color: #fff; clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%); border-color: var(--sc-accent); }
+  .tab[aria-selected="true"] .tab__ref { color: #E4F0FA; }
+  .tab:focus-visible { outline-offset: -3px; }
+  .tab[aria-selected="true"]:focus-visible { outline-color: #fff; }
+  .rail__foot { margin-top: auto; padding: 16px 20px 18px; font-size: 0.8125rem; line-height: 1.4; color: var(--sc-ink-soft); }
+  .rail__foot a { display: block; margin-bottom: 4px; font-family: var(--sc-font-display); font-size: 1.125rem; font-weight: 700; color: var(--sc-accent); text-decoration: none; font-variant-numeric: tabular-nums; }
+  .rail__foot a:hover { color: var(--navy); text-decoration: underline; }
+
+  /* ---- workspace ---- */
+  .work { min-width: 0; padding: 0 32px 40px; }
+  .work__in { max-width: 860px; margin: 0 auto; }
+  .status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2px 16px; min-height: 40px; padding: 8px 0; margin-bottom: 18px; border-bottom: 1px solid var(--line); font-size: 0.875rem; color: var(--sc-ink-soft); font-variant-numeric: tabular-nums; }
+  .status b { font-weight: 600; color: var(--sc-ink); }
+  .intro { display: grid; gap: 6px; margin-bottom: 22px; }
+
+  .panel { margin-bottom: 36px; }
+  .panel:focus-visible { outline-offset: 8px; }
+  .panel__head { display: grid; gap: 4px; margin-bottom: 14px; }
+  .panel__title { display: grid; gap: 1px; }
+  .panel__ref { font-size: 0.875rem; font-weight: 500; color: var(--sc-accent); }
+  .panel__ref[data-kind="beispiel"] { color: var(--sc-ink-soft); }
+  .stack { display: grid; }
+  .stack > * { grid-area: 1 / 1; }
+  .sizer { visibility: hidden; }
+
+  .media { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); gap: 14px; }
+  .frame { position: relative; overflow: hidden; background: #CFE0EC; border-radius: var(--r); }
+  .frame img, .frame video { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+  .frame--clip { aspect-ratio: 4 / 3; }
+  .frame video { opacity: 0; transition: opacity 240ms var(--sc-ease-out); }
+  .frame video.is-on { opacity: 1; }
+  .frame .fade { transition: opacity 200ms var(--sc-ease-out); }
+  .frame .fade.is-off { opacity: 0; }
+  figcaption { margin-top: 5px; font-size: 0.8125rem; line-height: 1.3; color: var(--sc-ink-soft); min-height: 2.6em; text-wrap: pretty; }
+  .stills { display: grid; grid-template-rows: minmax(0,1fr) minmax(0,1fr); gap: 8px; min-height: 0; }
+  .stills figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; }
+  .playbtn {
+    position: absolute; right: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 11px;
+    background: #fff; color: var(--navy); border: 0; border-radius: var(--r); cursor: pointer;
+    font-family: var(--sc-font-display); font-size: 0.9375rem; font-weight: 600; box-shadow: 0 1px 3px hsl(var(--sc-shadow-color) / .35);
+  }
+  .playbtn svg { width: 12px; height: 12px; fill: currentColor; }
+  .playbtn:hover { background: #E3EFF8; }
+  .playbtn[hidden] { display: none; }
+
+  .block { padding-top: 24px; margin-bottom: 36px; border-top: 1px solid var(--line); }
+  .block__head { display: grid; gap: 3px; margin-bottom: 12px; }
+
+  /* ---- service rows ---- */
+  .services { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); grid-auto-rows: 1fr; gap: 6px; }
+  .svc { position: relative; display: grid; grid-template-columns: 22px minmax(0,1fr) auto; grid-template-areas: "box name hint" "box what what"; gap: 1px 10px; align-items: center; align-content: center; min-height: 58px; padding: 8px 12px; background: #fff; border-radius: var(--r); box-shadow: inset 0 0 0 1px var(--line); cursor: pointer; transition: box-shadow 140ms var(--sc-ease-out); }
+  .svc input { grid-area: box; width: 20px; height: 20px; margin: 0; cursor: pointer; }
+  .svc > span:not(.svc__hint) { display: contents; }
+  .svc__name { grid-area: name; min-width: 0; display: block; font-family: var(--sc-font-display); font-size: 1.0625rem; font-weight: 600; line-height: 1.15; }
+  .svc__what { grid-area: what; display: block; font-size: 0.8125rem; line-height: 1.25; color: var(--sc-ink-soft); }
+  .svc__hint { grid-area: hint; font-size: 0.75rem; font-weight: 600; color: var(--sc-accent); }
+  .svc__hint[hidden] { display: block; visibility: hidden; }
+  .svc:has(input:checked) { box-shadow: inset 0 0 0 1.5px var(--sc-accent); }
+  @media (hover: hover) and (pointer: fine) { .svc:hover { box-shadow: inset 0 0 0 1.5px var(--line-strong); } .svc:has(input:checked):hover { box-shadow: inset 0 0 0 1.5px var(--navy); } }
+  .svc:has(input:focus-visible) { outline: 2px solid var(--sc-accent); outline-offset: 2px; }
+  .svc input:focus-visible { outline: none; }
+  .svc.is-moving { transition: transform 300ms var(--sc-ease-out), box-shadow 140ms var(--sc-ease-out); }
+
+  /* ---- rhythm and place ---- */
+  .wish { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 24px; }
+  .radios { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; margin-top: 10px; }
+  .radio { display: block; position: relative; cursor: pointer; }
+  .radio input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+  .radio span { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 4px 6px; text-align: center; font-family: var(--sc-font-display); font-size: 1rem; font-weight: 600; line-height: 1.1; background: #fff; border-radius: var(--r); box-shadow: inset 0 0 0 1px var(--line); transition: background-color 140ms var(--sc-ease-out), color 140ms var(--sc-ease-out); }
+  .radio input:checked + span { background: var(--sc-accent); color: #fff; box-shadow: none; }
+  .radio input:focus-visible + span { outline: 2px solid var(--sc-accent); outline-offset: 2px; }
+  @media (hover: hover) and (pointer: fine) { .radio:hover input:not(:checked) + span { box-shadow: inset 0 0 0 1.5px var(--line-strong); } }
+  .field { display: grid; gap: 4px; }
+  .wish .field { display: block; }
+  .wish .field input { margin-top: 10px; }
+  .wish .err { margin-top: 4px; }
+  .field > label, .field > .fieldlabel { font-family: var(--sc-font-display); font-size: 1.0625rem; font-weight: 600; line-height: 1.2; }
+  .field small { font-size: 0.8125rem; line-height: 1.3; color: var(--sc-ink-soft); }
+  .field input, .field textarea { width: 100%; min-height: 48px; padding: 10px 12px; background: #fff; border: 1px solid var(--line-strong); border-radius: var(--r); font-size: 1rem; line-height: 1.4; color: var(--sc-ink); }
+  .field textarea { resize: vertical; min-height: 92px; display: block; }
+  .field input::placeholder, .field textarea::placeholder { color: #5A6D84; opacity: 1; }
+  .field input:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--sc-accent); outline-offset: 0; border-color: var(--sc-accent); }
+  .field [aria-invalid="true"] { border-color: #A3142B; box-shadow: inset 0 0 0 1px #A3142B; }
+  .err { font-size: 0.875rem; line-height: 1.3; font-weight: 500; color: #A3142B; min-height: 1.3em; }
+
+  /* ---- process and proof ---- */
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; align-content: start; gap: 3px; padding-top: 10px; border-top: 2px solid var(--sc-accent); }
+  .steps h4 { margin: 0; font-family: var(--sc-font-display); font-size: 1.0625rem; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .steps h4::before { content: counter(s) " "; color: var(--sc-accent); }
+  .steps p { font-size: 0.9375rem; line-height: 1.42; color: var(--sc-ink-soft); text-wrap: pretty; }
+  .free { margin-top: 12px; font-weight: 500; }
+  .who { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 24px; align-items: start; }
+  .who .frame { aspect-ratio: 4 / 3; }
+  .who dl { display: grid; gap: 13px; }
+  .who dt { font-family: var(--sc-font-display); font-size: 1.0625rem; font-weight: 700; line-height: 1.2; }
+  .who dd { font-size: 0.9375rem; line-height: 1.42; color: var(--sc-ink-soft); margin-top: 2px; text-wrap: pretty; }
+
+  /* ---- inquiry: the page ends in a cursor ---- */
+  .inquiry { padding: 22px; background: #fff; border-radius: var(--r); box-shadow: inset 0 0 0 1px var(--line); }
+  .inquiry form { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px 16px; margin-top: 14px; }
+  .inquiry .span { grid-column: 1 / -1; }
+  .inquiry__do { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+  .result { font-size: 0.9375rem; line-height: 1.42; padding: 12px 14px; background: var(--sc-canvas); border-radius: var(--r); text-wrap: pretty; }
+  .result[hidden] { display: none; }
+  .foot { display: flex; flex-wrap: wrap; gap: 4px 18px; justify-content: space-between; margin-top: 22px; font-size: 0.875rem; color: var(--sc-ink-soft); }
+  .foot nav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+
+  /* ---- plan: a paper draft on a navy desk ---- */
+  .plan { position: sticky; top: 0; height: 100dvh; background: var(--navy); padding: 12px; display: flex; flex-direction: column; color: var(--sc-ink); }
+  .plan__sheet { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; background: #fff; border-radius: var(--r); box-shadow: 0 2px 4px hsl(232 70% 8% / .4), 0 10px 26px -8px hsl(232 70% 8% / .55); }
+  .plan__scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 16px 18px 6px; scrollbar-width: thin; display: flex; flex-direction: column; }
+  .plan__scroll > * { flex: 0 0 auto; }
+  .plan__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .plan__title { font-size: 1.3125rem; line-height: 1.1; }
+  .plan__close { display: none; }
+  .plan__sub { font-size: 0.875rem; line-height: 1.35; color: var(--sc-ink-soft); text-wrap: pretty; }
+  .meter { display: flex; align-items: center; gap: 8px; margin: 10px 0 2px; font-size: 0.8125rem; color: var(--sc-ink-soft); font-variant-numeric: tabular-nums; }
+  .meter__bars { display: grid; grid-template-columns: repeat(4, 22px); gap: 3px; }
+  .meter__bars i { display: block; height: 5px; background: var(--steel); transform: skewX(-24deg); transition: background-color 180ms var(--sc-ease-out); }
+  .meter__bars i.on { background: var(--sc-accent); }
+  .lines { margin-top: 8px; }
+  .line { position: relative; padding: 9px 0; border-top: 1px solid var(--line); }
+  .line dt { font-size: 0.8125rem; line-height: 1.2; color: var(--sc-ink-soft); }
+  .line dd { margin: 2px 0 0; font-family: var(--sc-font-display); font-size: 1.0625rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+  .line dd.is-empty { font-family: var(--sc-font-text); font-size: 0.9375rem; font-weight: 400; color: var(--sc-ink-soft); }
+  .line dd ul { display: grid; gap: 1px; }
+  .line.is-written dd { animation: write 300ms var(--sc-ease-out) both; animation-delay: var(--d, 0ms); }
+  @keyframes write { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+  .plan__do { flex: 0 0 auto; display: grid; gap: 7px; padding: 12px 18px 12px; border-top: 1px solid var(--line); }
+  .plan__meta { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin-top: auto; padding-top: 6px; }
+  .line--ask dd { font-family: var(--sc-font-text); font-size: 0.9375rem; font-weight: 400; line-height: 1.35; color: var(--sc-ink); }
+  .plan__saved { font-size: 0.75rem; line-height: 1.3; color: var(--sc-ink-soft); padding: 2px 0 8px; }
+  .scrim, .bar { display: none; }
+
+  .is-short-h .plan__scroll { padding-top: 12px; }
+
+  /* ---- mid widths: the plan becomes a bottom sheet ---- */
+  @media (max-width: 1179px) {
+    :root { --rail-w: 240px; }
+    .desk { grid-template-columns: var(--rail-w) minmax(0, 1fr); }
+    .work { padding: 0 24px calc(var(--bar-h) + 28px); }
+    .plan { position: fixed; z-index: 60; inset: auto 0 0 auto; width: min(440px, 100%); height: auto; max-height: min(88dvh, 720px); padding: 8px; padding-bottom: max(8px, env(safe-area-inset-bottom)); border-radius: 6px 6px 0 0; transform: translateY(102%); visibility: hidden; transition: transform 300ms var(--sc-ease-drawer), visibility 0s linear 300ms; }
+    .plan.is-open { transform: none; visibility: visible; transition: transform 300ms var(--sc-ease-drawer); }
+    .plan__close { display: inline-flex; flex: 0 0 auto; align-items: center; min-height: 40px; padding: 0 2px 0 10px; margin: -8px -4px 0 0; background: none; border: 0; cursor: pointer; font-family: var(--sc-font-display); font-size: 1rem; font-weight: 600; color: var(--sc-accent); }
+    .scrim { position: fixed; inset: 0; z-index: 55; background: hsl(232 70% 12% / .45); opacity: 0; pointer-events: none; display: block; transition: opacity 240ms var(--sc-ease-out); }
+    .scrim.is-open { opacity: 1; pointer-events: auto; }
+    .bar { position: fixed; z-index: 50; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; padding: 8px 12px; padding-bottom: max(8px, env(safe-area-inset-bottom)); background: #fff; box-shadow: 0 -1px 0 var(--line), 0 -6px 18px -8px hsl(var(--sc-shadow-color) / .3); }
+    .bar__draft { flex-direction: column; gap: 0; min-height: 52px; padding: 4px 12px; line-height: 1.12; }
+    .bar__draft small { font-family: var(--sc-font-text); font-size: 0.8125rem; font-weight: 400; color: #fff; }
+    .bar .btn--line { width: auto; min-height: 52px; padding: 0 12px; }
+  }
+  @media (min-width: 821px) and (max-width: 1179px) { .bar { left: var(--rail-w); } }
+
+  /* ---- phones: rail becomes a sticky strip ---- */
+  @media (max-width: 820px) {
+    html { scroll-padding-top: 72px; }
+    .desk { display: block; }
+    .rail { position: sticky; z-index: 40; height: auto; overflow: visible; display: block; border-right: 0; border-bottom: 1px solid var(--line); }
+    .rail__logo { display: none; }
+    .rail__label, .rail__foot { display: none; }
+    .tabs { flex-direction: row; overflow-x: auto; scrollbar-width: none; scroll-padding: 0 12px; padding: 6px 8px; gap: 4px; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab, .tab:last-child { flex: 0 0 auto; width: auto; display: flex; gap: 7px; min-height: 44px; padding: 4px 16px 4px 5px; border: 0; border-radius: var(--r); box-shadow: inset 0 0 0 1px var(--line); }
+    .tab img { width: 32px; height: 32px; }
+    .tab__name { white-space: nowrap; }
+    .tab__name .is-full { display: none; }
+    .tab__name .is-short { display: inline; }
+    .tab__ref { display: none; }
+    .tab[aria-selected="true"] { clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 100%, 0 100%); box-shadow: none; }
+    .mast { display: flex !important; }
+    .work { padding: 0 16px calc(var(--bar-h) + 24px); }
+    .status { display: none; }
+    .intro { margin: 14px 0 16px; }
+    h1 { font-size: 1.5rem; }
+    .intro__more { display: none; }
+    .panel { display: flex; flex-direction: column; }
+    .panel__head { display: contents; }
+    .panel__title { order: 1; margin-bottom: 10px; }
+    .media { order: 2; }
+    .panel__head > .stack { order: 3; margin-top: 8px; }
+    .media { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+    .stills { grid-template-columns: repeat(2, minmax(0,1fr)); grid-template-rows: auto; }
+    .stills .frame { aspect-ratio: 4 / 3; }
+    .services { grid-template-columns: minmax(0, 1fr); gap: 5px; }
+    .svc { min-height: 56px; }
+    .wish { grid-template-columns: minmax(0, 1fr); }
+    .radios { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .steps { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .who { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .inquiry { padding: 16px; }
+    .inquiry form { grid-template-columns: minmax(0, 1fr); }
+    .inquiry__do { grid-template-columns: minmax(0, 1fr); }
+    .playbtn { min-height: 44px; }
+    .plan { inset: auto 0 0 0; width: 100%; }
+    .block, .panel { margin-bottom: 28px; }
+  }
+  .mast { display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; background: #fff; }
+  .mast img { width: 150px; height: auto; }
+  .nojs { padding: 10px 16px; background: var(--steel); font-size: 0.9375rem; }
+
+  /* Short laptop screens: keep the whole rail and the buttons on screen. */
+  @media (min-width: 821px) and (max-height: 760px) {
+    .rail__logo { padding: 12px 20px 8px; }
+    .rail__logo img { width: 150px; }
+    .tab { min-height: 50px; padding-top: 4px; padding-bottom: 4px; }
+    .tab img { width: 36px; height: 36px; }
+    .tab { grid-template-columns: 36px minmax(0,1fr); }
+    .rail__foot { padding: 8px 20px 10px; }
+    .rail__foot span { display: none; }
+    .line { padding: 6px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .svc.is-moving, .frame video, .frame .fade { transition: none; }
+    .line.is-written dd { animation: none; }
+    .plan, .plan.is-open { transition: none; }
+    .btn:active { transform: none; }
+  }
+</style>
+</head>
+<body>
+<noscript><p class="nojs">Ohne JavaScript bleibt der Planer beim Beispiel Handelsgeschäft. Sie erreichen uns direkt unter <a href="tel:+4997112382990">0971 12382990</a>.</p></noscript>
+
+<header class="mast">
+  <a href="#top" aria-label="Saifi's Gebäudereinigung, zum Seitenanfang"><img src="assets/logo-trim.png" width="480" height="132" alt="Saifi's Gebäudereinigung"></a>
+</header>
+
+<div class="desk" id="top">
+
+  <nav class="rail" aria-label="Objektart">
+    <a class="rail__logo" href="#top"><img src="assets/logo-trim.png" width="480" height="132" alt="Saifi's Gebäudereinigung"></a>
+    <p class="rail__label label" id="rail-label">Ihr Objekt</p>
+    <div class="tabs" id="tabs" role="tablist" aria-orientation="vertical" aria-labelledby="rail-label"></div>
+    <div class="rail__foot">
+      <a href="tel:+4997112382990">0971 12382990</a>
+      <span>Prinzregentenstraße 3<br>97688 Bad Kissingen</span>
+    </div>
+  </nav>
+
+  <main class="work">
+    <div class="work__in">
+
+      <p class="status" role="status" aria-live="polite">
+        <span>Reinigungsplan <span aria-hidden="true">/</span> <b id="st-object">Handelsgeschäft</b></span>
+        <span id="st-progress">Entwurf: 2 von 4 Angaben</span>
+      </p>
+
+      <div class="intro">
+        <h1>Reinigungsplan für Ihr Objekt in Bad Kissingen und Umgebung</h1>
+        <p class="note">Objektart wählen, Leistungen prüfen, Entwurf senden. <span class="intro__more">Den fertigen Plan machen wir beim kostenfreien Analyse-Termin.</span></p>
+      </div>
+
+      <section data-sc-act="flow" class="panel" id="panel" role="tabpanel" aria-labelledby="tab-handel" tabindex="-1">
+        <div class="panel__head">
+          <div class="panel__title">
+            <h2 id="p-name">Handelsgeschäft</h2>
+            <span class="panel__ref" id="p-ref" data-kind="ref">Referenz: Autohaus Löffler</span>
+          </div>
+          <div class="stack">
+            <p class="note" id="p-lead">Ihre Glasfront ist das Erste, was Kunden sehen. Deshalb stehen hier Glas, die laufende Reinigung der Verkaufsfläche und die Fassade oben.</p>
+          </div>
+        </div>
+        <div class="media">
+          <figure>
+            <div class="frame frame--clip">
+              <img class="fade" id="m-poster" src="assets/handel-poster.webp" width="800" height="600" alt="Glasfassade eines Autohauses mit Ford-Logo">
+              <video id="m-video" muted playsinline loop preload="none" aria-hidden="true"></video>
+              <button class="playbtn" id="m-play" type="button" hidden></button>
+            </div>
+            <figcaption id="m-cap">Autohaus Löffler: die Glasfassade am Ford-Haus.</figcaption>
+          </figure>
+          <div class="stills">
+            <figure>
+              <div class="frame"><img class="fade" id="m-a" src="assets/handel-a.webp" width="680" height="510" alt="Runder Glasturm eines Autohauses mit Ford-Logo vor blauem Himmel"></div>
+              <figcaption id="m-a-cap">Glasturm von außen</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img class="fade" id="m-b" src="assets/handel-b.webp" width="680" height="510" alt="Silhouette eines Reinigers auf der Leiter vor einer großen Fensterfront"></div>
+              <figcaption id="m-b-cap">Innenseite, von der Leiter aus</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section data-sc-act="flow" class="block" aria-labelledby="h-services">
+        <div class="block__head">
+          <h3 id="h-services">Was soll gereinigt werden?</h3>
+          <p class="note" id="svc-note">Unser Vorschlag für Handelsgeschäft steht oben. Ändern Sie, was nicht passt.</p>
+        </div>
+        <div class="services" id="services">
+          <label class="svc" data-id="glas"><input type="checkbox" name="Leistung" value="Glasreinigung" form="anfrage" checked><span><span class="svc__name">Glasreinigung</span><span class="svc__what">Fenster, Schaufenster, Glasfronten</span></span><span class="svc__hint">Vorschlag</span></label>
+          <label class="svc" data-id="unterhalt"><input type="checkbox" name="Leistung" value="Unterhaltsreinigung" form="anfrage" checked><span><span class="svc__name">Unterhalts&shy;reinigung</span><span class="svc__what">Laufende Reinigung der Räume</span></span><span class="svc__hint">Vorschlag</span></label>
+          <label class="svc" data-id="fassade"><input type="checkbox" name="Leistung" value="Fassadenreinigung" form="anfrage" checked><span><span class="svc__name">Fassaden&shy;reinigung</span><span class="svc__what">Außenwände und Verkleidungen</span></span><span class="svc__hint">Vorschlag</span></label>
+          <label class="svc" data-id="grund"><input type="checkbox" name="Leistung" value="Grundreinigung" form="anfrage"><span><span class="svc__name">Grundreinigung</span><span class="svc__what">Einmalig und gründlich</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="treppe"><input type="checkbox" name="Leistung" value="Treppenhausreinigung" form="anfrage"><span><span class="svc__name">Treppenhaus&shy;reinigung</span><span class="svc__what">Treppen, Flure, Eingänge</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="desinf"><input type="checkbox" name="Leistung" value="Desinfektionsreinigung" form="anfrage"><span><span class="svc__name">Desinfektions&shy;reinigung</span><span class="svc__what">Sanitär und Kontaktflächen</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="bau"><input type="checkbox" name="Leistung" value="Baureinigung" form="anfrage"><span><span class="svc__name">Baureinigung</span><span class="svc__what">Nach Bau oder Umbau</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="pv"><input type="checkbox" name="Leistung" value="Photovoltaikreinigung" form="anfrage"><span><span class="svc__name">Photovoltaik&shy;reinigung</span><span class="svc__what">Module auf Dach oder Freifläche</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="jalousie"><input type="checkbox" name="Leistung" value="Jalousienreinigung" form="anfrage"><span><span class="svc__name">Jalousien&shy;reinigung</span><span class="svc__what">Jalousien und Lamellen</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="stein"><input type="checkbox" name="Leistung" value="Steinreinigung" form="anfrage"><span><span class="svc__name">Steinreinigung</span><span class="svc__what">Steinböden, Stufen, Pflaster</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="teppich"><input type="checkbox" name="Leistung" value="Teppichreinigung" form="anfrage"><span><span class="svc__name">Teppichreinigung</span><span class="svc__what">Teppichböden und Läufer</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="polster"><input type="checkbox" name="Leistung" value="Polsterreinigung" form="anfrage"><span><span class="svc__name">Polsterreinigung</span><span class="svc__what">Sitzmöbel und Polster</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="graffiti"><input type="checkbox" name="Leistung" value="Graffitientfernung" form="anfrage"><span><span class="svc__name">Graffiti&shy;entfernung</span><span class="svc__what">Wände, Tore und Flächen außen</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+          <label class="svc" data-id="hausmeister"><input type="checkbox" name="Leistung" value="Hausmeisterservice" form="anfrage"><span><span class="svc__name">Hausmeister&shy;service</span><span class="svc__what">Laufende Betreuung des Objekts</span></span><span class="svc__hint" hidden>Vorschlag</span></label>
+        </div>
+      </section>
+
+      <section data-sc-act="flow" class="block wish" aria-label="Rhythmus und Ort">
+        <fieldset>
+          <legend>Wie oft wünschen Sie sich die Reinigung?</legend>
+          <p class="note">Ihr Wunsch, keine Empfehlung. Wir stimmen ihn beim Termin ab.</p>
+          <div class="radios" id="rhythm">
+            <label class="radio"><input type="radio" name="Rhythmus" value="Einmalig" form="anfrage"><span>Einmalig</span></label>
+            <label class="radio"><input type="radio" name="Rhythmus" value="Täglich" form="anfrage"><span>Täglich</span></label>
+            <label class="radio"><input type="radio" name="Rhythmus" value="Mehrmals pro Woche" form="anfrage"><span>Mehrmals pro Woche</span></label>
+            <label class="radio"><input type="radio" name="Rhythmus" value="Wöchentlich" form="anfrage"><span>Wöchentlich</span></label>
+            <label class="radio"><input type="radio" name="Rhythmus" value="Monatlich" form="anfrage"><span>Monatlich</span></label>
+            <label class="radio"><input type="radio" name="Rhythmus" value="Noch offen" form="anfrage" checked><span>Noch offen</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <h3><label for="ort">Wo steht das Objekt?</label></h3>
+          <p class="note">Postleitzahl oder Ort reichen.</p>
+          <input id="ort" name="Ort" form="anfrage" type="text" autocomplete="postal-code" maxlength="60" placeholder="z. B. 97688 Bad Kissingen" aria-describedby="ort-err">
+          <p class="err" id="ort-err"></p>
+        </div>
+      </section>
+
+      <section data-sc-act="flow" class="block" aria-labelledby="h-next">
+        <div class="block__head"><h3 id="h-next">So geht es weiter</h3></div>
+        <ol class="steps">
+          <li><h4>Anfrage</h4><p>Sie senden den Entwurf oder rufen direkt an.</p></li>
+          <li><h4>Analyse</h4><p>Wir rufen kurz zurück und planen einen Termin, um Ihr Objekt kennenzulernen.</p></li>
+          <li><h4>Angebot</h4><p>Danach erhalten Sie ein maßgeschneidertes Angebot für Ihre Situation.</p></li>
+        </ol>
+        <p class="free">Der Analyse-Termin ist kostenfrei und 100 % unverbindlich.</p>
+      </section>
+
+      <section data-sc-act="flow" class="block" aria-labelledby="h-who">
+        <div class="block__head"><h3 id="h-who">Wer dafür geradesteht</h3></div>
+        <div class="who">
+          <div class="frame"><img src="assets/van.webp" width="900" height="675" loading="lazy" alt="Weißer Transporter von Saifi's Gebäudereinigung mit Logo und dem Satz: Sauber. Schnell. Zuverlässig."></div>
+          <dl>
+            <div><dt>Inhabergeführt</dt><dd>Naqeeb Ullah Saifi sorgt als Geschäftsführer persönlich dafür, dass Sie zufrieden sind.</dd></div>
+            <div><dt>Persönlicher Ansprechpartner</dt><dd>Bei besonderen Anliegen oder Wünschen erreichen Sie Ihren eigenen Ansprechpartner.</dd></div>
+            <div><dt>Q-Check</dt><dd>Mit unserem Q-Check-System prüfen wir regelmäßig die Qualität in Ihrem Objekt. Das Personal weiß nicht, wann wir kontrollieren.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section data-sc-act="flow" class="inquiry" id="anfrage-box" aria-labelledby="h-inq">
+        <h3 id="h-inq">Wohin dürfen wir uns melden?</h3>
+        <p class="note">Ihr Entwurf wird automatisch mitgeschickt. Die Anfrage öffnet Ihr E-Mail-Programm, gesendet wird erst dort.</p>
+        <form id="anfrage" action="mailto:info@saifis-gebaeudereinigung.de" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="f-name">Firma oder Name</label>
+            <input id="f-name" name="Firma oder Name" type="text" autocomplete="organization" maxlength="80" required aria-describedby="f-name-err">
+            <p class="err" id="f-name-err"></p>
+          </div>
+          <div class="field">
+            <label for="f-tel">Telefon für den Rückruf</label>
+            <input id="f-tel" name="Telefon" type="tel" autocomplete="tel" maxlength="30" aria-describedby="f-tel-err">
+            <p class="err" id="f-tel-err"></p>
+          </div>
+          <div class="field span">
+            <label for="f-msg">Was sollten wir noch wissen? <span style="font-weight:500;color:var(--sc-ink-soft)">(freiwillig)</span></label>
+            <textarea id="f-msg" name="Nachricht" maxlength="500" rows="3"></textarea>
+          </div>
+          <div class="inquiry__do span">
+            <button class="btn" type="submit">Analyse-Termin anfragen</button>
+            <a class="btn btn--line" href="tel:+4997112382990">0971 12382990</a>
+          </div>
+          <p class="result span" id="result" role="status" hidden></p>
+        </form>
+      </section>
+
+      <footer class="foot">
+        <span>Saifi's Gebäudereinigung, Prinzregentenstraße 3, 97688 Bad Kissingen</span>
+        <nav aria-label="Rechtliches">
+          <a href="mailto:info@saifis-gebaeudereinigung.de">E-Mail</a>
+          <a href="https://www.instagram.com/saifis0077/" rel="noopener">Instagram</a>
+          <a href="https://saifis-gebaeudereinigung.de/impressum/">Impressum</a>
+          <a href="https://saifis-gebaeudereinigung.de/datenschutz/">Datenschutz</a>
+        </nav>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="plan" id="plan" aria-labelledby="plan-title">
+    <div class="plan__sheet">
+      <div class="plan__scroll">
+        <div class="plan__top">
+          <h2 class="plan__title" id="plan-title">Reinigungsplan-Entwurf</h2>
+          <button class="plan__close" id="plan-close" type="button">Schließen</button>
+        </div>
+        <p class="plan__sub">Unverbindlicher Entwurf. Beim kostenfreien Analyse-Termin wird daraus Ihr Plan.</p>
+        <div class="meter">
+          <span class="meter__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span>
+          <span id="meter-text">2 von 4 Angaben</span>
+        </div>
+        <dl class="lines" id="lines">
+          <div class="line"><dt>Objektart</dt><dd id="l-object">Handelsgeschäft</dd></div>
+          <div class="line"><dt>Leistungen</dt><dd id="l-services"><ul><li>Glasreinigung</li><li>Unterhaltsreinigung</li><li>Fassadenreinigung</li></ul></dd></div>
+          <div class="line"><dt>Rhythmus (Ihr Wunsch)</dt><dd id="l-rhythm" class="is-empty">Noch offen</dd></div>
+          <div class="line"><dt>Ort</dt><dd id="l-ort" class="is-empty">Noch nicht angegeben</dd></div>
+          <div class="line line--ask"><dt>Klären wir beim Termin</dt><dd id="l-ask"><ul><li>Öffnungszeiten und Zugang</li><li>Höhe und Größe der Glasflächen</li><li>Reinigung vor oder nach Ladenschluss</li></ul></dd></div>
+        </dl>
+        <div class="plan__meta">
+          <button class="linkbtn" id="copy" type="button">Entwurf kopieren</button>
+          <button class="linkbtn" id="reset" type="button">Zurücksetzen</button>
+        </div>
+        <p class="plan__saved" id="saved" role="status">Objektart und Auswahl bleiben nur in diesem Browser. Name und Telefon speichern wir nicht.</p>
+      </div>
+      <div class="plan__do">
+        <a class="btn" id="to-form" href="#anfrage-box">Analyse-Termin anfragen</a>
+        <a class="btn btn--line" href="tel:+4997112382990">0971 12382990</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="bar" id="bar">
+  <button class="btn bar__draft" id="bar-open" type="button" aria-controls="plan" aria-expanded="false">
+    <span>Analyse-Termin anfragen</span>
+    <small id="bar-text">3 Leistungen, 2 von 4 Angaben</small>
+  </button>
+  <a class="btn btn--line" href="tel:+4997112382990">0971 12382990</a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* Editorial data. Service emphasis per object is a suggestion Saifi should confirm. */
+  var SERVICES = {
+    glas: 'Glasreinigung', unterhalt: 'Unterhaltsreinigung', fassade: 'Fassadenreinigung', grund: 'Grundreinigung',
+    treppe: 'Treppenhausreinigung', desinf: 'Desinfektionsreinigung', bau: 'Baureinigung', pv: 'Photovoltaikreinigung',
+    jalousie: 'Jalousienreinigung', stein: 'Steinreinigung', teppich: 'Teppichreinigung', polster: 'Polsterreinigung',
+    graffiti: 'Graffitientfernung', hausmeister: 'Hausmeisterservice'
+  };
+  var OBJECTS = [
+    { id: 'handel', ask: ['Öffnungszeiten und Zugang', 'Höhe und Größe der Glasflächen', 'Reinigung vor oder nach Ladenschluss'], name: 'Handelsgeschäft', short: 'Handel', rail: 'Autohaus Löffler', kind: 'ref',
+      ref: 'Referenz: Autohaus Löffler',
+      lead: 'Ihre Glasfront ist das Erste, was Kunden sehen. Deshalb stehen hier Glas, die laufende Reinigung der Verkaufsfläche und die Fassade oben.',
+      first: ['glas', 'unterhalt', 'fassade'], then: ['grund', 'treppe', 'desinf', 'bau', 'pv', 'jalousie', 'stein', 'teppich', 'polster', 'graffiti', 'hausmeister'],
+      clip: { cap: 'Autohaus Löffler: die Glasfassade am Ford-Haus.', alt: 'Glasfassade eines Autohauses mit Ford-Logo' },
+      a: { cap: 'Glasturm von außen', alt: 'Runder Glasturm eines Autohauses mit Ford-Logo vor blauem Himmel' },
+      b: { cap: 'Innenseite, von der Leiter aus', alt: 'Silhouette eines Reinigers auf der Leiter vor einer großen Fensterfront' } },
+    { id: 'buero', ask: ['Arbeitszeiten und Schlüsselregelung', 'Zahl der Räume und Etagen', 'Sanitärbereiche und Küchen'], name: 'Büro', short: 'Büro', rail: 'Beispielaufnahmen', kind: 'beispiel',
+      ref: 'Beispielaufnahmen von anderen Objekten',
+      lead: 'Besucher und Mitarbeitende merken sofort, ob Räume, Flure und Sanitärbereiche gepflegt sind. Deshalb steht hier die laufende Reinigung oben, dazu Glas und Teppich.',
+      first: ['unterhalt', 'glas', 'teppich'], then: ['treppe', 'desinf', 'grund', 'jalousie', 'polster', 'fassade', 'hausmeister', 'stein', 'bau', 'graffiti', 'pv'],
+      clip: { cap: 'Fenster und Fassade, Arbeit mit der Teleskopstange. Kein Büro-Referenzobjekt.', alt: 'Rote Teleskopstange an einer Fassade mit grün gerahmten Fenstern' },
+      a: { cap: 'Mehrgeschossige Fassade', alt: 'Mehrgeschossiges Gebäude mit langen Fensterbändern und Jalousien' },
+      b: { cap: 'Lange Fensterfront', alt: 'Flacher Gebäuderiegel mit langer Fensterfront unter blauem Himmel' } },
+    { id: 'gesundheit', ask: ['Hygieneanforderungen Ihres Hauses', 'Zeiten ohne Patientenbetrieb', 'Behandlungs- und Wartebereiche'], name: 'Gesundheits­einrichtung', short: 'Gesundheit', rail: 'Athera Physio, Hescuro', kind: 'ref',
+      ref: 'Referenzen: Athera Physio, Hescuro',
+      lead: 'Patienten und Personal erwarten hygienisch saubere Räume. Deshalb stehen hier Desinfektion, die laufende Reinigung und Glas oben.',
+      first: ['desinf', 'unterhalt', 'glas'], then: ['grund', 'treppe', 'fassade', 'jalousie', 'stein', 'polster', 'teppich', 'hausmeister', 'bau', 'graffiti', 'pv'],
+      clip: { cap: 'Athera Physio: Fensterreinigung mit der Teleskopstange.', alt: 'Teleskopstange vor den Fenstern eines Gebäudes mit dem Schild Athera Physio' },
+      a: { cap: 'Hescuro: Eingang und Fassade', alt: 'Eingangsdach mit dem Schriftzug Hescuro vor blauem Himmel' },
+      b: { cap: 'Glastüren, von Hand abgezogen', alt: 'Hand zieht eine Glastür im Innenraum ab' } },
+    { id: 'bildung', ask: ['Unterrichts- und Betreuungszeiten', 'Räume, Flure und Sanitärbereiche', 'Ferien und Schließzeiten'], name: 'Bildung und Soziales', short: 'Bildung', rail: 'Lebenshilfe Hammelburg', kind: 'ref',
+      ref: 'Referenz: Lebenshilfe Hammelburg',
+      lead: 'Räume, Flure und Sanitärbereiche werden hier von vielen Menschen genutzt. Deshalb stehen die laufende Reinigung, Desinfektion und Glas oben.',
+      first: ['unterhalt', 'desinf', 'glas'], then: ['treppe', 'grund', 'fassade', 'jalousie', 'hausmeister', 'stein', 'teppich', 'polster', 'graffiti', 'bau', 'pv'],
+      clip: { cap: 'Lebenshilfe Hammelburg: Fenster mit Teleskopstange und Wasser.', alt: 'Bürste an der Teleskopstange spritzt Wasser auf ein großes Fenster, Sonne im Glas' },
+      a: { cap: 'Scheibe von Hand abziehen', alt: 'Reiniger im schwarzen Saifi-T-Shirt von hinten an einem Fenster vor blauem Himmel' },
+      b: { cap: 'Fassade und Jalousien', alt: 'Lange Fassade mit Jalousien neben einem gepflasterten Weg' } },
+    { id: 'kita', ask: ['Betreuungszeiten', 'Spielbereiche und Schlafräume', 'Gewünschte Reinigungsmittel'], name: 'Kindergarten', short: 'Kindergarten', rail: 'Beispielaufnahmen', kind: 'beispiel',
+      ref: 'Beispielaufnahmen von anderen Objekten',
+      lead: 'Kinder spielen auf dem Boden und fassen alles an. Deshalb stehen hier die laufende Reinigung, Desinfektion und Polster oben.',
+      first: ['unterhalt', 'desinf', 'polster'], then: ['glas', 'teppich', 'grund', 'treppe', 'jalousie', 'hausmeister', 'stein', 'fassade', 'graffiti', 'bau', 'pv'],
+      clip: { cap: 'Große Glasfront von innen. Beispiel von einem anderen Objekt.', alt: 'Große Fensterfront von innen mit Blick ins Grüne' },
+      a: { cap: 'Glas an einer Terrasse', alt: 'Terrasse mit Glaswänden und Holzbank zwischen Bäumen' },
+      b: { cap: 'Fensterband von außen', alt: 'Dunkles Fensterband eines Gebäudes vor blauem Himmel mit Wolken' } },
+    { id: 'sport', ask: ['Öffnungszeiten', 'Umkleiden und Duschen', 'Trainingsflächen und Geräte'], name: 'Sportclub', short: 'Sportclub', rail: 'GoFit', kind: 'ref',
+      ref: 'Referenz: GoFit',
+      lead: 'Viele Menschen, viel Kontakt mit Flächen und oft große Glasflächen. Deshalb stehen hier die laufende Reinigung, Desinfektion und Glas oben.',
+      first: ['unterhalt', 'desinf', 'glas'], then: ['grund', 'stein', 'fassade', 'teppich', 'polster', 'treppe', 'jalousie', 'hausmeister', 'graffiti', 'bau', 'pv'],
+      clip: { cap: 'GoFit: Glasflächen im Atrium, von der Leiter aus.', alt: 'Reiniger hoch auf der Leiter an einem Atrium aus Glas' },
+      a: { cap: 'Trainingsfläche im Studio', alt: 'Trainingsgeräte auf einer sauberen Fläche im Fitnessstudio' },
+      b: { cap: 'GoFit: Eingangstüren', alt: 'Automatische Glastüren am Eingang von GoFit' } },
+    { id: 'wohnen', ask: ['Zahl der Aufgänge und Etagen', 'Zugang und Schlüssel', 'Auszug oder laufende Betreuung'], name: 'Wohnanlage', short: 'Wohnanlage', rail: 'Komplettreinigung', kind: 'ref',
+      ref: 'Referenz: Komplettreinigung einer Wohnung',
+      lead: 'Treppenhaus und Eingänge prägen den Eindruck. Bei Auszug oder Leerstand kommt oft eine Grundreinigung dazu. Deshalb stehen beide oben, dazu Glas.',
+      first: ['treppe', 'grund', 'glas'], then: ['unterhalt', 'hausmeister', 'fassade', 'stein', 'graffiti', 'jalousie', 'teppich', 'desinf', 'polster', 'bau', 'pv'],
+      clip: { cap: 'Nachher: Rundgang durch die Wohnung.', alt: 'Rundgang durch ein leeres, sauberes Zimmer mit Parkettboden' },
+      a: { cap: 'Vorher: Müll und Tüten', alt: 'Haufen aus Müll und Plastiktüten auf dem Boden einer Wohnung' },
+      b: { cap: 'Nachher: Zimmer und Fenster', alt: 'Leeres Zimmer mit sauberen Wänden und Fenster' } },
+    { id: 'produktion', ask: ['Schichtzeiten', 'Hallen, Sozialräume und Büros', 'Sicherheitsvorgaben im Betrieb'], name: 'Produktionsstätte', short: 'Produktion', rail: 'Beispielaufnahmen', kind: 'beispiel',
+      ref: 'Beispielaufnahmen von anderen Objekten',
+      lead: 'Hallen, Tore, Sozialräume und Büros brauchen unterschiedliche Reinigung. Deshalb stehen hier Grundreinigung, Glas und Fassade oben.',
+      first: ['grund', 'glas', 'fassade'], then: ['unterhalt', 'desinf', 'treppe', 'hausmeister', 'graffiti', 'stein', 'jalousie', 'bau', 'pv', 'teppich', 'polster'],
+      clip: { cap: 'Glasfassade an einem Autohaus. Beispiel von einem anderen Objekt.', alt: 'Lange Glasfassade mit Spiegelungen von Bäumen' },
+      a: { cap: 'Hallentor aus Glas, von innen', alt: 'Großes verglastes Hallentor von innen mit Blick in den Himmel' },
+      b: { cap: 'Hallentor aus Glas, von außen', alt: 'Großes verglastes Hallentor von außen' } },
+    { id: 'pv', ask: ['Größe und Standort der Anlage', 'Zugang zu Dach oder Gelände', 'Art der Verschmutzung'], name: 'Photovoltaikanlage', short: 'Photovoltaik', rail: 'Solarreinigung', kind: 'ref',
+      ref: 'Referenz: Reinigung einer Solaranlage',
+      lead: 'Bei Modulen auf Dach oder Freifläche steht eine Leistung im Mittelpunkt: die Photovoltaikreinigung. Alles andere ist hier optional.',
+      first: ['pv'], then: ['fassade', 'glas', 'hausmeister', 'grund', 'stein', 'unterhalt', 'treppe', 'jalousie', 'graffiti', 'bau', 'desinf', 'teppich', 'polster'],
+      clip: { cap: 'Photovoltaikreinigung mit der Stangenbürste.', alt: 'Grüne Bürste an einer Stange reinigt Solarmodule' },
+      a: { cap: 'Reihen von Modulen', alt: 'Lange Reihen von Solarmodulen aus flacher Perspektive' },
+      b: { cap: 'Bürste und Stange am Modul', alt: 'Bürste am Rand eines Solarmoduls' } }
+  ];
+  var byId = {}; OBJECTS.forEach(function (o) { byId[o.id] = o; });
+  var plain = function (s) { return s.replace(/­/g, ''); };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var KEY = 'saifis-reinigungsplan-v1';
+  var storageOk = true;
+
+  /* ---------------------------------------------------------- state ---- */
+  var state = { obj: 'handel', picks: {}, rhythm: 'Noch offen', ort: '' };
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return;
+      var s = JSON.parse(raw);
+      if (s && byId[s.obj]) state.obj = s.obj;
+      if (s && s.picks && typeof s.picks === 'object') {
+        Object.keys(s.picks).forEach(function (k) {
+          if (byId[k] && Array.isArray(s.picks[k])) state.picks[k] = s.picks[k].filter(function (x) { return SERVICES[x]; });
+        });
+      }
+      if (s && typeof s.rhythm === 'string' && document.querySelector('#rhythm input[value="' + s.rhythm.replace(/"/g, '') + '"]')) state.rhythm = s.rhythm;
+      if (s && typeof s.ort === 'string') state.ort = s.ort.slice(0, 60);
+    } catch (e) { /* unavailable or corrupt storage: start clean */ }
+  }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); storageOk = true; }
+    catch (e) { storageOk = false; }
+    var msg = storageOk
+      ? 'Objektart und Auswahl bleiben nur in diesem Browser. Name und Telefon speichern wir nicht.'
+      : 'Ihr Browser speichert hier nichts. Der Entwurf gilt, solange diese Seite offen ist.';
+    if ($('saved').textContent !== msg) $('saved').textContent = msg;
+  }
+  function picksFor(id) { return state.picks[id] || byId[id].first.slice(); }
+
+  /* ------------------------------------------------- place validation -- */
+  function ortCheck(v) {
+    v = v.trim();
+    if (!v) return { ok: false, empty: true };
+    if (/^\d+$/.test(v)) return v.length === 5 ? { ok: true, value: v } : { ok: false, msg: 'Eine Postleitzahl hat fünf Ziffern.' };
+    if (/^\d{5}\s+\S/.test(v) || /^[\p{L}][\p{L}\s.\-'’\/()]+$/u.test(v)) {
+      if (/^\d{5}\s/.test(v) && !/^\d{5}\s+[\p{L}][\p{L}\s.\-'’\/()]*$/u.test(v)) return { ok: false, msg: 'Bitte nur Postleitzahl und Ort eintragen.' };
+      return { ok: true, value: v };
+    }
+    return { ok: false, msg: 'Bitte Postleitzahl oder Ort eintragen.' };
+  }
+
+  /* -------------------------------------------------------- rail ------- */
+  var tabsEl = $('tabs');
+  OBJECTS.forEach(function (o) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'tab'; b.id = 'tab-' + o.id; b.setAttribute('role', 'tab');
+    b.setAttribute('aria-controls', 'panel'); b.dataset.id = o.id; b.setAttribute('aria-label', plain(o.name) + ', ' + o.rail);
+    b.innerHTML = '<img src="assets/' + o.id + '-t.webp" width="40" height="40" alt="" loading="lazy">' +
+      '<span><span class="tab__name"><span class="is-full"></span><span class="is-short"></span></span><span class="tab__ref"></span></span>';
+    b.querySelector('.is-full').textContent = o.name;
+    b.querySelector('.is-short').textContent = o.short;
+    b.querySelector('.tab__ref').textContent = o.rail;
+    tabsEl.appendChild(b);
+  });
+  var tabs = [].slice.call(tabsEl.querySelectorAll('.tab'));
+  var narrow = matchMedia('(max-width: 820px)');
+  function syncOrientation() { tabsEl.setAttribute('aria-orientation', narrow.matches ? 'horizontal' : 'vertical'); }
+  syncOrientation();
+  narrow.addEventListener('change', function () { syncOrientation(); revealTab(); });
+  function revealTab() {
+    if (!narrow.matches) return;
+    var t = $('tab-' + state.obj);
+    var left = t.offsetLeft - (tabsEl.clientWidth - t.offsetWidth) / 2;
+    tabsEl.scrollTo({ left: left, behavior: reduce ? 'auto' : 'smooth' });
+  }
+  tabsEl.addEventListener('click', function (e) {
+    var t = e.target.closest('.tab'); if (!t) return;
+    select(t.dataset.id, { user: true });
+    var top = $('panel').getBoundingClientRect().top;
+    if (top < 0) {
+      var offset = narrow.matches ? 72 : 16;
+      window.scrollTo({ top: window.scrollY + top - offset, behavior: reduce ? 'auto' : 'smooth' });
+    }
+  });
+  tabsEl.addEventListener('keydown', function (e) {
+    var i = tabs.indexOf(document.activeElement); if (i < 0) return;
+    var n = null;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+    else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') n = 0;
+    else if (e.key === 'End') n = tabs.length - 1;
+    if (n === null) return;
+    e.preventDefault();
+    tabs[n].focus();
+    select(tabs[n].dataset.id, { user: true });
+  });
+
+  /* ------------------------------------------------------- media ------- */
+  var video = $('m-video'), poster = $('m-poster'), playBtn = $('m-play');
+  var userPaused = reduce, panelVisible = true, mediaToken = 0;
+  var PLAY = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z"/></svg>Abspielen';
+  var PAUSE = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>Pause';
+  function drawBtn() {
+    var playing = !video.paused && !userPaused;
+    playBtn.innerHTML = playing ? PAUSE : PLAY;
+    playBtn.setAttribute('aria-label', (playing ? 'Video anhalten: ' : 'Video abspielen: ') + poster.alt);
+  }
+  function tryPlay() {
+    if (userPaused || !panelVisible || document.hidden) return;
+    if (!video.getAttribute('src')) return;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () { drawBtn(); });
+  }
+  function swapImage(img, src, alt, token) {
+    var pre = new Image();
+    pre.src = src;
+    var done = function () {
+      if (token !== mediaToken) return;
+      img.classList.add('is-off');
+      setTimeout(function () {
+        if (token !== mediaToken) return;
+        img.src = src; img.alt = alt;
+        img.classList.remove('is-off');
+      }, reduce ? 0 : 110);
+    };
+    if (pre.decode) pre.decode().then(done, done); else pre.onload = pre.onerror = done;
+  }
+  function setMedia(o, first) {
+    var token = ++mediaToken;
+    $('m-cap').textContent = o.clip.cap; $('m-a-cap').textContent = o.a.cap; $('m-b-cap').textContent = o.b.cap;
+    var base = 'assets/' + o.id;
+    video.classList.remove('is-on');
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    if (!first || o.id !== 'handel') {
+      swapImage(poster, base + '-poster.webp', o.clip.alt, token);
+      swapImage($('m-a'), o.a.src || base + '-a.webp', o.a.alt, token);
+      swapImage($('m-b'), o.b.src || base + '-b.webp', o.b.alt, token);
+    }
+    playBtn.hidden = false;
+    video.dataset.src = base + '.mp4';
+    if (!userPaused) { video.preload = 'auto'; video.src = video.dataset.src; tryPlay(); }
+    drawBtn();
+  }
+  video.addEventListener('playing', function () { video.classList.add('is-on'); drawBtn(); });
+  video.addEventListener('pause', drawBtn);
+  video.addEventListener('error', function () { if (video.getAttribute('src')) { video.classList.remove('is-on'); playBtn.hidden = true; } });
+  playBtn.addEventListener('click', function () {
+    if (!video.paused && !userPaused) { userPaused = true; video.pause(); }
+    else {
+      userPaused = false;
+      if (!video.getAttribute('src')) { video.preload = 'auto'; video.src = video.dataset.src; }
+      tryPlay();
+    }
+    drawBtn();
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      panelVisible = es[0].isIntersecting;
+      if (panelVisible) tryPlay(); else video.pause();
+    }, { threshold: 0.15 }).observe(video.parentNode);
+  }
+  document.addEventListener('visibilitychange', function () { if (document.hidden) video.pause(); else tryPlay(); });
+
+  /* ---------------------------------------------------- service list --- */
+  var svcWrap = $('services');
+  var svcEls = {}; [].forEach.call(svcWrap.children, function (el) { svcEls[el.dataset.id] = el; });
+  function arrange(o, animate) {
+    var order = o.first.concat(o.then);
+    var moving = animate && !reduce;
+    var before = {};
+    if (moving) order.forEach(function (id) { before[id] = svcEls[id].getBoundingClientRect(); });
+    order.forEach(function (id) {
+      var el = svcEls[id];
+      svcWrap.appendChild(el);
+      el.querySelector('.svc__hint').hidden = o.first.indexOf(id) < 0;
+    });
+    if (!moving) return;
+    order.forEach(function (id) {
+      var el = svcEls[id], now = el.getBoundingClientRect();
+      var dx = before[id].left - now.left, dy = before[id].top - now.top;
+      if (!dx && !dy) return;
+      el.classList.remove('is-moving');
+      el.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+    });
+    svcWrap.offsetHeight; /* commit the inverted positions */
+    order.forEach(function (id) {
+      var el = svcEls[id];
+      if (!el.style.transform) return;
+      el.classList.add('is-moving');
+      el.style.transform = '';
+      el.addEventListener('transitionend', function end(ev) {
+        if (ev.propertyName !== 'transform') return;
+        el.classList.remove('is-moving'); el.removeEventListener('transitionend', end);
+      });
+    });
+  }
+  function syncChecks() {
+    var picks = picksFor(state.obj);
+    Object.keys(svcEls).forEach(function (id) { svcEls[id].querySelector('input').checked = picks.indexOf(id) >= 0; });
+  }
+  svcWrap.addEventListener('change', function (e) {
+    var id = e.target.closest('.svc').dataset.id;
+    var picks = picksFor(state.obj).filter(function (x) { return x !== id; });
+    if (e.target.checked) picks.push(id);
+    /* Keep the draft in the list's order, not in click order. */
+    var o = byId[state.obj], order = o.first.concat(o.then);
+    picks.sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); });
+    state.picks[state.obj] = picks;
+    save(); renderPlan(['l-services']);
+  });
+
+  /* ------------------------------------------------------- the plan ---- */
+  function completeness() {
+    var n = 1;
+    if (picksFor(state.obj).length) n++;
+    if (state.rhythm !== 'Noch offen') n++;
+    if (ortCheck(state.ort).ok) n++;
+    return n;
+  }
+  function renderPlan(written) {
+    var o = byId[state.obj], picks = picksFor(state.obj), n = completeness();
+    $('l-object').textContent = o.name;
+    var sv = $('l-services');
+    sv.textContent = '';
+    if (picks.length) {
+      var ul = document.createElement('ul');
+      picks.forEach(function (id) { var li = document.createElement('li'); li.textContent = SERVICES[id]; ul.appendChild(li); });
+      sv.appendChild(ul); sv.classList.remove('is-empty');
+    } else { sv.textContent = 'Noch keine ausgewählt'; sv.classList.add('is-empty'); }
+    var ask = $('l-ask'); ask.textContent = '';
+    var askUl = document.createElement('ul');
+    o.ask.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; askUl.appendChild(li); });
+    ask.appendChild(askUl);
+    var r = $('l-rhythm'); r.textContent = state.rhythm; r.classList.toggle('is-empty', state.rhythm === 'Noch offen');
+    var oc = ortCheck(state.ort), l = $('l-ort');
+    l.textContent = oc.ok ? oc.value : 'Noch nicht angegeben'; l.classList.toggle('is-empty', !oc.ok);
+
+    var bars = document.querySelectorAll('.meter__bars i');
+    [].forEach.call(bars, function (b, i) { b.classList.toggle('on', i < n); });
+    var txt = n + ' von 4 Angaben';
+    $('meter-text').textContent = txt;
+    $('st-progress').textContent = 'Entwurf: ' + txt;
+    $('st-object').textContent = plain(o.name);
+    var cnt = picks.length === 1 ? '1 Leistung' : picks.length + ' Leistungen';
+    $('bar-text').textContent = cnt + ', ' + txt;
+
+    if (written && !reduce) {
+      written.forEach(function (id, i) {
+        var line = $(id).parentNode;
+        line.classList.remove('is-written');
+        line.offsetWidth;
+        line.style.setProperty('--d', i * 45 + 'ms');
+        line.classList.add('is-written');
+      });
+    }
+  }
+  function draftText() {
+    var o = byId[state.obj], picks = picksFor(state.obj), oc = ortCheck(state.ort);
+    return [
+      'Reinigungsplan-Entwurf (unverbindlich)',
+      'Objektart: ' + plain(o.name),
+      'Leistungen: ' + (picks.length ? picks.map(function (id) { return SERVICES[id]; }).join(', ') : 'noch offen'),
+      'Gewünschter Rhythmus: ' + state.rhythm,
+      'Ort: ' + (oc.ok ? oc.value : 'noch offen')
+    ].join('\n');
+  }
+  function mailto() {
+    var o = byId[state.obj], oc = ortCheck(state.ort);
+    var name = $('f-name').value.trim(), tel = $('f-tel').value.trim(), msg = $('f-msg').value.trim();
+    var body = ['Guten Tag,', '', 'ich möchte einen kostenfreien Analyse-Termin anfragen.', '', draftText(), '',
+      'Firma oder Name: ' + name];
+    if (tel) body.push('Telefon für den Rückruf: ' + tel);
+    if (msg) body.push('', 'Nachricht:', msg);
+    body.push('', 'Freundliche Grüße', name);
+    var subject = 'Analyse-Termin: ' + plain(o.name) + (oc.ok ? ' in ' + oc.value : '');
+    return 'mailto:info@saifis-gebaeudereinigung.de?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.join('\n'));
+  }
+
+  /* --------------------------------------------------- object change --- */
+  function select(id, opt) {
+    opt = opt || {};
+    if (!byId[id]) return;
+    var changed = id !== state.obj || opt.first;
+    state.obj = id;
+    var o = byId[id];
+    tabs.forEach(function (t) {
+      var on = t.dataset.id === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+    });
+    if (!changed) return;
+    $('panel').setAttribute('aria-labelledby', 'tab-' + id);
+    $('p-name').textContent = o.name;
+    var ref = $('p-ref'); ref.textContent = o.ref; ref.dataset.kind = o.kind;
+    $('p-lead').textContent = o.lead;
+    $('svc-note').textContent = 'Unser Vorschlag für ' + plain(o.name) + ' steht oben. Ändern Sie, was nicht passt.';
+    setMedia(o, opt.first);
+    arrange(o, !opt.first);
+    syncChecks();
+    renderPlan(opt.first ? null : ['l-object', 'l-services', 'l-ask']);
+    revealTab();
+    if (!opt.first) {
+      save();
+      try { history.replaceState(null, '', '#' + id); } catch (e) {}
+    }
+  }
+  window.addEventListener('hashchange', function () {
+    var h = location.hash.slice(1);
+    if (byId[h]) select(h);
+  });
+
+  /* Reserve the tallest lead so switching objects cannot move what is below. */
+  (function () {
+    var lead = $('p-lead'), stack = lead.parentNode;
+    OBJECTS.forEach(function (o) {
+      var s = document.createElement('p');
+      s.className = 'note sizer'; s.setAttribute('aria-hidden', 'true'); s.textContent = o.lead;
+      stack.appendChild(s);
+    });
+    var title = $('p-ref').parentNode;
+    title.style.minHeight = '';
+  })();
+
+  /* --------------------------------------------------- rhythm, place --- */
+  $('rhythm').addEventListener('change', function (e) {
+    state.rhythm = e.target.value; save(); renderPlan(['l-rhythm']);
+  });
+  var ortEl = $('ort');
+  function showOrtError() {
+    var c = ortCheck(ortEl.value), bad = !c.ok && !c.empty;
+    $('ort-err').textContent = bad ? c.msg : '';
+    if (bad) ortEl.setAttribute('aria-invalid', 'true'); else ortEl.removeAttribute('aria-invalid');
+  }
+  ortEl.addEventListener('input', function () {
+    state.ort = ortEl.value; save(); renderPlan();
+    if (ortEl.getAttribute('aria-invalid')) showOrtError();
+  });
+  ortEl.addEventListener('blur', function () { showOrtError(); });
+
+  /* ------------------------------------------------------ the sheet ---- */
+  var plan = $('plan'), scrim = $('scrim'), barOpen = $('bar-open'), sheetMode = matchMedia('(max-width: 1179px)');
+  var outside = [document.querySelector('.work'), document.querySelector('.rail'), $('bar'), document.querySelector('.mast')];
+  function setSheetSemantics(open) {
+    if (sheetMode.matches) {
+      if (open) { plan.setAttribute('role', 'dialog'); plan.setAttribute('aria-modal', 'true'); plan.removeAttribute('inert'); }
+      else { plan.removeAttribute('role'); plan.removeAttribute('aria-modal'); plan.setAttribute('inert', ''); }
+    } else { plan.removeAttribute('role'); plan.removeAttribute('aria-modal'); plan.removeAttribute('inert'); }
+  }
+  function openSheet() {
+    plan.classList.add('is-open'); scrim.classList.add('is-open');
+    setSheetSemantics(true); barOpen.setAttribute('aria-expanded', 'true');
+    outside.forEach(function (el) { if (el) el.setAttribute('inert', ''); });
+    document.documentElement.style.overflow = 'hidden';
+    $('plan-close').focus();
+  }
+  function closeSheet(refocus) {
+    if (!plan.classList.contains('is-open')) return;
+    plan.classList.remove('is-open'); scrim.classList.remove('is-open');
+    setSheetSemantics(false); barOpen.setAttribute('aria-expanded', 'false');
+    outside.forEach(function (el) { if (el) el.removeAttribute('inert'); });
+    document.documentElement.style.overflow = '';
+    if (refocus !== false) barOpen.focus();
+  }
+  barOpen.addEventListener('click', openSheet);
+  $('plan-close').addEventListener('click', function () { closeSheet(); });
+  scrim.addEventListener('click', function () { closeSheet(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheet(); });
+  sheetMode.addEventListener('change', function () { closeSheet(false); setSheetSemantics(false); });
+  setSheetSemantics(false);
+
+  $('to-form').addEventListener('click', function (e) {
+    e.preventDefault();
+    closeSheet(false);
+    $('anfrage-box').scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
+    setTimeout(function () { $('f-name').focus({ preventScroll: true }); }, reduce ? 0 : 320);
+  });
+
+  /* ----------------------------------------------------- copy, reset --- */
+  function copyDraft() {
+    var text = draftText(), done = function (ok) {
+      $('copy').textContent = ok ? 'Kopiert' : 'Kopieren nicht möglich';
+      setTimeout(function () { $('copy').textContent = 'Entwurf kopieren'; }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fallbackCopy(text)); });
+    else done(fallbackCopy(text));
+  }
+  function fallbackCopy(text) {
+    try {
+      var t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select(); var ok = document.execCommand('copy'); t.remove(); return ok;
+    } catch (e) { return false; }
+  }
+  $('copy').addEventListener('click', copyDraft);
+  $('reset').addEventListener('click', function () {
+    delete state.picks[state.obj];
+    state.rhythm = 'Noch offen'; state.ort = '';
+    ortEl.value = ''; showOrtError();
+    var r = document.querySelector('#rhythm input[value="Noch offen"]'); r.checked = true;
+    syncChecks(); save(); renderPlan(['l-services', 'l-rhythm', 'l-ort']);
+  });
+
+  /* --------------------------------------------------------- inquiry --- */
+  var form = $('anfrage');
+  form.noValidate = true;
+  function fieldError(el, errEl, msg) {
+    errEl.textContent = msg || '';
+    if (msg) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nameEl = $('f-name'), telEl = $('f-tel');
+    var nameBad = !nameEl.value.trim() ? 'Bitte tragen Sie Firma oder Name ein.' : '';
+    var tv = telEl.value.trim();
+    var telBad = tv && !(/^[+()\d\s\/-]{6,30}$/.test(tv) && (tv.match(/\d/g) || []).length >= 6) ? 'Bitte prüfen Sie die Telefonnummer.' : '';
+    fieldError(nameEl, $('f-name-err'), nameBad);
+    fieldError(telEl, $('f-tel-err'), telBad);
+    var oc = ortCheck(ortEl.value);
+    if (!oc.ok && !oc.empty) {
+      showOrtError();
+      ortEl.focus();
+      return;
+    }
+    if (nameBad) { nameEl.focus(); return; }
+    if (telBad) { telEl.focus(); return; }
+    var href = mailto();
+    var res = $('result');
+    res.hidden = false;
+    res.textContent = '';
+    res.appendChild(document.createTextNode('Ihr E-Mail-Programm sollte sich jetzt öffnen. Gesendet ist die Anfrage erst, wenn Sie dort auf Senden klicken. Falls sich nichts öffnet: '));
+    var a = document.createElement('a'); a.href = href; a.id = 'mail-link'; a.textContent = 'E-Mail erneut öffnen';
+    res.appendChild(a);
+    res.appendChild(document.createTextNode(' oder 0971 12382990 anrufen.'));
+    a.click();
+  });
+  ['f-name', 'f-tel'].forEach(function (id) {
+    $(id).addEventListener('input', function () {
+      if ($(id).getAttribute('aria-invalid')) fieldError($(id), $(id + '-err'), '');
+    });
+  });
+
+  /* ------------------------------------------------------------ boot --- */
+  /* No scroll engine on this surface. The class and the data-sc-act markers only let the
+     scroll-craft verification harness walk the page. */
+  document.documentElement.classList.add('sc-ready');
+  load();
+  var fromHash = location.hash.slice(1);
+  if (byId[fromHash]) state.obj = fromHash;
+  ortEl.value = state.ort;
+  var rr = document.querySelector('#rhythm input[value="' + state.rhythm + '"]'); if (rr) rr.checked = true;
+  select(state.obj, { first: true });
+  showOrtError();
+  save();
+  window.__planDraft = { text: draftText, mailto: mailto, state: state }; /* read by lab/states.mjs */
+})();
+</script>
+</body>
+</html>

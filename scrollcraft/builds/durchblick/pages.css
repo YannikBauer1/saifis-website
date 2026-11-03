@@ -1,0 +1,73 @@
+/* Leistungen and Referenzen */
+.page-head { background: #fff; padding: calc(var(--bar-space) + clamp(2.75rem, 6vw, 5rem)) 0 clamp(2rem, 4vw, 3.5rem); }
+.page-head h1 { font-size: clamp(3rem, 1.6rem + 6vw, 6.5rem); line-height: .98; font-weight: 760; }
+.page-head p { margin-top: var(--sc-4); font-size: var(--sc-t-lg); line-height: 1.4; color: var(--sc-ink-soft); }
+.page-jump { list-style: none; margin: var(--sc-5) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.page-jump a { display: inline-block; padding: .55rem .9rem; background: var(--sc-surface); border-radius: var(--r); color: var(--navy); font-weight: 600; font-size: var(--sc-t-sm); text-decoration: none; }
+@media (hover: hover) and (pointer: fine) { .page-jump a:hover { color: var(--sc-accent); } }
+.trust { display: inline-flex; align-items: center; gap: .55rem; margin-top: var(--sc-4); color: var(--sc-ink); font-size: var(--sc-t-sm); font-weight: 600; text-decoration: none; }
+.trust:hover { text-decoration: underline; text-underline-offset: .2em; }
+.stars { display: inline-flex; gap: .08em; color: #fbbc04; }
+.stars svg { width: 1.05em; height: 1.05em; }
+
+/* Leistungen: three groups, one photo each, every service one line */
+.group { padding-block: clamp(3rem, 6vw, 5.5rem); background: #fff; scroll-margin-top: var(--bar-space); }
+.group--pale { background: var(--sc-surface); }
+.group__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.group--flip .group__grid { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); }
+.group--flip .group__media { order: 2; }
+.group__media { position: sticky; top: calc(var(--bar-space) + 2rem); margin: 0; }
+.group__media img, .group__media video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; box-shadow: var(--sc-e2); background: #d7e4ef; }
+.group h2 { font-size: clamp(1.9rem, 1.3rem + 2vw, 3.2rem); margin-bottom: clamp(1rem, 2vw, 1.75rem); }
+.srow { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr) auto; gap: 1rem clamp(1rem, 2vw, 2rem); align-items: center; padding: clamp(.8rem, 1.5vw, 1.1rem) 0; border-top: 1px solid var(--sc-hairline-strong); scroll-margin-top: calc(var(--bar-space) + 1rem); }
+.srow:last-child { border-bottom: 1px solid var(--sc-hairline-strong); }
+.srow h3 { font-size: clamp(1.1rem, 1rem + .55vw, 1.45rem); line-height: 1.12; font-weight: 680; letter-spacing: -.016em; }
+.srow p { color: var(--sc-ink-soft); line-height: 1.4; text-wrap: pretty; }
+.srow .pick { color: var(--sc-accent); font-weight: 600; font-size: var(--sc-t-sm); white-space: nowrap; }
+.srow .pick::after { content: " \2192"; }
+@media (hover: hover) and (pointer: fine) { .srow .pick:hover { text-decoration: underline; text-underline-offset: .2em; } }
+.page-objs { padding-block: clamp(3rem, 6vw, 5rem) clamp(4rem, 8vw, 7rem); background: var(--sc-surface); }
+.page-objs h2 { font-size: clamp(1.9rem, 1.3rem + 2vw, 3.2rem); }
+.page-objs .objs .pick { background: #fff; }
+@media (max-width: 860px) {
+  .group__grid, .group--flip .group__grid { grid-template-columns: minmax(0, 1fr); }
+  .group--flip .group__media { order: 0; }
+  .group__media { position: static; }
+  .group__media img, .group__media video { aspect-ratio: 16 / 11; }
+  .srow { grid-template-columns: minmax(0, 1fr) auto; gap: .2rem 1rem; }
+  .srow p { grid-column: 1; grid-row: 2; }
+  .srow .pick { grid-column: 2; grid-row: 1 / span 2; }
+}
+
+/* Referenzen: each job its own block, photos at different sizes */
+.job { padding-block: clamp(3rem, 6vw, 5.5rem); background: #fff; }
+.job--pale { background: var(--sc-surface); }
+.job__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(1.75rem, 4vw, 4rem); align-items: start; }
+.job--flip .job__grid { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); }
+.job--flip .job__copy { order: 2; }
+.job__copy { position: sticky; top: calc(var(--bar-space) + 2rem); }
+.job__copy h2 { font-size: clamp(1.75rem, 1.2rem + 1.9vw, 3.1rem); hyphens: manual; }
+.job__copy p { margin-top: .7rem; color: var(--sc-ink-soft); font-size: var(--sc-t-lg); line-height: 1.4; }
+.job__copy a { display: inline-block; margin-top: .9rem; color: var(--sc-accent); font-weight: 600; font-size: var(--sc-t-sm); text-underline-offset: .2em; }
+.job__media { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(.75rem, 1.5vw, 1.25rem); align-items: start; }
+.job__media figure { margin: 0; grid-column: span var(--s, 12); margin-top: var(--o, 0); }
+.job__media img, .job__media video { display: block; width: 100%; height: auto; aspect-ratio: var(--ar, 4 / 3); object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: var(--r); box-shadow: var(--sc-e1); background: #d7e4ef; }
+.job__media figcaption { margin-top: .5rem; font-size: var(--sc-t-sm); font-weight: 600; color: var(--sc-ink); }
+.more { padding-block: clamp(3rem, 6vw, 5.5rem) clamp(5rem, 9vw, 8rem); background: #fff; }
+.more h2 { font-size: clamp(1.9rem, 1.3rem + 2vw, 3.2rem); margin-bottom: clamp(1.25rem, 2.5vw, 2rem); }
+.more__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); align-items: start; }
+.more__grid figure { margin: 0; }
+.more__grid img, .more__grid video { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: var(--r); box-shadow: var(--sc-e1); background: #d7e4ef; }
+.more__grid figcaption { margin-top: .7rem; display: grid; gap: .1rem; font-size: var(--sc-t-sm); line-height: 1.35; color: var(--sc-ink-soft); }
+.more__grid b { font-family: var(--sc-font-display); font-stretch: 108%; font-weight: 680; font-size: 1.1rem; letter-spacing: -.012em; color: var(--sc-ink); }
+.more__grid a { color: var(--sc-accent); font-weight: 600; text-underline-offset: .2em; width: fit-content; }
+@media (max-width: 860px) {
+  .job__grid, .job--flip .job__grid { grid-template-columns: minmax(0, 1fr); }
+  .job--flip .job__copy { order: 0; }
+  .job__copy { position: static; }
+  .job__media figure { margin-top: 0; grid-column: span 6; }
+  .job__media figure:first-child, .job__media figure:nth-child(2):last-child { grid-column: span 12; }
+  .job__media--pairs figure:first-child { grid-column: span 6; }
+  .more__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) { .more__grid { grid-template-columns: minmax(0, 1fr); } .more__grid img, .more__grid video { aspect-ratio: 4 / 3; } }

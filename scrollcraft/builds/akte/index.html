@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reinigung vor der Wohnungsübergabe in Bad Kissingen | Saifi's Gebäudereinigung</title>
+<meta name="description" content="Echte Vorher-Nachher-Akten für Hausverwaltungen, Vermieter und Eigentümer in Bad Kissingen und Umgebung. Kostenfreier Analyse-Termin: 0971 12382990.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="scrollcraft.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Saifi's Gebäudereinigung","founder":"Naqeeb Ullah Saifi","telephone":"+4997112382990","email":"info@saifis-gebaeudereinigung.de","address":{"@type":"PostalAddress","streetAddress":"Prinzregentenstraße 3","postalCode":"97688","addressLocality":"Bad Kissingen","addressCountry":"DE"},"url":"https://saifis-gebaeudereinigung.de/"}
+</script>
+<style>
+  :root {
+    --sc-canvas: #FFFFFF;
+    --sc-surface: #FFFFFF;
+    --sc-ink: #0E1A2B;
+    --sc-ink-soft: #40536A;
+    --sc-accent: #006AB3;
+    --sc-accent-ink: #FFFFFF;
+    --sc-font-display: "Schibsted Grotesk", system-ui, sans-serif;
+    --sc-font-text: "Schibsted Grotesk", system-ui, sans-serif;
+    --sc-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+    --sc-shadow-color: 224 60% 20%;
+    --navy: #0F1D7B;
+    --steel: #BDD3E5;
+    --pale: #EFF6FB;
+    --r: 2px;
+    --left: 1.25rem;
+    --right: 1.25rem;
+    --sheet-w: 19rem;
+    --dock: 3.75rem;
+  }
+  body { padding-bottom: calc(var(--dock) + env(safe-area-inset-bottom)); }
+  h1, h2, h3, p, dl, dd, figure, fieldset, ol, ul { margin: 0; padding: 0; }
+  ol, ul { list-style: none; }
+  fieldset { border: 0; min-width: 0; }
+  a { color: inherit; }
+  [hidden] { display: none !important; }
+
+  .skip { position: absolute; left: 1rem; top: -4rem; z-index: 90; background: var(--navy); color: #fff; padding: .75rem 1rem; }
+  .skip:focus { top: 1rem; }
+
+  /* Hard grounds. Each chapter lands on its own ground and stays there. */
+  .ch { padding: var(--sc-section) var(--right) var(--sc-section) var(--left); color: var(--sc-ink); background: var(--g, #fff); scroll-margin-top: 0; }
+  .g-white { --g: #FFFFFF; }
+  .g-pale  { --g: var(--pale); }
+  .g-steel { --g: var(--steel); --sc-ink-soft: #2C3F55; --sc-accent: #0F1D7B; --sc-hairline-strong: rgb(14 26 43 / .34); --sc-hairline: rgb(14 26 43 / .22); }
+  .g-navy  { --g: var(--navy); --sc-ink: #FFFFFF; --sc-ink-soft: #D3DFEC; --sc-accent: #BDD3E5; --sc-accent-ink: #0F1D7B; --sc-hairline: rgb(255 255 255 / .22); --sc-hairline-strong: rgb(255 255 255 / .42); color: var(--sc-ink); }
+  .col { container-type: inline-size; width: 100%; max-width: 62rem; }
+
+  /* Type */
+  .ttl { font-family: var(--sc-font-display); font-weight: 800; letter-spacing: -.045em; line-height: .98; text-wrap: balance; hyphens: manual; }
+  h1.ttl { font-size: clamp(2.75rem, 14.2cqi, 8.25rem); }
+  .ch-ttl { font-size: clamp(3.25rem, 20cqi, 11rem); font-weight: 800; letter-spacing: -.05em; line-height: .92; margin: 0 0 var(--sc-6); }
+  .h3 { font-size: clamp(1.45rem, 3.8cqi, 2.2rem); font-weight: 700; letter-spacing: -.025em; line-height: 1.12; text-wrap: balance; }
+  .lede { font-size: clamp(1.15rem, 2.7cqi, 1.5rem); line-height: 1.42; letter-spacing: -.012em; max-width: 34em; text-wrap: pretty; }
+  .soft { color: var(--sc-ink-soft); }
+  .body { max-width: 60ch; color: var(--sc-ink-soft); text-wrap: pretty; }
+  .mono, figcaption, .file dt, .sheet__sub, .folio { font-family: var(--sc-font-mono); }
+  figcaption { font-size: .8125rem; line-height: 1.5; color: var(--sc-ink-soft); padding-top: .625rem; letter-spacing: 0; text-wrap: pretty; }
+  figcaption b { font-weight: 500; color: var(--sc-ink); }
+  figure img, figure video { width: 100%; height: auto; border-radius: var(--r); background: rgb(14 26 43 / .08); }
+
+  /* Links set as running text, which is what this grammar asks for */
+  .act { font-weight: 700; text-decoration: underline; text-decoration-color: var(--sc-accent); text-decoration-thickness: 2px; text-underline-offset: .2em; transition: color 140ms var(--sc-ease-out); white-space: nowrap; }
+  @media (hover: hover) and (pointer: fine) { .act:hover { color: var(--sc-accent); } }
+  .tel { font-variant-numeric: tabular-nums; }
+
+  /* Title page */
+  .title { min-height: calc(100svh - var(--dock)); display: flex; flex-direction: column; padding-block: var(--sc-5) var(--sc-5); }
+  .title .col { display: flex; flex-direction: column; flex: 1; }
+  .title__logo { width: 9.5rem; height: auto; margin-left: -.5rem; }
+  .title__main { margin-block: auto; padding-block: var(--sc-7); }
+  .title__stand { margin-top: var(--sc-6); }
+  .title__acts { margin-top: var(--sc-6); font-size: clamp(1.15rem, 2.7cqi, 1.5rem); line-height: 1.6; }
+  .title__acts .note { display: block; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); font-weight: 400; }
+  .toc { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; border-top: 1px solid var(--sc-hairline-strong); padding-top: .875rem; font-family: var(--sc-font-mono); font-size: .8125rem; }
+  .toc a { display: inline-block; padding-block: .3rem; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* The case schema: identical on every case, which is what makes it a file */
+  .file { display: grid; grid-template-columns: 5.75rem minmax(0, 1fr); border-top: 1px solid var(--sc-hairline-strong); }
+  .file dt, .file dd { padding-block: .625rem; border-bottom: 1px solid var(--sc-hairline); }
+  .file dt { font-size: .75rem; line-height: 1.6; color: var(--sc-ink-soft); padding-top: .8rem; }
+  .file dd { font-size: .975rem; line-height: 1.42; text-wrap: pretty; }
+
+  /* Ticking. A real checkbox, a real label, a row you can actually hit. */
+  .ticks legend { padding: 0 0 .5rem; font-weight: 700; font-size: .975rem; }
+  .tick { display: grid; grid-template-columns: 1.25rem 1fr; gap: .75rem; align-items: start; padding-block: .6875rem; min-height: 2.75rem; border-top: 1px solid var(--sc-hairline); cursor: pointer; line-height: 1.32; font-size: .975rem; }
+  .tick:last-child { border-bottom: 1px solid var(--sc-hairline); }
+  .tick input { width: 1.25rem; height: 1.25rem; margin: 0; accent-color: var(--sc-accent); cursor: pointer; }
+  .tick:has(input:checked) { font-weight: 600; }
+  @media (hover: hover) and (pointer: fine) { .tick:hover { background: color-mix(in oklab, var(--sc-accent) 7%, transparent); } }
+  .g-navy .tick input { accent-color: #BDD3E5; }
+
+  /* Chapter 1 */
+  .open { display: grid; gap: var(--sc-5) var(--sc-6); }
+  .open figure { max-width: 34rem; }
+  .plate { background: var(--navy); }
+  .plate .sc-stage, .plate [data-sc-stage] { background: var(--navy); }
+  .plate__in { height: 100%; display: flex; align-items: center; padding-inline: var(--left) var(--right); color: #fff; }
+  .plate__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sc-5); width: 100%; }
+  .plate__copy > * + * { margin-top: var(--sc-4); }
+
+  .cmp { width: 100%; }
+  .cmp__frame { container-type: inline-size; position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--r); background: #0a1450; --v: 0; }
+  .cmp__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+  .cmp__after { clip-path: inset(0 calc(100% - var(--v) * 1%) 0 0); }
+  .cmp__line { position: absolute; top: 0; bottom: 0; left: 0; width: 2px; margin-left: -1px; background: #fff; transform: translate3d(calc(var(--v) * 1cqi), 0, 0); box-shadow: 0 0 0 1px rgb(14 26 43 / .25); pointer-events: none; }
+  .cmp__grip { position: absolute; top: 50%; left: 50%; width: 2.75rem; height: 2.75rem; margin: -1.375rem 0 0 -1.375rem; background: #fff; color: var(--navy); border-radius: 50%; display: grid; place-items: center; box-shadow: var(--sc-e2); transform: translateX(calc((50 - var(--v)) * .44px)); }
+  .cmp__grip svg { width: 1.25rem; height: 1.25rem; }
+  .cmp__range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; -webkit-appearance: none; appearance: none; }
+  .cmp__frame:has(.cmp__range:focus-visible) { outline: 3px solid #BDD3E5; outline-offset: 3px; }
+  .cmp__scale { display: flex; justify-content: space-between; font-family: var(--sc-font-mono); font-size: .8125rem; padding-top: .625rem; color: #D3DFEC; }
+  .cmp__scale b { font-weight: 500; color: #fff; }
+
+  .sink { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sc-4); margin-top: var(--sc-6); }
+  .aside-note { margin-top: var(--sc-5); }
+
+  /* Chapter 2 */
+  .bath { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sc-4); margin-top: var(--sc-6); }
+  .bath__a { grid-column: 1 / -1; }
+  .stackblock > * + * { margin-top: var(--sc-5); }
+  .twoup { display: grid; gap: var(--sc-6); margin-top: var(--sc-6); }
+
+  /* Chapter 3 */
+  .walk { display: grid; gap: var(--sc-6); }
+  .walk__clip { max-width: 26.25rem; }
+  .clipctl { font: inherit; background: none; border: 0; padding: .35rem 0; min-height: 2.75rem; color: var(--sc-ink); font-weight: 500; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+  .rooms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sc-4); margin-top: var(--sc-7); }
+
+  /* Chapter 4: one ledger, same schema on every row */
+  .ledger { margin-top: var(--sc-6); border-top: 2px solid var(--sc-ink); }
+  .case { display: grid; gap: var(--sc-4) var(--sc-6); padding-block: var(--sc-6); border-bottom: 1px solid var(--sc-hairline-strong); }
+  .case__media { max-width: 20rem; }
+  .case__media--wide { max-width: 26rem; }
+  .case h3 { margin-bottom: var(--sc-4); }
+  .ticks--wide { margin-top: var(--sc-7); max-width: 34rem; }
+
+  /* Chapter 5 */
+  .steps { margin-top: var(--sc-6); counter-reset: s; display: grid; gap: var(--sc-5); }
+  .steps li { counter-increment: s; display: grid; align-content: start; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 0 .5rem; border-top: 2px solid var(--sc-ink); padding-top: .75rem; }
+  .steps li::before { content: counter(s); font-family: var(--sc-font-mono); font-size: 1rem; line-height: 1.5; }
+  .steps .h3 { font-size: 1.3rem; grid-column: 2; }
+  .steps p { grid-column: 2; margin-top: .375rem; color: var(--sc-ink-soft); }
+  .check { display: grid; gap: var(--sc-6); margin-top: var(--sc-8); }
+  .check p + p { margin-top: var(--sc-4); }
+  .sign { margin-top: var(--sc-5); font-weight: 600; }
+  .sign span { display: block; font-weight: 400; color: var(--sc-ink-soft); }
+
+  /* The protocol. One sheet, three places: margin, drawer, close. */
+  .sheet { background: #fff; color: #0E1A2B; --sc-ink: #0E1A2B; --sc-ink-soft: #40536A; --sc-accent: #006AB3; --sc-accent-ink: #fff; --sc-hairline: rgb(14 26 43 / .14); --sc-hairline-strong: rgb(14 26 43 / .3); border-radius: var(--r); }
+  .sheet__title { font-size: 1.125rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+  .sheet__sub { font-size: .75rem; line-height: 1.45; color: var(--sc-ink-soft); margin-top: .25rem; }
+  .rows { margin-top: .75rem; border-top: 2px solid #0E1A2B; }
+  .rows li { display: grid; grid-template-columns: 1.75rem minmax(0, 1fr) 2.25rem; align-items: center; min-height: 2.5rem; border-bottom: 1px solid var(--sc-hairline); font-size: .9rem; line-height: 1.25; }
+  .rows li > span:first-child { font-family: var(--sc-font-mono); font-size: .75rem; color: var(--sc-ink-soft); }
+  .rows .empty { display: block; padding-block: .75rem; color: var(--sc-ink-soft); font-size: .875rem; line-height: 1.4; }
+  .rows .fresh { animation: stamp 900ms var(--sc-ease-out); }
+  @keyframes stamp { from { background: var(--steel); transform: translateY(4px); } to { background: transparent; transform: none; } }
+  .rm { width: 2.25rem; height: 2.25rem; border: 0; background: none; color: var(--sc-ink-soft); cursor: pointer; display: grid; place-items: center; border-radius: var(--r); }
+  .rm:hover { color: #0E1A2B; background: var(--pale); }
+  .rm svg { width: .875rem; height: .875rem; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: .625rem 1.125rem; border: 0; border-radius: var(--r); background: #006AB3; color: #fff; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; white-space: nowrap; transition: background-color 140ms var(--sc-ease-out), transform 120ms var(--sc-ease-out); }
+  .btn:hover { background: var(--navy); }
+  .btn:active { transform: translateY(1px); }
+  .btn:disabled { background: var(--steel); color: #40536A; cursor: not-allowed; }
+  .btn--quiet { background: var(--pale); color: var(--navy); }
+  .btn--quiet:hover { background: var(--steel); color: var(--navy); }
+
+  /* Margin furniture appears only when there is a margin to put it in */
+  .folio, .margin-sheet { display: none; }
+
+  /* Phone dock: the one piece of fixed chrome, and it only exists for reachability */
+  .dock { position: fixed; z-index: 70; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); height: calc(var(--dock) + env(safe-area-inset-bottom)); padding: .5rem .75rem calc(.5rem + env(safe-area-inset-bottom)); gap: .5rem; background: #fff; border-top: 1px solid rgb(14 26 43 / .16); }
+  .dock > * { min-height: 2.75rem; padding-inline: .5rem; font-size: .9375rem; }
+
+  dialog.drawer { position: fixed; margin: auto 0 0; width: 100%; max-width: none; max-height: 86svh; border: 0; padding: 1.25rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); border-radius: 10px 10px 0 0; overflow: auto; color: #0E1A2B; background: #fff; }
+  dialog.drawer[open] { animation: rise 320ms var(--sc-ease-drawer); }
+  dialog.drawer::backdrop { background: rgb(10 20 80 / .45); }
+  @keyframes rise { from { transform: translateY(1.5rem); opacity: .4; } to { transform: none; opacity: 1; } }
+  .drawer__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .drawer__close { min-height: 2.75rem; padding-inline: .75rem; }
+  .drawer__acts { display: grid; gap: .5rem; margin-top: 1rem; }
+
+  /* Close */
+  .close { padding-top: var(--sc-section); padding-bottom: var(--sc-7); }
+  .close__sent { font-size: clamp(1.3rem, 3.6cqi, 2.1rem); font-weight: 600; line-height: 1.28; letter-spacing: -.02em; max-width: 26em; text-wrap: pretty; }
+  .close__sent a { font-weight: 800; }
+  .form-sheet { margin-top: var(--sc-7); padding: clamp(1.25rem, 4cqi, 2.5rem); max-width: 46rem; box-shadow: var(--sc-e3); }
+  .form-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .form-head img { flex: none; width: clamp(5.25rem, 20cqi, 7.5rem); height: auto; margin: -.35rem 0 0 0; }
+  .fields { display: grid; gap: var(--sc-4); margin-top: var(--sc-6); }
+  .f label { display: block; font-size: .875rem; font-weight: 600; margin-bottom: .3rem; }
+  .f input, .f select { height: 2.875rem; }
+  .f input, .f select, .f textarea { display: block; width: 100%; min-height: 2.875rem; padding: .625rem .75rem; border: 1px solid rgb(14 26 43 / .42); border-radius: var(--r); background: #fff; color: #0E1A2B; font-size: 1rem; }
+  .f textarea { min-height: 5.5rem; resize: vertical; }
+  .f input:focus-visible, .f select:focus-visible, .f textarea:focus-visible { outline: 2px solid #006AB3; outline-offset: 1px; }
+  .f [aria-invalid="true"] { border-color: #A3123A; border-width: 2px; }
+  .err { color: #A3123A; font-size: .875rem; margin-top: .3rem; }
+  .form-acts { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; margin-top: var(--sc-5); }
+  .form-note { margin-top: .875rem; color: var(--sc-ink-soft); font-size: .875rem; line-height: 1.45; max-width: 52ch; }
+  .form-status { margin-top: .875rem; font-weight: 600; font-size: .9375rem; line-height: 1.4; max-width: 52ch; }
+  .colophon { display: grid; gap: var(--sc-5); margin-top: var(--sc-8); font-size: .875rem; line-height: 1.55; color: var(--sc-ink-soft); border-top: 1px solid rgb(255 255 255 / .34); padding-top: var(--sc-4); }
+  .colophon a { color: #fff; }
+  .colophon b { font-weight: 600; color: #fff; display: block; }
+  .links { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+  .links a { display: inline-block; padding-block: .25rem; }
+
+  @media (min-width: 640px) {
+    .twoup { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+    .case { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); }
+    .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sc-5); }
+    .steps li { grid-template-columns: minmax(0, 1fr); }
+    .steps .h3, .steps p { grid-column: 1; }
+    .steps li::before { margin-bottom: .75rem; }
+    .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .f--wide { grid-column: 1 / -1; }
+    .colophon { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .open { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: end; }
+    .check { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+  }
+  @media (min-width: 640px) and (max-width: 1179.98px) {
+    .plate__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 4fr); align-items: start; }
+  }
+
+  @container (min-width: 46rem) {
+    .walk { grid-template-columns: minmax(0, 26.25rem) minmax(0, 1fr); align-items: start; }
+    .walk__clip { position: sticky; top: 1.5rem; }
+  }
+
+  @container (max-width: 27rem) {
+    .form-head { flex-direction: column-reverse; gap: .75rem; }
+    .form-head img { width: 6.5rem; margin: -.35rem 0 0 -.35rem; }
+  }
+
+  /* Desktop: two real margins. Folio left, protocol right. */
+  @media (min-width: 1180px) {
+    :root { --left: clamp(10.25rem, 13vw, 13rem); --right: calc(var(--sheet-w) + clamp(3rem, 4.6vw, 5rem)); --dock: 0rem; }
+    .dock { display: none; }
+    .title { min-height: 100svh; }
+    .title .toc { display: none; }
+    .folio { display: block; position: fixed; z-index: 60; left: clamp(1.25rem, 2.2vw, 2.5rem); bottom: 1.5rem; width: clamp(7.75rem, 9vw, 8.75rem); padding: .75rem .75rem .625rem; background: #fff; color: #0E1A2B; border: 1px solid rgb(14 26 43 / .14); border-radius: var(--r); box-shadow: var(--sc-e1); font-size: .8125rem; line-height: 1.4; }
+    .folio__now { display: block; font-family: var(--sc-font-display); font-weight: 800; font-size: 1.25rem; letter-spacing: -.03em; line-height: 1.05; margin-bottom: .75rem; hyphens: manual; }
+    .folio ol { display: grid; gap: .05rem; }
+    .folio a { display: block; padding-block: .17rem; text-decoration: none; color: inherit; opacity: .78; }
+    .folio a[aria-current="true"], .folio a:hover { opacity: 1; text-decoration: underline; text-underline-offset: .2em; }
+    
+    .margin-sheet { display: block; position: fixed; z-index: 60; right: clamp(1.25rem, 2.2vw, 2.5rem); top: 1.5rem; width: var(--sheet-w); max-height: calc(100svh - 3rem); overflow: auto; padding: 1.125rem 1.125rem 1rem; box-shadow: var(--sc-e2); border: 1px solid rgb(14 26 43 / .14); transition: opacity 240ms var(--sc-ease-out), visibility 0s linear 0s; }
+    body.at-close .margin-sheet { opacity: 0; visibility: hidden; transition: opacity 240ms var(--sc-ease-out), visibility 0s linear 240ms; }
+    .margin-sheet .acts { display: grid; gap: .5rem; margin-top: .875rem; }
+    .margin-sheet .btn { width: 100%; }
+    .margin-sheet .tel-line { text-align: center; font-weight: 700; padding-block: .5rem; display: block; }
+
+    /* The peak: pinned on desktop only */
+    .plate__grid { grid-template-columns: minmax(0, min(calc(min(74svh, 50rem) * .75), 52%)) minmax(15rem, 1fr); gap: clamp(1.5rem, 3vw, 3rem); align-items: center; max-width: 62rem; }
+    .cmp { width: 100%; }
+  }
+
+  /* No pin below desktop, on short screens or under reduced motion. */
+  @media (max-width: 1179.98px), (max-height: 599.98px), (prefers-reduced-motion: reduce) {
+    .plate { height: auto !important; }
+    .plate .sc-stage, .plate [data-sc-stage] { position: static; height: auto; overflow: visible; }
+    .plate__in { padding-block: var(--sc-section); }
+  }
+  @media (max-height: 599.98px) and (min-width: 1180px) {
+    .plate__grid { grid-template-columns: minmax(0, 24rem) minmax(16rem, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rows .fresh, dialog.drawer[open] { animation: none; }
+  }
+
+  /* Print: the protocol and nothing else */
+  .print-only { display: none; }
+  @media print {
+    @page { size: A4; margin: 18mm; }
+    html, body { background: #fff !important; padding: 0 !important; }
+    body > *:not(.print-only) { display: none !important; }
+    .print-only { display: block !important; color: #000; font-family: var(--sc-font-text); font-size: 11pt; line-height: 1.4; }
+    .print-only img { width: 42mm; height: auto; }
+    .print-only h1 { font-size: 24pt; font-weight: 800; letter-spacing: -.02em; margin: 8mm 0 2mm; }
+    .print-only .p-meta { font-size: 9.5pt; color: #333; }
+    .print-only table { width: 100%; border-collapse: collapse; margin-top: 6mm; }
+    .print-only th, .print-only td { text-align: left; vertical-align: top; padding: 2mm 2mm 2mm 0; border-bottom: .4pt solid #666; }
+    .print-only th { width: 40mm; font-weight: 600; }
+    .print-only ol { margin-top: 6mm; border-top: 1pt solid #000; }
+    .print-only ol li { padding: 2mm 0; border-bottom: .4pt solid #666; list-style: none; }
+    .print-only .p-foot { margin-top: 10mm; font-size: 9.5pt; }
+  }
+</style>
+<noscript><style>[data-sc-in],[data-sc-stagger]>*{opacity:1!important;transform:none!important}[data-sc-reveal]{clip-path:none!important}.cmp__after{clip-path:inset(0 50% 0 0)}.plate{height:auto!important}.plate [data-sc-stage]{position:static;height:auto}.dock,.margin-sheet{display:none!important}</style></noscript>
+</head>
+<body data-ground="pale" data-ch="titel">
+<a class="skip" href="#kueche">Zum Inhalt springen</a>
+
+<nav class="folio" aria-label="Kapitel">
+  <span class="folio__now" id="folio-now" aria-hidden="true">Akte</span>
+  <ol>
+    <li><a href="#kueche" data-to="kueche">1 Küche</a></li>
+    <li><a href="#bad" data-to="bad">2 Bad</a></li>
+    <li><a href="#zimmer" data-to="zimmer">3 Zimmer</a></li>
+    <li><a href="#aussen" data-to="aussen">4 Außen</a></li>
+    <li><a href="#ablauf" data-to="ablauf">5 Ablauf</a></li>
+    <li><a href="#protokoll" data-to="protokoll">6 Protokoll</a></li>
+  </ol>
+</nav>
+
+<aside class="margin-sheet sheet" aria-label="Ihr Übergabeprotokoll">
+  <p class="sheet__title">Übergabeprotokoll</p>
+  <p class="sheet__sub">Ihr Entwurf. Noch nichts gesendet.</p>
+  <ol class="rows" data-rows></ol>
+  <div class="acts">
+    <a class="btn" href="#protokoll">Analyse-Termin anfragen</a>
+    <a class="tel-line tel" href="tel:+4997112382990">0971 12382990</a>
+  </div>
+</aside>
+
+<main>
+
+<!-- TITLE PAGE: type on pale ground, no media above the fold -->
+<section class="ch title g-pale" data-sc-act="flow" data-chapter="titel" data-label="Akte" data-ground="pale">
+  <div class="col">
+    <img class="title__logo" src="assets/logo.png" width="500" height="250" alt="Saifi's Gebäudereinigung">
+    <div class="title__main">
+      <h1 class="ttl">Was bleibt, wenn der Mieter geht.</h1>
+      <p class="lede title__stand soft">Eine Akte für Hausverwaltungen, Vermieter und Eigentümer in Bad Kissingen und Umgebung. Mit echten Fotos aus unseren Einsätzen.</p>
+      <p class="title__acts">
+        <a class="act" href="#protokoll">Analyse-Termin anfragen</a> oder <a class="act tel" href="tel:+4997112382990">0971 12382990</a>
+        <span class="note">Kostenfrei und 100 % unverbindlich.</span>
+      </p>
+    </div>
+    <nav aria-label="Inhalt der Akte"><ol class="toc">
+      <li><a href="#kueche">1 Küche</a></li>
+      <li><a href="#bad">2 Bad</a></li>
+      <li><a href="#zimmer">3 Zimmer</a></li>
+      <li><a href="#aussen">4 Außen</a></li>
+      <li><a href="#ablauf">5 Ablauf</a></li>
+      <li><a href="#protokoll">6 Protokoll</a></li>
+    </ol></nav>
+  </div>
+</section>
+
+<!-- CHAPTER 1: the quiet in front of the peak -->
+<section class="ch g-white" id="kueche" data-sc-act="flow" data-chapter="kueche" data-label="Küche" data-ground="white">
+  <div class="col">
+    <h2 class="ttl ch-ttl">Küche.</h2>
+    <div class="open">
+      <figure data-sc-in>
+        <img src="assets/haufen-befund.webp" width="900" height="1200" alt="Beutel, Verpackungen, Prospekte und ein Stofftier als Haufen auf dem Laminat einer leeren Küche." loading="lazy">
+        <figcaption><b>Befund.</b> Küchenboden vor der Reinigung. Foto aus dem Einsatz.</figcaption>
+      </figure>
+      <p class="lede" data-sc-in>So sah diese Wohnung aus, bevor wir kamen. Kein Einzelfall für eine Hausverwaltung, und nichts, was bis zur Übergabe von allein verschwindet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE PEAK: one wipe, the largest scroll room on the page -->
+<section class="plate g-navy" id="vergleich" data-sc-act="pin" data-sc-span="2.8" data-chapter="kueche" data-label="Küche" data-ground="navy">
+  <div data-sc-stage>
+    <div class="plate__in">
+      <div class="plate__grid">
+        <div class="cmp">
+          <div class="cmp__frame" id="cmp" data-sc-verify-state="0">
+            <img src="assets/kueche-befund.webp" width="780" height="1040" alt="Befund: Haufen aus Beuteln und Verpackungen unter der Marmor-Arbeitsplatte.">
+            <img class="cmp__after" src="assets/kueche-nachher.webp" width="780" height="1040" alt="Ergebnis: dieselbe Küche von weiter hinten, Arbeitsplatte rechts, der Boden ist frei und gewischt.">
+            <div class="cmp__line" aria-hidden="true"><span class="cmp__grip"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 5 2.5 10l5 5M12.5 5l5 5-5 5"/></svg></span></div>
+            <input class="cmp__range" id="cmp-range" type="range" min="0" max="100" step="1" value="0" aria-label="Vergleich von Befund und Ergebnis. Nach rechts zeigt mehr Ergebnis." aria-valuetext="Nur Befund sichtbar">
+          </div>
+          <div class="cmp__scale" aria-hidden="true"><b>Ergebnis</b><b>Befund</b></div>
+        </div>
+        <div class="plate__copy">
+          <h3 class="h3">Dieselbe Küche, danach.</h3>
+          <dl class="file">
+            <dt>Objekt</dt><dd>Wohnung, Küche</dd>
+            <dt>Befund</dt><dd>Beutel, Verpackungen und Reste auf dem Boden unter der Arbeitsplatte.</dd>
+            <dt>Maßnahme</dt><dd>Komplettreinigung</dd>
+            <dt>Ergebnis</dt><dd>Boden frei und gewischt, Sockelleiste und Arbeitsplatte frei.</dd>
+          </dl>
+          <fieldset class="ticks">
+            <legend>Steht das bei Ihnen auch an?</legend>
+            <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Grundreinigung Küche"><span>Grundreinigung Küche</span></label>
+            <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Reste und Müll im Objekt (im Termin klären)"><span>Reste und Müll im Objekt (im Termin klären)</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ch g-white" data-sc-act="flow" data-chapter="kueche" data-label="Küche" data-ground="white">
+  <div class="col">
+    <p class="body">Das Nachher-Bild ist ein Standbild aus unserem Rundgangvideo, darum etwas weicher. Nur die Farbe ist korrigiert, retuschiert ist nichts.</p>
+    <div class="sink">
+      <figure data-sc-in>
+        <img src="assets/spuele-befund.webp" width="780" height="1040" alt="Offene Anschlüsse und Abflussrohr an der Wand, darunter Dose, Schlauch und Bauteile auf dem Boden." loading="lazy">
+        <figcaption><b>Befund.</b> Unter der Spüle, vor der Reinigung.</figcaption>
+      </figure>
+      <figure data-sc-in>
+        <img src="assets/spuele-nachher.webp" width="780" height="1040" alt="Fertige Küchenzeile mit Marmor-Arbeitsplatte und Edelstahlspüle, dahinter Fenster und sauberer Boden." loading="lazy">
+        <figcaption><b>Ergebnis.</b> Dieselbe Küche, fertig. Standbild aus dem Rundgang.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 2 -->
+<section class="ch g-pale" id="bad" data-sc-act="flow" data-chapter="bad" data-label="Bad" data-ground="pale">
+  <div class="col">
+    <h2 class="ttl ch-ttl">Bad.</h2>
+    <p class="lede">Krümel in der Ecke, Schlieren auf den Fliesen. Genau die Stellen, die bei einer Übergabe auffallen.</p>
+    <div class="twoup">
+      <div class="stackblock">
+        <figure data-sc-in>
+          <img src="assets/bad-befund.webp" width="780" height="1040" alt="Bodenecke im Bad mit Krümeln, Flecken und einer liegen gebliebenen Hülle auf den Fliesen." loading="lazy">
+          <figcaption><b>Befund.</b> Bodenecke im Bad.</figcaption>
+        </figure>
+        <figure data-sc-in>
+          <img src="assets/wand-befund.webp" width="780" height="1040" alt="Wandfliesen mit braunem Schlieren und rotem Strich." loading="lazy">
+          <figcaption><b>Befund.</b> Wandfliesen.</figcaption>
+        </figure>
+      </div>
+      <div class="stackblock">
+        <figure data-sc-in>
+          <img src="assets/bad-nachher.webp" width="780" height="1040" alt="Fertiges Bad mit Wanne, Waschbecken und sauberem weißen Fliesenboden." loading="lazy">
+          <figcaption><b>Ergebnis.</b> Dasselbe Bad, fertig. Standbild aus dem Rundgang.</figcaption>
+        </figure>
+        <dl class="file">
+          <dt>Objekt</dt><dd>Wohnung, Bad</dd>
+          <dt>Befund</dt><dd>Krümel und Flecken am Boden, Schlieren an der Wand.</dd>
+          <dt>Maßnahme</dt><dd>Komplettreinigung</dd>
+          <dt>Ergebnis</dt><dd>Boden und Wandfliesen frei von sichtbaren Rückständen.</dd>
+        </dl>
+        <fieldset class="ticks">
+          <legend>Steht das bei Ihnen auch an?</legend>
+          <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Grundreinigung Bad"><span>Grundreinigung Bad</span></label>
+          <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Desinfektionsreinigung"><span>Desinfektions&shy;reinigung</span></label>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 3 -->
+<section class="ch g-white" id="zimmer" data-sc-act="flow" data-chapter="zimmer" data-label="Zimmer" data-ground="white">
+  <div class="col">
+    <h2 class="ttl ch-ttl">Zimmer.</h2>
+    <div class="walk">
+      <figure class="walk__clip" data-sc-in>
+        <video data-clip muted loop playsinline preload="metadata" poster="assets/rundgang-poster.webp" width="480" height="640" aria-label="Gekürzter Rundgang durch die fertige Wohnung: Zimmer, Küche und Bad."><source src="assets/rundgang-fertig.mp4" type="video/mp4"></video>
+        <figcaption><b>Rundgang danach.</b> Gekürzt, ohne Ton, sonst nur Farbe korrigiert.<br><button class="clipctl" type="button" data-clip-toggle>Abspielen</button></figcaption>
+      </figure>
+      <div class="stackblock">
+        <p class="lede">Der Rundgang entstand nach der Reinigung. Mit dem Handy gefilmt, gekürzt, nicht inszeniert.</p>
+        <dl class="file">
+          <dt>Objekt</dt><dd>Wohnung, Zimmer und Flur</dd>
+          <dt>Befund</dt><dd>Verschmutzte Böden, Flecken, liegen gebliebene Reste.</dd>
+          <dt>Maßnahme</dt><dd>Komplettreinigung</dd>
+          <dt>Ergebnis</dt><dd>Böden, Fensterbänke und Heizkörper ohne sichtbare Rückstände.</dd>
+        </dl>
+        <fieldset class="ticks">
+          <legend>Steht das bei Ihnen auch an?</legend>
+          <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Grundreinigung Wohnräume"><span>Grundreinigung Wohnräume</span></label>
+          <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Treppenhausreinigung"><span>Treppenhausreinigung</span></label>
+          <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Teppichreinigung"><span>Teppichreinigung</span></label>
+          <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Polsterreinigung"><span>Polsterreinigung</span></label>
+        </fieldset>
+      </div>
+    </div>
+    <div class="rooms">
+      <figure data-sc-in>
+        <img src="assets/boden-befund.webp" width="780" height="1040" alt="Laminatboden mit Flecken, Papierresten und Müll." loading="lazy">
+        <figcaption><b>Befund.</b> Boden im selben Objekt, vor der Reinigung.</figcaption>
+      </figure>
+      <figure data-sc-in>
+        <img src="assets/raum-ergebnis.webp" width="780" height="1040" alt="Leeres Zimmer mit sauberem Laminat, Heizkörper und grauer Wand." loading="lazy">
+        <figcaption><b>Ergebnis.</b> Ein fertiges Zimmer, Standbild aus dem Rundgang.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 4 -->
+<section class="ch g-steel" id="aussen" data-sc-act="flow" data-chapter="aussen" data-label="Außen" data-ground="steel">
+  <div class="col">
+    <h2 class="ttl ch-ttl">Außen.</h2>
+    <p class="lede">Ein Objekt endet nicht an der Wohnungstür. Drei Einsätze an Glas und Dach, gezeigt, wie sie im Alltag entstanden sind.</p>
+    <div class="ledger">
+      <article class="case">
+        <figure class="case__media">
+          <video data-clip muted loop playsinline preload="metadata" poster="assets/fenster-poster.webp" width="720" height="960" aria-label="Reinigungskraft im Saifi's-Shirt wäscht eine Fensterfront mit Wasserstange, im Gegenlicht der Sonne."><source src="assets/fenster.mp4" type="video/mp4"></video>
+          <figcaption><button class="clipctl" type="button" data-clip-toggle>Abspielen</button></figcaption>
+        </figure>
+        <div>
+          <h3 class="h3">Fensterfront</h3>
+          <dl class="file">
+            <dt>Objekt</dt><dd>Lebenshilfe Hammelburg, Glasflächen</dd>
+                        <dt>Maßnahme</dt><dd>Glasreinigung mit Teleskopstange und Wasserzufuhr</dd>
+            <dt>Im Film</dt><dd>Die Stange bei der Arbeit an der Fensterfront.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="case">
+        <figure class="case__media">
+          <video data-clip muted loop playsinline preload="metadata" poster="assets/pv-poster.webp" width="360" height="480" aria-label="Bürste an einer Stange reinigt ein Solarmodul, hinter der Bürste ist eine dunkle, nasse Bahn zu sehen."><source src="assets/pv.mp4" type="video/mp4"></video>
+          <figcaption><button class="clipctl" type="button" data-clip-toggle>Abspielen</button></figcaption>
+        </figure>
+        <div>
+          <h3 class="h3">Solaranlage</h3>
+          <dl class="file">
+            <dt>Objekt</dt><dd>Photovoltaikanlage</dd>
+            <dt>Befund</dt><dd>Matter Belag auf den Modulen.</dd>
+            <dt>Maßnahme</dt><dd>Photovoltaikreinigung mit Bürste an der Stange</dd>
+            <dt>Im Film</dt><dd>Die gereinigte Bahn neben noch ungereinigter Fläche.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="case">
+        <figure class="case__media case__media--wide">
+          <img src="assets/autohaus.webp" width="1200" height="938" alt="Runde Glasfassade eines Autohauses mit Ford-Logo unter blauem Himmel." loading="lazy">
+        </figure>
+        <div>
+          <h3 class="h3">Glasfassade</h3>
+          <dl class="file">
+            <dt>Objekt</dt><dd>Autohaus Löffler</dd>
+                        <dt>Maßnahme</dt><dd>Glasreinigung</dd>
+            <dt>Im Bild</dt><dd>Der Glasturm des Autohauses.</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+    <fieldset class="ticks ticks--wide">
+      <legend>Steht das bei Ihnen auch an?</legend>
+      <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Glasreinigung"><span>Glasreinigung</span></label>
+      <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Fassadenreinigung"><span>Fassadenreinigung</span></label>
+      <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Jalousienreinigung"><span>Jalousienreinigung</span></label>
+      <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Photovoltaikreinigung"><span>Photovoltaik&shy;reinigung</span></label>
+      <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Steinreinigung"><span>Steinreinigung</span></label>
+      <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Graffitientfernung"><span>Graffitientfernung</span></label>
+    </fieldset>
+  </div>
+</section>
+
+<!-- CHAPTER 5 -->
+<section class="ch g-white" id="ablauf" data-sc-act="flow" data-chapter="ablauf" data-label="Ablauf" data-ground="white">
+  <div class="col">
+    <h2 class="ttl ch-ttl">Ablauf.</h2>
+    <ol class="steps" data-sc-in data-sc-stagger="60">
+      <li><h3 class="h3">Anfrage</h3><p>Sie schicken uns Ihr Protokoll oder rufen an.</p></li>
+      <li><h3 class="h3">Analyse-Termin</h3><p>Nach einem kurzen Anruf lernen wir Ihr Objekt vor Ort kennen. Kostenfrei und 100 % unverbindlich.</p></li>
+      <li><h3 class="h3">Angebot</h3><p>Sie erhalten ein maßgeschneidertes Angebot für Ihre Situation.</p></li>
+    </ol>
+    <div class="check">
+      <div>
+        <p class="lede">Mit unserem eigenen Q-Check System prüfen wir regelmäßig die Qualität in Ihrem Objekt. Das Personal weiß nicht, wann wir kontrollieren.</p>
+        <p class="body">Bei besonderen Anliegen erreichen Sie Ihren persönlichen Ansprechpartner. Wir sind ein inhabergeführter Betrieb, für die Zufriedenheit unserer Kunden sorge ich persönlich.</p>
+        <p class="sign">Naqeeb Ullah Saifi<span>Inhaber und Geschäftsführer</span></p>
+      </div>
+      <fieldset class="ticks">
+        <legend>Und danach?</legend>
+        <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Unterhaltsreinigung"><span>Unterhaltsreinigung</span></label>
+        <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Hausmeisterservice"><span>Hausmeisterservice</span></label>
+        <label class="tick"><input type="checkbox" form="anfrage" name="position" value="Baureinigung"><span>Baureinigung</span></label>
+      </fieldset>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE: the protocol is the inquiry -->
+<section class="ch close g-navy" id="protokoll" data-sc-act="flow" data-chapter="protokoll" data-label="Protokoll" data-ground="navy">
+  <div class="col">
+    <h2 class="ttl ch-ttl">Protokoll.</h2>
+    <p class="close__sent">Schicken Sie uns dieses Blatt für Ihren kostenfreien Analyse-Termin. Oder rufen Sie an: <a class="tel act" href="tel:+4997112382990">0971 12382990</a></p>
+
+    <div class="sheet form-sheet">
+      <div class="form-head">
+        <div>
+          <p class="sheet__title" style="font-size:1.5rem">Übergabeprotokoll</p>
+          <p class="sheet__sub">Ihr Entwurf. Noch nichts gesendet.</p>
+        </div>
+        <img src="assets/logo.png" width="500" height="250" alt="Saifi's Gebäudereinigung" loading="lazy">
+      </div>
+      <ol class="rows" data-rows></ol>
+
+      <form id="anfrage" method="post" action="mailto:info@saifis-gebaeudereinigung.de" enctype="text/plain" novalidate>
+        <div class="fields">
+          <div class="f"><label for="f-objekt">Objekt</label>
+            <select id="f-objekt" name="objekt">
+              <option value="">Bitte wählen</option>
+              <option>Einzelne Wohnung</option>
+              <option>Mehrfamilienhaus oder Wohnanlage</option>
+              <option>Gewerbeobjekt</option>
+              <option>Anderes Objekt</option>
+            </select></div>
+          <div class="f"><label for="f-ort">Ort des Objekts</label><input id="f-ort" name="ort" autocomplete="address-level2"></div>
+          <div class="f"><label for="f-name">Ihr Name (erforderlich)</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><p class="err" id="e-name" hidden>Bitte geben Sie Ihren Namen an.</p></div>
+          <div class="f"><label for="f-tel">Telefon für den Rückruf (erforderlich)</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required aria-describedby="e-tel"><p class="err" id="e-tel" hidden>Bitte geben Sie eine Telefonnummer an.</p></div>
+          <div class="f f--wide"><label for="f-notiz">Anmerkung</label><textarea id="f-notiz" name="anmerkung" rows="3"></textarea></div>
+        </div>
+        <div class="form-acts">
+          <button class="btn" type="submit">Analyse-Termin anfragen</button>
+          <button class="btn btn--quiet" type="button" id="print">Drucken</button>
+        </div>
+        <p class="form-note">Das öffnet Ihr E-Mail-Programm mit dem fertigen Text an info@saifis-gebaeudereinigung.de. Gesendet wird erst, wenn Sie dort auf Senden klicken.</p>
+        <p class="form-status" id="status" role="status" hidden></p>
+        <a id="mailto-link" href="mailto:info@saifis-gebaeudereinigung.de" hidden>E-Mail öffnen</a>
+      </form>
+    </div>
+
+    <footer class="colophon">
+      <div><b>Saifi's Gebäudereinigung</b>Naqeeb Ullah Saifi<br>Prinzregentenstraße 3<br>97688 Bad Kissingen</div>
+      <div><b>Kontakt</b><a class="tel" href="tel:+4997112382990">0971 12382990</a><br><a href="mailto:info@saifis-gebaeudereinigung.de" style="overflow-wrap:anywhere">info@saifis-gebaeudereinigung.de</a></div>
+      <div><b>Rechtliches</b><div class="links"><a href="https://saifis-gebaeudereinigung.de/impressum/">Impressum</a><a href="https://saifis-gebaeudereinigung.de/datenschutz/">Datenschutz</a><a href="https://www.instagram.com/saifis0077/">Instagram</a></div></div>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<div class="dock" id="dock">
+  <button class="btn btn--quiet" type="button" id="open-drawer"><span>Protokoll&nbsp;<span class="tel" data-count>(0)</span></span></button>
+  <a class="btn tel" href="tel:+4997112382990">0971 12382990</a>
+</div>
+
+<dialog class="drawer sheet" id="drawer" aria-labelledby="drawer-title">
+  <div class="drawer__head">
+    <div>
+      <p class="sheet__title" id="drawer-title">Übergabeprotokoll</p>
+      <p class="sheet__sub">Ihr Entwurf. Noch nichts gesendet.</p>
+    </div>
+    <button class="btn btn--quiet drawer__close" type="button" id="close-drawer">Schließen</button>
+  </div>
+  <ol class="rows" data-rows></ol>
+  <div class="drawer__acts">
+    <a class="btn" href="#protokoll" id="drawer-go">Analyse-Termin anfragen</a>
+    <a class="btn btn--quiet tel" href="tel:+4997112382990">0971 12382990</a>
+  </div>
+</dialog>
+
+<div aria-live="polite" class="sc-visually-hidden" id="live" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap"></div>
+
+<!-- filled only at print time -->
+<div class="print-only" id="print-sheet" aria-hidden="true"></div>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ------------------------------------------- the protocol, one state ---- */
+  var boxes = $$('input[name="position"]');
+  var KEY = 'saifis-akte-positionen';
+  var X = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2 2 12"/></svg>';
+  var fresh = null;
+
+  function picked() { return boxes.filter(function (b) { return b.checked; }).map(function (b) { return b.value; }); }
+  function save() { try { sessionStorage.setItem(KEY, JSON.stringify(picked())); } catch (e) {} }
+  function esc(t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  function render() {
+    var list = picked();
+    var html = list.length
+      ? list.map(function (v, i) {
+          return '<li' + (v === fresh ? ' class="fresh"' : '') + '><span>' + (i < 9 ? '0' : '') + (i + 1) + '</span><span>' + esc(v) +
+            '</span><button class="rm" type="button" data-remove="' + esc(v) + '" aria-label="' + esc(v) + ' entfernen">' + X + '</button></li>';
+        }).join('')
+      : '<li class="empty">Noch leer. Kreuzen Sie beim Lesen an, was bei Ihrem Objekt ansteht. Daraus entsteht Ihre Anfrage.</li>';
+    $$('[data-rows]').forEach(function (el) { el.innerHTML = html; });
+    $$('[data-count]').forEach(function (el) { el.textContent = '(' + list.length + ')'; });
+    fresh = null;
+  }
+
+  boxes.forEach(function (b) {
+    b.addEventListener('change', function () {
+      if (b.checked) fresh = b.value;
+      $('#live').textContent = b.value + (b.checked ? ' ins Protokoll aufgenommen.' : ' aus dem Protokoll entfernt.');
+      render(); save();
+    });
+  });
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-remove]');
+    if (!btn) return;
+    var v = btn.getAttribute('data-remove');
+    var inDrawer = !!btn.closest('dialog');
+    boxes.forEach(function (b) { if (b.value === v) b.checked = false; });
+    $('#live').textContent = v + ' aus dem Protokoll entfernt.';
+    render(); save();
+    if (inDrawer) $('#close-drawer').focus();
+  });
+  try {
+    var saved = JSON.parse(sessionStorage.getItem(KEY) || '[]');
+    boxes.forEach(function (b) { if (saved.indexOf(b.value) > -1) b.checked = true; });
+  } catch (e) {}
+  render();
+
+  /* ------------------------------------------------------------ drawer ---- */
+  var drawer = $('#drawer');
+  $('#open-drawer').addEventListener('click', function () { drawer.showModal(); });
+  $('#close-drawer').addEventListener('click', function () { drawer.close(); });
+  $('#drawer-go').addEventListener('click', function () { drawer.close(); });
+  drawer.addEventListener('click', function (e) { if (e.target === drawer) drawer.close(); });
+
+  /* -------------------------------------- compose the mail, honestly ------ */
+  var form = $('#anfrage');
+  function val(id) { return $(id).value.trim(); }
+  function composeBody() {
+    var list = picked();
+    var lines = ['Guten Tag,', '', 'ich möchte einen kostenfreien Analyse-Termin anfragen.', ''];
+    if (val('#f-objekt')) lines.push('Objekt: ' + val('#f-objekt'));
+    if (val('#f-ort')) lines.push('Ort: ' + val('#f-ort'));
+    lines.push('', 'Übergabeprotokoll:');
+    if (list.length) list.forEach(function (v) { lines.push('- ' + v); });
+    else lines.push('- Noch keine Positionen, bitte im Termin klären');
+    if (val('#f-notiz')) lines.push('', 'Anmerkung: ' + val('#f-notiz'));
+    lines.push('', 'Bitte rufen Sie mich zurück:', val('#f-name'), val('#f-tel'));
+    return lines.join('\n');
+  }
+  function flag(input, err, bad) {
+    input.setAttribute('aria-invalid', bad ? 'true' : 'false');
+    $(err).hidden = !bad;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var noName = !val('#f-name'), noTel = !val('#f-tel');
+    flag($('#f-name'), '#e-name', noName);
+    flag($('#f-tel'), '#e-tel', noTel);
+    var status = $('#status');
+    if (noName || noTel) {
+      status.hidden = true;
+      (noName ? $('#f-name') : $('#f-tel')).focus();
+      return;
+    }
+    var link = $('#mailto-link');
+    link.href = 'mailto:info@saifis-gebaeudereinigung.de?subject=' +
+      encodeURIComponent('Analyse-Termin anfragen: Übergabeprotokoll') + '&body=' + encodeURIComponent(composeBody());
+    link.click();
+    status.hidden = false;
+    status.textContent = 'Ihr E-Mail-Programm sollte sich jetzt öffnen. Die Anfrage geht erst mit dem Senden dort an uns. Öffnet sich nichts, rufen Sie uns bitte an: 0971 12382990.';
+  });
+
+  /* ------------------------------------------------------------- print ---- */
+  function fillPrint() {
+    var list = picked();
+    var row = function (k, v) { return '<tr><th>' + k + '</th><td>' + esc(v || ' ') + '</td></tr>'; };
+    $('#print-sheet').innerHTML =
+      '<img src="assets/logo.png" alt="Saifi\'s Gebäudereinigung">' +
+      '<h1>Übergabeprotokoll</h1>' +
+      '<p class="p-meta">Entwurf für einen kostenfreien, unverbindlichen Analyse-Termin.</p>' +
+      '<table>' + row('Objekt', val('#f-objekt')) + row('Ort', val('#f-ort')) + row('Name', val('#f-name')) + row('Telefon', val('#f-tel')) + row('Anmerkung', val('#f-notiz')) + '</table>' +
+      '<ol>' + (list.length ? list.map(function (v, i) { return '<li>' + (i + 1) + '. ' + esc(v) + '</li>'; }).join('') : '<li>Noch keine Positionen angekreuzt.</li>') + '</ol>' +
+      '<p class="p-foot">Saifi\'s Gebäudereinigung, Naqeeb Ullah Saifi, Prinzregentenstraße 3, 97688 Bad Kissingen<br>0971 12382990, info@saifis-gebaeudereinigung.de</p>';
+  }
+  window.addEventListener('beforeprint', fillPrint);
+  $('#print').addEventListener('click', function () { fillPrint(); window.print(); });
+
+  /* ------------------------------------------------ folio and grounds ----- */
+  var chapters = $$('[data-chapter]');
+  var nowEl = $('#folio-now');
+  var links = $$('.folio a[data-to]');
+  function setChapter(el) {
+    document.body.setAttribute('data-ground', el.getAttribute('data-ground'));
+    var id = el.getAttribute('data-chapter');
+    document.body.setAttribute('data-ch', id);
+    nowEl.textContent = el.getAttribute('data-label');
+    links.forEach(function (a) {
+      if (a.getAttribute('data-to') === id) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    });
+    document.body.classList.toggle('at-close', id === 'protokoll');
+  }
+    if ('IntersectionObserver' in window) {
+    var chapterIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) setChapter(en.target); });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+    chapters.forEach(function (c) { chapterIO.observe(c); });
+  }
+
+  /* -------------------------------------------------- the comparison ------ */
+  var frame = $('#cmp'), range = $('#cmp-range'), plate = $('#vergleich');
+  var manual = false, near = false, shown = -1;
+  var pinMQ = matchMedia('(min-width: 1180px) and (min-height: 600px)');
+
+  function paint(v) {
+    v = Math.round(v * 2) / 2;
+    if (v === shown) return;
+    shown = v;
+    frame.style.setProperty('--v', v);
+    frame.setAttribute('data-sc-verify-state', String(v));
+    frame.setAttribute('data-sc-verify-hold', v <= 0 || v >= 100 ? 'true' : 'false');
+    range.value = Math.round(v);
+    range.setAttribute('aria-valuetext',
+      v <= 0 ? 'Nur Befund sichtbar' : v >= 100 ? 'Nur Ergebnis sichtbar' : 'Ergebnis zu ' + Math.round(v) + ' Prozent sichtbar');
+  }
+  function smooth(t) { return t * t * (3 - 2 * t); }
+  function clamp(x) { return Math.max(0, Math.min(1, x)); }
+  function driven() {
+    var vh = innerHeight, t;
+    if (pinMQ.matches) {
+      var rect = plate.getBoundingClientRect();
+      var travel = Math.max(plate.offsetHeight - vh, 1);
+      /* a quiet beat on the mess first, then one long wipe, then the result holds */
+      t = clamp((clamp(-rect.top / travel) - 0.08) / 0.8);
+    } else {
+      var fr = frame.getBoundingClientRect();
+      t = clamp((vh * 0.62 - fr.top) / (vh * 0.62));
+    }
+    return smooth(t) * 100;
+  }
+  function tick() {
+    if (near && !manual) paint(driven());
+    raf = near ? requestAnimationFrame(tick) : 0;
+  }
+  var raf = 0;
+  if (reduce) {
+    paint(50);
+  } else {
+    paint(0);
+    new IntersectionObserver(function (es) {
+      near = es[0].isIntersecting;
+      if (near && !raf) raf = requestAnimationFrame(tick);
+      if (!near) manual = false;
+    }, { rootMargin: '20% 0px 20% 0px' }).observe(plate);
+  }
+  range.addEventListener('input', function () { manual = true; paint(parseFloat(range.value)); });
+
+  /* --------------------------------------------------- clips ------------- */
+  $$('video[data-clip]').forEach(function (video) {
+    var btn = video.closest('figure').querySelector('[data-clip-toggle]');
+    var stopped = reduce;
+    function label() { btn.textContent = video.paused ? 'Abspielen' : 'Pause'; }
+    video.addEventListener('play', label);
+    video.addEventListener('pause', label);
+    btn.addEventListener('click', function () {
+      if (video.paused) { stopped = false; video.play().catch(function () {}); }
+      else { stopped = true; video.pause(); }
+    });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting && !stopped) video.play().catch(function () {});
+        else if (!es[0].isIntersecting) video.pause();
+      }, { threshold: 0.35 }).observe(video);
+    }
+    label();
+  });
+})();
+</script>
+</body>
+</html>
