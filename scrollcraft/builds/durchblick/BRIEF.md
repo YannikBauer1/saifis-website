@@ -141,3 +141,7 @@ Durchblick was chosen. Changes from the owner's review:
 - Added leistungen.html and referenzen.html, linked in the header and footer. Shared CSS and JS now live in site.css, site.js and pages.css. Phone button dock now applies up to 900px wide.
 - Service lines are shortened from the live service pages. Job names and services come from the Instagram post names, so they need confirming. No customer quotes or details were invented.
 - Frames showing the old van number 0174 8119568 are avoided.
+
+## Netlify preview, 2026-11-03
+
+- The owner says all photos are approved. Published from branch durchblick-relaunch as saifis-gebaeudereinigung.netlify.app, still noindex because it is not the final site.

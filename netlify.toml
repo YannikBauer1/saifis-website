@@ -2,7 +2,7 @@
 [build]
   publish = "scrollcraft/builds/durchblick"
 
-# Stay out of search engines until customer names and photos are approved.
+# A preview for now: stay out of search engines until the real launch.
 [[headers]]
   for = "/*"
   [headers.values]
