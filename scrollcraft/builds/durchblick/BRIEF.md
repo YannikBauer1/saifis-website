@@ -216,3 +216,7 @@ Owner feedback from their own iPhone. Hero logo on phones now takes up to 92% of
 ## Round 20: phone version, 2026-11-04
 
 Owner: desktop is right, the phone should feel more like an app. Hero and zoom stay. On phones the owner's words now hold on white and the film rises over them as a sheet, instead of fading in and straight back out over the video. So arbeiten wir is a row of cards you swipe, not a pinned section. Service lists are grouped rows with chevrons instead of ragged chips, lead text and section headings use one size each, the bottom bar is frosted, and buttons respond on touch. Service pages show the photo before the text.
+
+## Round 21: Impressum and Datenschutz, 2026-11-04
+
+Owner asked to copy both texts from the current site. Done word for word, with PDF line breaks and page numbers removed and headings restored. The text lives in legal/*.html and generate_pages.py wraps it. The copied policy described the old site, so Datenschutz was then rewritten for this one, based on what the live site was measured to do: only its own host, no cookies, no browser storage, form opens the visitor's email program. It needs a legal check and must change if hosting moves or a real form is added. The Impressum still cites the TMG and old photo sources.

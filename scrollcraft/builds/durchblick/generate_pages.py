@@ -16,7 +16,7 @@ def srcsets(h,small=()):
         sz='(max-width: 860px) 46vw, 34vw' if k in small else '(max-width: 600px) 80vw, (max-width: 860px) 100vw, 45vw'
         h=re.sub(r'(<img(?![^>]*srcset)[^>]*?)src="assets/%s\.webp"'%k, lambda m:f'{m.group(1)}src="assets/{k}.webp" srcset="assets/{k}-420.webp 420w, {extra}assets/{k}.webp {w}w" sizes="{sz}"',h)
     return h
-def page(file,title,desc,cur,body,path=None):
+def page(file,title,desc,cur,body,path=None,closing=True):
     h=header.replace('<a href="%s">'%file,'<a href="%s" aria-current="page">'%file)
     f=foot.replace('<li><a href="%s">'%file,'<li><a href="%s" aria-current="page">'%file)
     html=f'''<!doctype html>
@@ -42,7 +42,7 @@ def page(file,title,desc,cur,body,path=None):
 
 <main id="inhalt">
 {body}
-{close}
+{close if closing else ''}
 </main>
 
 {f}
@@ -344,3 +344,19 @@ page('einsatzgebiet.html',"Einsatzgebiet: Gebäudereinigung rund um Bad Kissinge
 # ================================================== Sitemap
 paths=['','leistungen','unsere-arbeit','einsatzgebiet']+[c['slug'] for c in CITIES]+[s[0] for s in SERVICES]
 open('sitemap.xml','w',encoding='utf8').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>https://saifis-gebaeudereinigung.de/{p}</loc></url>\n' for p in paths)+'</urlset>\n')
+
+# Legal pages. The text lives in legal/*.html, taken word for word from the current site.
+def legal(file,h1,title,desc):
+    text=open('legal/'+file,encoding='utf8').read()
+    page(file,title,desc,'legal',f'''  <section class="page-head legal-head">
+    <div class="sc-wrap">
+      <h1>{h1}</h1>
+    </div>
+  </section>
+
+  <section class="legal">
+    <div class="sc-wrap legal__text">
+{text}    </div>
+  </section>''',closing=False)
+legal('impressum.html','Impressum.',"Impressum | Saifi's Gebäudereinigung","Impressum von Saifi's Gebäudereinigung in Bad Kissingen.")
+legal('datenschutz.html','Datenschutz&shy;erklärung.',"Datenschutz | Saifi's Gebäudereinigung","Datenschutzerklärung von Saifi's Gebäudereinigung in Bad Kissingen.")

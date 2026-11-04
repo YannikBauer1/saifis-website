@@ -153,3 +153,15 @@ a.srow::after { content: ""; grid-column: 2; grid-row: 1 / span 2; width: .6rem;
   .sv-photo { order: 1; margin-top: 1.25rem; }
   .sv-head .sv-text { margin-top: 1.25rem; }
 }
+
+/* Impressum and Datenschutz: long reading, one comfortable column. */
+.legal-head { padding-bottom: clamp(1.25rem, 2vw, 2rem); }
+.legal-head h1 { hyphens: manual; }
+.legal { padding-bottom: clamp(4rem, 8vw, 7rem); background: #fff; }
+.legal__text { max-width: calc(46rem + 2 * var(--sc-gutter)); margin-inline: 0; margin-left: max(0px, calc((100% - var(--sc-maxw)) / 2)); }
+.legal__text h2 { margin-top: clamp(2.25rem, 4vw, 3.25rem); font-size: clamp(1.45rem, 1.25rem + .8vw, 2rem); line-height: 1.12; }
+.legal__text h3 { margin-top: 1.75rem; font-size: clamp(1.1rem, 1.05rem + .25vw, 1.25rem); line-height: 1.2; font-weight: 680; letter-spacing: -.012em; }
+.legal__text h4 { margin-top: 1.1rem; font: 600 1rem/1.3 var(--sc-font-text); letter-spacing: 0; }
+.legal__text p { margin-top: .65rem; line-height: 1.55; color: var(--sc-ink-soft); overflow-wrap: anywhere; }
+.legal__text h2:first-child { margin-top: 0; }
+.legal__text a { color: var(--sc-accent); text-decoration-thickness: 1px; text-underline-offset: .2em; }

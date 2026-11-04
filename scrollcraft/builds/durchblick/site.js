@@ -21,7 +21,7 @@
       var overHero = quiet && quiet.getBoundingClientRect().top + h * .37 > y;
       var p = peak && peak.getBoundingClientRect();
       var overFilm = p && matchMedia('(max-width: 860px), (max-width: 1100px) and (orientation: portrait)').matches && p.top < y && p.bottom > 0;   // full-bleed on phones
-      var overEnd = close.getBoundingClientRect().top < y;
+      var overEnd = close && close.getBoundingClientRect().top < y;
       bar.classList.toggle('is-solid', overHero || overFilm || overEnd);
       slide();
     }
