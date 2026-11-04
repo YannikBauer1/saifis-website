@@ -136,9 +136,10 @@
       bh = Math.min(H * .7, W * .5 / RATIO); bw = bh * RATIO;
       ox = W * .96 - bw; oy = H * .95 - bh;
     } else {
-      var room = Math.min(H, innerHeight) - copyBottom - 16 - (W <= 900 ? 84 : 32);   // the address bar may be covering the bottom
-      bw = Math.min(W * .86, room * RATIO); bh = bw / RATIO;
-      ox = (W - bw) / 2; oy = copyBottom + 16 + (room - bh) / 2;
+      var phone = W <= 760, gap = phone ? 12 : 16;
+      var room = Math.min(H, innerHeight) - copyBottom - gap - (phone ? 72 : W <= 900 ? 84 : 32);   // the address bar may be covering the bottom
+      bw = Math.min(W * (phone ? .92 : .86), room * RATIO); bh = bw / RATIO;
+      ox = (W - bw) / 2; oy = copyBottom + gap + (room - bh) / 2;
     }
     var u = bh / (Y1 - Y0);
     function at(p) { return [ox + (p[0] - X0) * u, oy + (p[1] - Y0) * u]; }

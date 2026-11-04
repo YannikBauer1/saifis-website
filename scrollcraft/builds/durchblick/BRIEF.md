@@ -208,3 +208,7 @@ Source limits: solar video 360x480, GoFit door video 848x480, most Instagram cli
 ## Round 18: phone header, 2026-11-04
 
 Owner approved. Up to 900 wide the header slides away on scroll down and returns on scroll up; it is always there at the top of a page. The steps section uses the freed space. The bottom bar steps aside while the end card's own buttons are on screen. Desktop header unchanged.
+
+## Round 19: logo, film text, chevrons, 2026-11-04
+
+Owner feedback from their own iPhone. Hero logo on phones now takes up to 92% of the width and is measured against the real bottom bar, so it no longer shrinks as much on phones with less visible height. Film text moved to the top on phones and upright tablets, with the white fade above it shortened so the first line reads as soon as the section stops. Arrows replaced by quiet chevrons at the end of each service row, and on phone chips that link somewhere. Chips and rows without their own page have no chevron.

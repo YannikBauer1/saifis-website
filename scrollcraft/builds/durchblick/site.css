@@ -87,11 +87,11 @@ p { margin: 0; }
 .svcs h3 { margin: 0; padding-bottom: .55rem; border-bottom: 1.5px solid var(--sc-ink); font-family: var(--sc-font-display); font-stretch: 108%; font-size: clamp(1rem, .7rem + .75vw, 1.35rem); font-weight: 680; letter-spacing: -.015em; }
 .svcs ul { list-style: none; margin: 0; padding: 0; }
 .svcs .pick { display: flex; justify-content: space-between; align-items: center; gap: .75rem; width: 100%; padding: .55rem 0; border-bottom: 1px solid var(--sc-hairline-strong); font-size: clamp(1rem, .96rem + .2vw, 1.1rem); font-weight: 500; }
-.svcs .pick::after { content: "\2192"; color: var(--sc-accent); opacity: 0; transform: translateX(-4px); transition: opacity 140ms var(--sc-ease-out), transform 140ms var(--sc-ease-out); }
+.svcs .pick::after { content: ""; flex: none; width: .5em; height: .5em; margin-right: .2em; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; transform: rotate(45deg); opacity: .4; transition: opacity 140ms var(--sc-ease-out), translate 140ms var(--sc-ease-out); }
 @media (hover: hover) and (pointer: fine) {
   .objs .pick:hover { box-shadow: 0 0 0 1.5px var(--sc-accent); color: var(--sc-accent); }
   .svcs .pick:hover { color: var(--sc-accent); }
-  .svcs .pick:hover::after { opacity: 1; transform: none; }
+  .svcs .pick:hover::after { opacity: 1; translate: 2px 0; }
 }
 @media (max-width: 1099px) { .objs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 340px) {
@@ -188,7 +188,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px
   .svcs { gap: 1.25rem; }
   .svcs ul { display: flex; flex-wrap: wrap; gap: .4rem; padding-top: .7rem; }
   .svcs .pick { width: auto; padding: .6rem .75rem; border: 0; border-radius: 8px; background: var(--sc-surface); font-size: .92rem; line-height: 1.15; }
-  .svcs .pick::after { display: none; }
+  .svcs .pick { gap: .5rem; }
+  .svcs .pick::after { width: .42em; height: .42em; margin-right: .1em; }
 }
 
 
