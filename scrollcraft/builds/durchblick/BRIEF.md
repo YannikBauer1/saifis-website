@@ -145,3 +145,66 @@ Durchblick was chosen. Changes from the owner's review:
 ## Netlify preview, 2026-11-03
 
 - The owner says all photos are approved. Published from branch durchblick-relaunch as saifis-gebaeudereinigung.netlify.app, still noindex because it is not the final site.
+
+## Round 10: sub page feedback, 2026-11-03
+
+- Leistungen: repeated "Anfragen" links removed, services in two tidy columns under each group.
+- Referenzen renamed "Unsere Arbeit" (unsere-arbeit.html). No Google rating and no Instagram links there, and none on the homepage rail. Only the footer keeps the Instagram logo.
+- The owner confirmed the height work belongs to Hescuro, so it moved into a Hescuro block. Cupitalis, Athera Physio and the solar job sit under "Weitere Einsätze".
+
+## Round 11, 2026-11-03
+
+- Opener: "Sauber. Schnell." on one line, "Zuverlässig." below, portrait cropped closer and smaller.
+- Leistungen: service lines cut to a few plain words so the page can be scanned. Each group has a short plain sub line.
+
+## Round 12: phone pass, 2026-11-03
+
+- Dock buttons equal width. Header current page is a soft pill, no underline. Header solid on phones.
+- Bigger example images, swipeable review cards and service chips on phones, shorter footer.
+- Checked in iPhone 16 Safari in the simulator. Fixed the gap under full-screen acts when the address bar shrinks, and section links that missed their target. Removed the fixed theme color.
+
+## Round 13: phone feedback, 2026-11-03
+
+- White fades into the film on phones, mirroring the fade after the zoom.
+- Phone examples are a sideways swipe row; the page scrolls normally. "Mehr aus dem Arbeitsalltag" hidden on phones.
+- Underlined action links became .link-btn buttons. Footer links stay as text.
+- Home labels "Objekte" and "Leistungen" hidden on phones. Steps get more air under the header. Phone footer rebuilt.
+
+## Round 14: speed and SEO, 2026-11-03
+
+- Squeezed favicon replaced by the S on a square canvas.
+- build.mjs publishes dist/ with inlined CSS and minified JS. Fonts are self-hosted and subset. Scripts deferred. Section heights set in CSS, so the page does not jump. Photos have phone sizes.
+- SEO: keyword in title, meta and H1 (the visible subline is now part of the H1), richer LocalBusiness data, robots.txt, sitemap.xml, _redirects for old URLs. Add canonical tags and remove the noindex header at launch.
+- Ranked keywords on 2026-11-03: only "reinigung bad kissingen", position 15. Keyword volumes: reinigung bad kissingen 170, gebäudereinigung bad kissingen 50, hausmeisterservice bad kissingen 40.
+
+## Round 15: more searches, 2026-11-03
+
+- Live results from Bad Kissingen: first on maps and in the regular results for "gebäudereinigung bad kissingen". Live results from Schweinfurt: not in the top 50, and 18 local firms on the map. Service searches in Bad Kissingen mostly miss the regular results.
+- Added canonical tags, a short homepage text, 14 service pages at their old addresses and a Schweinfurt page. Facts come from the live site, including its FAQ. generate_pages.py builds the sub pages from index.html.
+- Bigger markets not built yet, need owner confirmation they are served: Würzburg (590 + 390 searches a month), Fulda (210).
+- Owner confirmed Würzburg is served. Added /gebaeudereinigung-wuerzburg with its own wording, targeting "reinigungsfirma würzburg" and "gebäudereinigung würzburg".
+- Owner confirmed Fulda. Added /gebaeudereinigung-fulda with its own wording.
+- Owner wants everything within about an hour's drive. Town pages only where searches exist: Fulda, Bamberg, Lohr, Kitzingen, Karlstadt, Gelnhausen, Suhl (plus Schweinfurt, Würzburg). All other towns are on /einsatzgebiet, to stay clear of Google's doorway-page rules. Drive times are estimates, not measured.
+- References now name towns and link to customer sites where verified: auto-loeffler.de, gofit-badkissingen.de, hescuro.de, cupvitalis.de, athera.info. "Cupitalis" from the post name is read as Parkhotel Cup Vitalis, Bad Kissingen. Owner to confirm that, and which town each Löffler, Hescuro and Athera job was in. Lebenshilfe Hammelburg has no verified site, so no link.
+
+## Round 16: visual QA of every section
+
+Went through every section on desktop, small laptop, tablet and phone, then removed the small link buttons ("Website des Kunden", "Unser Einsatzgebiet", "Mehr aus dem Arbeitsalltag", Google link). Customer names are now the links.
+
+Fixes: broken word in the Photovoltaik headline, one left and right edge for film, rail and steps (`--edge`), more room under the header for film and van images, headings no longer stuck to the lists below, three-photo jobs fill their block, service names on one line, FAQ plus icons on the right, Einsatzgebiet headline clear of the phone edge, three service columns kept on tablets, softer underlines in the intro.
+
+Netlify's free-plan badge covered the appointment button on phones. It comes from the host and is switched off in the Netlify project settings (no longer on the preview as of 2026-11-04).
+
+## Round 17: everything, all sizes, 2026-11-04
+
+All 27 pages measured and looked at, at 23 screen sizes (phones upright and sideways, tablets, the widths where layouts switch, laptops, large monitors), plus form, FAQ, swiping, keyboard, reduced motion, no script, and the home page in iPhone Safari.
+
+Phone hero: on upright phones the S used to land on a dark beam, so the cleaned part looked dark. The picture now sits so the S opens onto blue sky and clouds, with a little more weight in the dirt.
+
+Other fixes: page scales up on large monitors, sideways phones fit every pinned section, upright tablets use the stacked film and steps, 320 wide no longer overflows, footer columns sized to their content, jump links land below the header, sharper images on tablets, two-line headlines on service and town pages, three-photo layouts line up.
+
+Source limits: solar video 360x480, GoFit door video 848x480, most Instagram clips 480 to 720 wide. Better files from the owner would fix the remaining soft photos. Seven service pages and nine town pages share the van photo because there are no real photos for them yet.
+
+## Round 18: phone header, 2026-11-04
+
+Owner approved. Up to 900 wide the header slides away on scroll down and returns on scroll up; it is always there at the top of a page. The steps section uses the freed space. The bottom bar steps aside while the end card's own buttons are on screen. Desktop header unchanged.

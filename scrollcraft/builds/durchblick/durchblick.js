@@ -23,6 +23,8 @@
     var r = rng(77);
     var c = document.createElement('canvas'); c.width = w; c.height = h;
     var x = c.getContext('2d');
+    // Upright phones look at bright sky through the film, so the dirt gets a little weight.
+    if (h > w && w / k <= 760) { x.fillStyle = 'rgba(66,68,64,.24)'; x.fillRect(0, 0, w, h); }
 
     // Soft layers are painted small and scaled up: the blur costs nothing and
     // works on browsers without canvas filters.
@@ -126,12 +128,15 @@
   var LEAN = Math.atan2(109, 149), SLOPE = 109 / 149;
 
   function buildPath(W, H, copyBottom) {
-    var wide = W >= 1000 && W / H > 1, bw, bh, ox, oy;
-    if (wide) {
-      bh = Math.min(H * .7, W * .54 / RATIO); bw = bh * RATIO;
+    var wide = W >= 1000 && W / H > 1, sideways = !wide && W > H && H <= 520, bw, bh, ox, oy;
+    if (sideways) {
+      bh = Math.min(H - 150, W * .46 / RATIO); bw = bh * RATIO;
+      ox = W * .975 - bw; oy = 76 + (H - 150 - bh) / 2;
+    } else if (wide) {
+      bh = Math.min(H * .7, W * .5 / RATIO); bw = bh * RATIO;
       ox = W * .96 - bw; oy = H * .95 - bh;
     } else {
-      var room = H - copyBottom - 16 - (W <= 900 ? 84 : 32);
+      var room = Math.min(H, innerHeight) - copyBottom - 16 - (W <= 900 ? 84 : 32);   // the address bar may be covering the bottom
       bw = Math.min(W * .86, room * RATIO); bh = bw / RATIO;
       ox = (W - bw) / 2; oy = copyBottom + 16 + (room - bh) / 2;
     }
@@ -211,7 +216,7 @@
       // Push through the middle of a real pane, wherever the crop put it.
       var iw = 1599, ih = 1248, cover = Math.max(W / iw, H / ih), posX = W > 760 ? .5 : .71;
       var ox = (W - iw * cover) * posX + 715 * cover, oy = H - ih * cover + 935 * cover;
-      near.style.transformOrigin = (ox / W * 100).toFixed(2) + '% ' + (oy / H * 100).toFixed(2) + '%';
+      near.style.transformOrigin = W <= 760 && H > W ? '65% 55%' : (ox / W * 100).toFixed(2) + '% ' + (oy / H * 100).toFixed(2) + '%';
       last = -1;
     }
 
@@ -363,7 +368,7 @@
       var px = pointer.x, py = pointer.y;
       // Each plane has its own rate. Near moves most, the sky barely at all.
       near.style.transform = 'translate3d(' + (px * -14) + 'px,' + (py * -5) + 'px,0) scale(' + ((1.06 + settle * .045) * Math.pow(11, through)) + ')';
-      near.style.opacity = 1 - smooth(range(p, .68, .8));
+      near.style.opacity = 1 - (W <= 760 && H > W ? smooth(range(p, .54, .66)) : smooth(range(p, .68, .8)));
       far.style.transform = 'translate3d(' + (px * 5) + 'px,' + (py * 3 + settle * -14) + 'px,0) scale(' + (1.08 + through * .1) + ')';
       scrim.style.opacity = 1 - smooth(range(p, .46, .6));
       var cue = stage.querySelector('.hero__copy');
@@ -427,7 +432,9 @@
     how.querySelectorAll('.steps button').forEach(function (btn, i) {
       btn.addEventListener('click', function () { jump(how, (i + .5) / items.length); });
     });
-    imgs.forEach(function (im) { im.loading = 'eager'; });
+    if (imgs.length) new IntersectionObserver(function (e, o) {
+      if (e[0].isIntersecting) { imgs.forEach(function (im) { im.loading = 'eager'; }); o.disconnect(); }
+    }, { rootMargin: '100% 0px' }).observe(how);
     tick();
   });
 
@@ -438,5 +445,5 @@
   }
   var heroAct = document.getElementById('glas'), workAct = document.getElementById('objekte');
   if (heroAct) heroAct.addEventListener('focusin', function () { if (scrollY > 40 && !reduce) jump(heroAct, 0); });
-  if (workAct && !reduce) workAct.addEventListener('focusin', function () { jump(workAct, 1); });
+  if (workAct && !reduce && workAct.getAttribute('data-sc-act') === 'pan') workAct.addEventListener('focusin', function () { jump(workAct, 1); });
 })();

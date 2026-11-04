@@ -1,8 +1,10 @@
-# Preview of the Durchblick relaunch. Static files, no build step.
+# Durchblick relaunch. build.mjs inlines and minifies into dist/.
 [build]
-  publish = "scrollcraft/builds/durchblick"
+  command = "node scrollcraft/builds/durchblick/build.mjs"
+  publish = "scrollcraft/builds/durchblick/dist"
 
 # A preview for now: stay out of search engines until the real launch.
+# Remove this block when the site moves to saifis-gebaeudereinigung.de.
 [[headers]]
   for = "/*"
   [headers.values]

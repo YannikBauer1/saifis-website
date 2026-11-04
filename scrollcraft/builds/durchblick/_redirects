@@ -1,0 +1,10 @@
+# Old addresses keep working after launch, so existing links and Google results are not lost.
+/bildungseinrichtung      /leistungen#objekte                 301
+/buero                    /leistungen#objekte                 301
+/gesundheitseinrichtung   /leistungen#objekte                 301
+/handelsgeschaeft         /leistungen#objekte                 301
+/kindergarten             /leistungen#objekte                 301
+/produktionsstatte        /leistungen#objekte                 301
+/sportclub                /leistungen#objekte                 301
+/wohnanlage               /leistungen#objekte                 301
+/kontaktformular          /#kontakt                           301
