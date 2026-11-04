@@ -135,3 +135,21 @@ a.srow::after { content: ""; grid-column: 2; grid-row: 1 / span 2; width: .6rem;
 .sv-photo img[src*="m-van"] { object-position: 50% 30%; }
 @media (max-width: 400px) { .sv-head h1 { font-size: 8.1vw; } }
 @media (max-height: 520px) and (orientation: landscape) { .job__media img, .job__media video { max-height: 75svh; } }
+
+/* Phones: one size for lead text, comfortable jump links, the picture before the reading. */
+@media (max-width: 760px) {
+  .page-head { padding-top: calc(var(--bar-space) + 1.75rem); padding-bottom: 1.75rem; }
+  .page-head p, .group__sub, .sv-head .sv-text { font-size: 1.0625rem; line-height: 1.42; }
+  .page-jump a { display: flex; align-items: center; min-height: 2.6rem; }
+  .page-jump a:active { background: rgb(15 37 87 / .1); }
+  a.srow:active h3 { color: var(--sc-accent); }
+  a.srow:active::after { border-color: var(--sc-accent); opacity: 1; }
+}
+@media (max-width: 600px) {
+  .sv-grid { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .sv-grid > div { display: contents; }
+  .sv-grid > div > * { order: 2; }
+  .sv-grid > div > h1, .sv-grid > div > h1 + p { order: 0; }
+  .sv-photo { order: 1; margin-top: 1.25rem; }
+  .sv-head .sv-text { margin-top: 1.25rem; }
+}

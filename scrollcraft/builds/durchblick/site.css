@@ -57,7 +57,7 @@ p { margin: 0; }
   .bar__logo { height: 2.15rem; }
   .bar__actions { display: none; }
   .dock { position: fixed; z-index: 60; inset: auto 0 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .4rem; padding: .5rem .5rem calc(.5rem + env(safe-area-inset-bottom)); background: #fff; box-shadow: 0 -6px 20px -8px hsl(222 70% 20% / .35); }
-  .dock .btn { min-height: 3rem; min-width: 0; padding: 0 .1rem; font-size: clamp(.75rem, 3.35vw, .95rem); gap: .35em; }
+  .dock .btn { min-height: 3rem; min-width: 0; padding: 0 .1rem; font-size: clamp(.75rem, 3.6vw, .95rem); gap: .35em; }
   /* Finger-sized targets without changing how anything looks */
   .bar__logo { position: relative; }
   .bar__logo::after { content: ""; position: absolute; inset: -.5rem 0; }
@@ -227,3 +227,24 @@ h1, h2, h3 { text-wrap: balance; }
 p, li, figcaption { text-wrap: pretty; }
 
 .svcs a.pick { text-decoration: none; color: inherit; }
+
+/* Phones: instant feedback under the thumb, frosted bottom bar, lists instead of ragged chips. */
+html { -webkit-tap-highlight-color: transparent; }
+a, button { touch-action: manipulation; }
+@media (max-width: 900px) {
+  .dock { background: rgb(255 255 255 / .88); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); box-shadow: 0 -1px 0 rgb(15 37 87 / .1); }
+  .btn:active { transform: scale(.97); transition: transform 80ms ease-out; }
+  .objs .pick:active { transform: scale(.97); }
+}
+@media (prefers-reduced-transparency: reduce) { .dock { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; } }
+@media (max-width: 760px) {
+  :root { --sc-t-sm: .9375rem; }
+  .svcs:not(:has(.hub-note)) { gap: 1.5rem; }
+  .svcs:not(:has(.hub-note)) h3 { padding: 0 .2rem .5rem; border: 0; color: var(--sc-ink-soft); font: 600 .95rem/1.2 var(--sc-font-text); letter-spacing: 0; }
+  .svcs:not(:has(.hub-note)) ul { display: block; padding: 0; border-radius: 14px; overflow: hidden; background: var(--sc-surface); }
+  .sv-more:not(.hub-svc) .svcs:not(:has(.hub-note)) ul { background: #fff; }
+  .svcs:not(:has(.hub-note)) li + li { border-top: 1px solid var(--sc-hairline); }
+  .svcs:not(:has(.hub-note)) li .pick { width: 100%; min-height: 3.05rem; padding: .7rem 1rem; border-radius: 0; background: transparent; font-size: 1.02rem; line-height: 1.2; }
+  .svcs:not(:has(.hub-note)) li .pick::after { width: .5em; height: .5em; margin-right: .1em; }
+  .svcs li a.pick:active { background: rgb(15 37 87 / .08); }
+}

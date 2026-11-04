@@ -251,9 +251,49 @@
     .peak__lines { right: auto; width: 46%; bottom: calc(3.8rem + env(safe-area-inset-bottom)); }
     .peak__shade { inset: 0; height: auto; background: linear-gradient(to right, rgb(7 15 34 / .94) 0, rgb(7 15 34 / .82) 42%, transparent 64%); }
   }
+
+  .how__thumb { display: none; }
+  /* Phones: built for a thumb, not squeezed from the desktop page. */
+  @media (max-width: 760px), (max-height: 520px) and (orientation: landscape) {
+    /* The owner's words get a calm moment on white, then the film rises over them as a sheet. */
+    .quiet { --hold: 45svh; margin-bottom: -100svh; padding-bottom: 0; height: calc(40svh + 7rem + var(--hold) + 100svh); background: linear-gradient(to bottom, rgb(255 255 255 / 0) 0, rgb(255 255 255 / .22) 7svh, rgb(255 255 255 / .62) 18svh, rgb(255 255 255 / .92) 29svh, #fff 37svh); }
+    .quiet__grid { position: sticky; top: calc(50svh - 3rem); }
+    .peak { position: relative; z-index: 6; }
+    .peak__stage { overflow: hidden; border-radius: var(--sheet-r, 0px) var(--sheet-r, 0px) 0 0; box-shadow: 0 -10px 30px rgb(7 15 34 / .16); }
+
+    .rail__lead h2, .how__left > h2, .svc__head h2 { font-size: clamp(1.7rem, 7.6vw, 2rem); line-height: 1.06; }
+
+    /* So arbeiten wir: cards you swipe, like the examples and the reviews. */
+    #ablauf { height: auto; }
+    #ablauf .how__stage { position: static; display: block; height: auto; padding: 3.25rem 0 3.5rem; transition: none; }
+    #ablauf .how__left { display: block; }
+    #ablauf .how__left > h2 { padding-inline: var(--sc-gutter); }
+    #ablauf .how__media { display: none; }
+    #ablauf .steps { counter-reset: step; display: flex; gap: .75rem; margin: 1.25rem 0 0; padding: 0 var(--sc-gutter) .75rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--sc-gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    #ablauf .steps::-webkit-scrollbar { display: none; }
+    #ablauf .steps li { counter-increment: step; flex: 0 0 82%; scroll-snap-align: start; padding: 0; border: 0; border-radius: 16px; overflow: hidden; background: var(--sc-surface); box-shadow: var(--sc-e1); }
+    #ablauf .steps li::before { display: none; }
+    #ablauf .how__thumb { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--pos, 50% 50%); background: #d7e4ef; }
+    #ablauf .steps h3 { padding: .95rem 1.05rem 0; color: var(--sc-ink); font-size: 1.25rem; line-height: 1.15; }
+    #ablauf .steps h3::before { content: "Schritt " counter(step) " von 4"; display: block; margin-bottom: .3rem; color: var(--sc-accent); font: 600 var(--sc-t-sm)/1.2 var(--sc-font-text); letter-spacing: 0; }
+    #ablauf .steps button { pointer-events: none; }
+    #ablauf .steps .txt { display: block; opacity: 1; overflow: visible; }
+    #ablauf .steps .txt > p { padding: .4rem 1.05rem 1.15rem; font-size: 1rem; line-height: 1.42; }
+
+    /* The long intro stays for search engines, but opens on request. */
+    .svc__intro.is-short { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+    .svc__more { all: unset; display: block; margin-top: .35rem; padding-block: .35rem; color: var(--sc-accent); font-weight: 600; cursor: pointer; }
+    .svc__more:focus-visible { outline: 3px solid var(--sc-accent); outline-offset: 2px; }
+  }
+  @media (max-height: 520px) and (orientation: landscape) {
+    #ablauf .steps li { flex-basis: 66%; display: grid; grid-template-columns: 42% minmax(0, 1fr); grid-template-rows: auto 1fr; }
+    #ablauf .how__thumb { grid-row: 1 / span 2; height: 100%; aspect-ratio: auto; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .peak__frame { scale: 1; }
-    .quiet { margin-block: 0; min-height: 0; padding-block: clamp(3rem, 6vw, 5rem); background: #fff; }
+    .quiet { margin-block: 0; min-height: 0; height: auto; padding-block: clamp(3rem, 6vw, 5rem); background: #fff; }
+    .quiet__grid { position: static; }
+    .peak__stage { border-radius: 0; box-shadow: none; }
     .hero__copy { opacity: 1 !important; transform: none !important; }
     #objekte { height: auto; }
     .work__stage { display: block; height: auto; position: static; overflow: visible; padding-block: var(--sc-section); }
@@ -347,10 +387,10 @@
       <div class="how__left">
         <h2>So arbeiten wir.</h2>
         <ol class="steps">
-          <li class="is-on"><h3><button type="button">Analyse-Termin</button></h3><div class="txt"><p>Wir kommen zu Ihnen und sehen uns das Objekt an. Kostenfrei und 100&nbsp;% unverbindlich.</p></div></li>
-          <li><h3><button type="button">Reinigungsplan</button></h3><div class="txt"><p>Sie bekommen ein maßgeschneidertes Angebot mit allem, was Ihnen wichtig ist.</p></div></li>
-          <li><h3><button type="button">Fachpersonal</button></h3><div class="txt"><p>Fachkräfte setzen den Plan um. Für Fragen haben Sie einen persönlichen Ansprechpartner.</p></div></li>
-          <li><h3><button type="button">Q-Check</button></h3><div class="txt"><p>Wir prüfen die Qualität regelmäßig und unangekündigt.</p></div></li>
+          <li class="is-on"><img class="how__thumb" style="--pos:50% 42%" loading="lazy" src="assets/m-van.webp" srcset="assets/m-van-420.webp 420w, assets/m-van-800.webp 800w, assets/m-van.webp 1000w" sizes="(max-width: 760px) 82vw, 1px" width="1000" height="1333" alt="Saifi's Transporter mit Logo und dem Schriftzug Sauber. Schnell. Zuverlässig."><h3><button type="button">Analyse-Termin</button></h3><div class="txt"><p>Wir kommen zu Ihnen und sehen uns das Objekt an. Kostenfrei und 100&nbsp;% unverbindlich.</p></div></li>
+          <li><img class="how__thumb" loading="lazy" src="assets/g-facade.webp" srcset="assets/g-facade-420.webp 420w, assets/g-facade-800.webp 800w, assets/g-facade.webp 1500w" sizes="(max-width: 760px) 82vw, 1px" width="1500" height="1171" alt="Lange Fensterfront unter blauem Himmel."><h3><button type="button">Reinigungsplan</button></h3><div class="txt"><p>Sie bekommen ein maßgeschneidertes Angebot mit allem, was Ihnen wichtig ist.</p></div></li>
+          <li><img class="how__thumb" style="--pos:38% 30%" loading="lazy" src="assets/m-ladder.webp" srcset="assets/m-ladder-420.webp 420w, assets/m-ladder-800.webp 800w, assets/m-ladder.webp 1152w" sizes="(max-width: 760px) 82vw, 1px" width="1152" height="869" alt="Mitarbeiter im Saifi's-Shirt arbeitet auf der Leiter unter einem Holzdach."><h3><button type="button">Fachpersonal</button></h3><div class="txt"><p>Fachkräfte setzen den Plan um. Für Fragen haben Sie einen persönlichen Ansprechpartner.</p></div></li>
+          <li><img class="how__thumb" loading="lazy" src="assets/m-window.webp" srcset="assets/m-window-420.webp 420w, assets/m-window-800.webp 800w, assets/m-window.webp 1599w" sizes="(max-width: 760px) 82vw, 1px" width="1599" height="1248" alt="Blick durch ein sauberes Sektionaltor in den blauen Himmel."><h3><button type="button">Q-Check</button></h3><div class="txt"><p>Wir prüfen die Qualität regelmäßig und unangekündigt.</p></div></li>
         </ol>
       </div>
       <div class="how__media">
@@ -493,6 +533,25 @@
     work.setAttribute('data-sc-act', 'flow');
     rail.removeAttribute('data-sc-pan');
     rail.parentNode.insertBefore(rail.querySelector('.rail__lead'), rail);
+    // The steps become cards you swipe, so the section scrolls like any other.
+    var how = document.getElementById('ablauf'), howStage = how.querySelector('[data-sc-stage]');
+    how.setAttribute('data-sc-act', 'flow');
+    how.removeAttribute('data-sc-span');
+    how.removeAttribute('data-steps');
+    howStage.removeAttribute('data-sc-stage');
+    howStage.classList.remove('sc-stage');
+    how.querySelectorAll('.steps button').forEach(function (b) { b.tabIndex = -1; });
+    // The long intro opens on request.
+    var intro = document.querySelector('.svc__intro');
+    if (intro) {
+      var more = document.createElement('button');
+      more.type = 'button'; more.className = 'svc__more'; more.textContent = 'Mehr lesen';
+      var openIntro = function () { intro.classList.remove('is-short'); more.remove(); };
+      more.addEventListener('click', openIntro);
+      intro.addEventListener('focusin', openIntro);
+      intro.classList.add('is-short');
+      intro.parentNode.insertBefore(more, intro.nextSibling);
+    }
   }
   // Without motion, the hero needs no travel: one complete frame, then the page.
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {

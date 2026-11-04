@@ -439,6 +439,19 @@
     tick();
   });
 
+  /* ------------- phones: the film arrives as a sheet, its corners square up as it docks -- */
+  var sheet = document.querySelector('.peak__stage');
+  if (sheet) (function () {
+    var phone = matchMedia('(max-width: 760px), (max-height: 520px) and (orientation: landscape)'), act = sheet.closest('.peak');
+    function dockSheet() {
+      if (!phone.matches || reduce) { sheet.style.removeProperty('--sheet-r'); return; }
+      sheet.style.setProperty('--sheet-r', (clamp(act.getBoundingClientRect().top / 90, 0, 1) * 22).toFixed(1) + 'px');
+    }
+    addEventListener('scroll', dockSheet, { passive: true });
+    addEventListener('resize', dockSheet);
+    dockSheet();
+  })();
+
   /* ---------------------------- keyboard: focus never lands on something unseen -- */
   function jump(act, p) {
     var r = act.getBoundingClientRect(), top = r.top + scrollY;

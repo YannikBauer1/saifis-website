@@ -212,3 +212,7 @@ Owner approved. Up to 900 wide the header slides away on scroll down and returns
 ## Round 19: logo, film text, chevrons, 2026-11-04
 
 Owner feedback from their own iPhone. Hero logo on phones now takes up to 92% of the width and is measured against the real bottom bar, so it no longer shrinks as much on phones with less visible height. Film text was tried at the top, but it covered the cleaning, so it stays at the bottom. The dark shade behind it now only reaches as high as the text, which keeps the top of the film clear. Arrows replaced by quiet chevrons at the end of each service row, and on phone chips that link somewhere. Chips and rows without their own page have no chevron.
+
+## Round 20: phone version, 2026-11-04
+
+Owner: desktop is right, the phone should feel more like an app. Hero and zoom stay. On phones the owner's words now hold on white and the film rises over them as a sheet, instead of fading in and straight back out over the video. So arbeiten wir is a row of cards you swipe, not a pinned section. Service lists are grouped rows with chevrons instead of ragged chips, lead text and section headings use one size each, the bottom bar is frosted, and buttons respond on touch. Service pages show the photo before the text.
