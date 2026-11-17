@@ -220,3 +220,7 @@ Owner: desktop is right, the phone should feel more like an app. Hero and zoom s
 ## Round 21: Impressum and Datenschutz, 2026-11-04
 
 Owner asked to copy both texts from the current site. Done word for word, with PDF line breaks and page numbers removed and headings restored. The text lives in legal/*.html and generate_pages.py wraps it. The copied policy described the old site, so Datenschutz was then rewritten for this one, based on what the live site was measured to do: only its own host, no cookies, no browser storage, form opens the visitor's email program. It needs a legal check and must change if hosting moves or a real form is added. The Impressum still cites the TMG and old photo sources.
+
+## Round 22: maker credit, 2026-11-17
+
+Footer of every page ends with "Website gestaltet und gebaut von Yannik Bauer", linking to yannik-bauer.me.

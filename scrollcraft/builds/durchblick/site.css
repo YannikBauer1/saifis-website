@@ -248,3 +248,8 @@ a, button { touch-action: manipulation; }
   .svcs:not(:has(.hub-note)) li .pick::after { width: .5em; height: .5em; margin-right: .1em; }
   .svcs li a.pick:active { background: rgb(15 37 87 / .08); }
 }
+
+/* Credit for the site's maker, quiet under the legal row. */
+.foot__credit { margin: .9rem 0 0; color: #7f93ad; font-size: .82rem; }
+.foot__credit a { color: #c9d7e8; text-decoration: underline; text-decoration-color: rgb(201 215 232 / .4); text-underline-offset: .2em; }
+@media (hover: hover) and (pointer: fine) { .foot__credit a:hover { color: #fff; text-decoration-color: currentColor; } }
